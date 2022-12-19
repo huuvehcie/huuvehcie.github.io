@@ -38,9 +38,14 @@ sudo pacman -S vulkan-intel vulkan-icd-loader
 
 Отредактировать файл /etc/mkinitcpio.conf
 
-` MODULES=(crc32c libcrc32c zlib_deflate btrfs crc32c-intel intel_agp i915)
+```
+MODULES=(crc32c libcrc32c zlib_deflate btrfs crc32c-intel intel_agp i915)
+```
 
 Далее выполнить команду:
 
-` sudo mkinitcpio -P 
+```
+sudo mkinitcpio -P
+```
+
 
