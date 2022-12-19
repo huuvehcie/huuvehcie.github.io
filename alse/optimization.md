@@ -241,14 +241,14 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash rootfstype=btrfs lpj=3499912 raid=noaut
 
 **Разъяснения:**
 
-_lpj=_ Определить значение: sudo dmesg | grep "lpj="
-_mitigations=off_ Отключает все заплатки безопасности ядра
-_raid=noautodetect_ Отключает проверку на RAID во время загрузки
-_rootfstype=btrfs_ Название корневой файловой системы
-_elevator=noop_ Указывает для всех дисков планировщик ввода NONE
-_nowatchdog_ Отключает сторожевые таймеры
-_page_alloc.shuffle=1_ Рандомизирует свободные списки распределителя страниц
-_split_lock_detect=off_ Отключает раздельные блокировки шины памяти
+__lpj=__ Определить значение: sudo dmesg | grep "lpj="
+__mitigations=off__ Отключает все заплатки безопасности ядра
+__raid=noautodetect__ Отключает проверку на RAID во время загрузки
+__rootfstype=btrfs__ Название корневой файловой системы
+__elevator=noop__ Указывает для всех дисков планировщик ввода NONE
+__nowatchdog__ Отключает сторожевые таймеры
+__page_alloc.shuffle=1__ Рандомизирует свободные списки распределителя страниц
+__split_lock_detect=off__ Отключает раздельные блокировки шины памяти
 
 После операций обновление загрузчика:
 
