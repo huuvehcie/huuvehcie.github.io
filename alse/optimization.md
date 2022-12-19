@@ -151,7 +151,7 @@ sudo systemctl enable --now irqbalance
 # Низкие задержки звука
 
 ```
-alsa-card-profiles alsa-plugins
+sudo pacman -S alsa alsa-utils alsa-firmware alsa-card-profiles alsa-plugins
 ```
 
 # Ускорение загрузки системы
@@ -239,7 +239,7 @@ sudo pacman -Syyuu
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash rootfstype=btrfs lpj=3499912 raid=noautodetect elevator=noop mitigations=off preempt=none nowatchdog audit=0 page_alloc.shuffle=1 split_lock_detect=off"
 ```
 
-*Разъяснения:*
+**Разъяснения:**
 
 _lpj=_ Определить значение: sudo dmesg | grep "lpj="
 _mitigations=off_ Отключает все заплатки безопасности ядра
