@@ -147,3 +147,87 @@ sudo systemctl --global enable dbus-broker.service # Включает и зап�
 udo pacman -S irqbalance
 sudo systemctl enable --now irqbalance
 ```
+
+# Низкие задержки звука
+
+```
+alsa-card-profiles alsa-plugins
+```
+
+# Ускорение загрузки системы
+
+```
+sudo systemctl mask NetworkManager-wait-online.service
+```
+
+# Одновременная загрузка двух и более пакетов
+
+Отредактировать /etc/pacman.conf:
+
+```
+# Где 4 - количество пакетов для одновременной загрузки
+ParallelDownloads = 4
+```
+
+# Перевод процессора из стандартного энергосбережения в режим производительности\
+
+```
+sudo pacman -S cpupower                       # Установит менеджер управления частотой процессора
+sudo systemctl enable cpupower # Включить как постоянную службу
+
+git clone https://aur.archlinux.org/cpupower-gui.git
+cd cpupower-gui
+makepkg -sric
+```
+
+Лучше установить Onedemand
+
+# Установка оптимизированных пакетов
+
+Проверить поколение процессора (искать supported, searched):
+
+```
+/lib/ld-linux-x86-64.so.2 --help | grep -B 3 -E "x86-64-v2"
+```
+
+Установка ключей для проверки подписей пакетов:
+
+```
+# Ключи для пакетов
+git clone https://aur.archlinux.org/alhp-keyring.git
+cd alhp-keyring
+makepkg -sric
+
+git clone https://aur.archlinux.org/alhp-mirrorlist.git
+cd alhp-mirrorlist
+makepkg -sric
+```
+
+Добавить репозиторий для нужной архитектуры в /etc/pacman.conf:
+
+```
+[core-x86-64-v2]
+Include = /etc/pacman.d/alhp-mirrorlist
+
+[extra-x86-64-v2]
+Include = /etc/pacman.d/alhp-mirrorlist
+
+[community-x86-64-v2]
+Include = /etc/pacman.d/alhp-mirrorlist
+
+[core]
+Include = /etc/pacman.d/mirrorlist
+
+[extra]
+Include = /etc/pacman.d/mirrorlist
+
+[community]
+Include = /etc/pacman.d/mirrorlist
+```
+
+Полностью обновить систему:
+
+```
+sudo pacman -Syyuu
+```
+
