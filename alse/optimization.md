@@ -85,3 +85,38 @@ BUILDENV=(!distcc color ccache check !sign)
 
 # Установка полезных служб и демонов
 
+## Включение Nohang
+
+Демон повышающий производительность путём обработки и слежки за потреблением памяти
+
+```
+git clone https://aur.archlinux.org/nohang-git.git # Скачивание исходников.
+cd nohang-git                                      # Переход в nohang-git
+makepkg -sric                                      # Сборка и установка.
+sudo systemctl enable --now nohang-desktop         # Включаем службу.
+```
+
+## Включение TRIM
+
+```
+sudo systemctl enable fstrim.timer    # Включаем службу.
+sudo fstrim -v /                      # Ручной метод.
+sudo fstrim -va /                     # Если первый метод не тримит весь диск.
+```
+
+## Включение cronie
+
+Демон, который поможет вам очищать вашу систему от мусора полностью автономно
+
+```
+sudo pacman -S cronie                         # Установить cron.
+sudo systemctl enable --now cronie.service    # Запускает и включает службу.
+sudo EDITOR=nano crontab -e                   # Редактируем параметр.
+```
+
+И прописываем:
+
+```
+15 10 * * sun /sbin/pacman -Scc --noconfirm
+```
+
