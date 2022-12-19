@@ -231,3 +231,21 @@ Include = /etc/pacman.d/mirrorlist
 sudo pacman -Syyuu
 ```
 
+# Обновление загрузчика и отключение ненужных заплаток
+
+Отредактировать /etc/default/grub:
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash rootfstype=btrfs lpj=3499912 raid=noautodetect elevator=noop mitigations=off preempt=none nowatchdog audit=0 page_alloc.shuffle=1 split_lock_detect=off"
+```
+
+*Разъяснения:*
+
+_lpj=_ Определить значение: sudo dmesg | grep "lpj="
+_mitigations=off_ Отключает все заплатки безопасности ядра
+_raid=noautodetect_ Отключает проверку на RAID во время загрузки
+_rootfstype=btrfs_ Название корневой файловой системы
+_elevator=noop_ Указывает для всех дисков планировщик ввода NONE
+_nowatchdog_ Отключает сторожевые таймеры
+_page_alloc.shuffle=1_ Рандомизирует свободные списки распределителя страниц
+_split_lock_detect=off_ Отключает раздельные блокировки шины памяти
