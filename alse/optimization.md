@@ -33,3 +33,14 @@ sudo pacman -S vulkan-radeon vulkan-icd-loader mesa-vdpau vulkan-mesa-layers
 ```
 sudo pacman -S vulkan-intel vulkan-icd-loader
 ```
+
+# Добавление важных модулей в образы initramfs
+
+Отредактировать файл /etc/mkinitcpio.conf
+
+` MODULES=(crc32c libcrc32c zlib_deflate btrfs crc32c-intel intel_agp i915)
+
+Далее выполнить команду:
+
+` sudo mkinitcpio -P 
+
