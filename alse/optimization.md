@@ -457,4 +457,3 @@ cd linux-cachyos/linux-cachyos-bore # Если хотите использова
 makepkg -sric
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
