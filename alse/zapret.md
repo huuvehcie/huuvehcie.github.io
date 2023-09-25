@@ -38,8 +38,8 @@ rutracker | tpws | - | --split-pos=1 | --split-pos=2
 rutracker | nfqws | - | --dpi-desync=split2 | --dpi-desync=split2
 utorrentfilmi | tpws | - | --split-pos=1 | --split-pos=1
 utorrentfilmi | nfqws | - | --dpi-desync=split2 | --dpi-desync=split2
-novoekino | tpws | --split-pos=1 | --split-pos=2
-novoekino | nfqws | --dpi-desync=split2 --dpi-desync-split-pos=1 | --dpi-desync=split2
+novoekino | tpws | - | --split-pos=1 | --split-pos=2
+novoekino | nfqws | - | --dpi-desync=split2 --dpi-desync-split-pos=1 | --dpi-desync=split2
 
 
 ## Ссылки на конфиги
