@@ -28,4 +28,12 @@ sudo bash ~/uninstall_easy.sh
 
 ## Настройки для различных провайдеров
 
+### Beeline проводной интернет
+
+Ресурс | Метод | HTTP | TLS 1.2 | TLS 1.3
+ --- | --- | --- | --- | ---
+nnmclub | tpws | - | --split-pos=1 | --split-pos=1
+nnmclub | nfqws | --dpi-desync=fake --dpi-desync-ttl=5 | --dpi-desync=split2 --dpi-desync-split-pos=1
+
+
 ## Ссылки на конфиги
