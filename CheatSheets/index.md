@@ -1,23 +1,31 @@
-# Навигация по документам
+# Шпаргалки
 
-- [aaa.md](./aaa.md)
-- [BISO.md](./BISO.md)
-- [cicd.md](./cicd.md)
-- [cloud.md](./cloud.md)
-- [cyber_apps.md](./cyber_apps.md)
-- [git.md](./git.md)
-- [index.md](./index.md)
-- [mercurial.md](./mercurial.md)
-- [metrics.md](./metrics.md)
-- [monolyte_mservice.md](./monolyte_mservice.md)
-- [networks.md](./networks.md)
-- [skills.md](./skills.md)
-- [ssdlc.md](./ssdlc.md)
-- **threats**
-  - [threats_ai.md](./threats/threats_ai.md)
-  - [threats_baks.md](./threats/threats_baks.md)
-  - [threats_bin.md](./threats/threats_bin.md)
-  - [threats.md](./threats/threats.md)
-  - [threats_mobile.md](./threats/threats_mobile.md)
-- [vectors_attach.md](./vectors_attach.md)
-- [virtualizations.md](./virtualizations.md)
+[Обязанности BISO](./BISO.md)
+[Средства защиты информации](./cyber_apps.md)
+[Метрики кибербезопасности](./metrics.md)
+
+
+## Архитектура
+
+[Технологии процессов аутентификации и авторизации: пользовательской или межсервисной](./aaa.md)
+[Технологии виртуализации](./virtualizations.md)
+[Сети](./networks.md)
+[Монолит VS микросервисная архитектура](./monolyte_mservice.md)
+[Принципы работы облачной инфраструктуры](./cloud.md)
+
+
+## DevSecOps / SSDLC / AppSec
+
+[Процесс CI/CD](./cicd.md)
+[Работа в GIT](./git.md)
+[Работа в mercurial](./mercurial.md)
+[Процесс безопасной разработки](./ssdlc.md)
+
+## Угрозы
+
+[Угрозы искуственного интеллекта (AI)](./threats/threats_ai.md)
+[Угрозы в финансовой сфере](./threats/threats_baks.md)
+[Угрозы в бинарных приложениях](./threats/threats_bin.md)
+[Веб угрозы](./threats/threats.md)
+[Угрозы мобильных приложений](./threats/threats_mobile.md)
+[Актуальные векторы атак, тактик, техник и процедур, используемых злоумышленниками](./vectors_attach.md)
