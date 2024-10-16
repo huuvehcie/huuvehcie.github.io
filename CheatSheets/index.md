@@ -19,6 +19,8 @@
 
 [Принципы работы облачной инфраструктуры](./cloud.md)
 
+[Сравнительная таблица Docker, Containerd, Podman и Kubernetes](./containers.md)
+
 
 ## DevSecOps / SSDLC / AppSec
 
