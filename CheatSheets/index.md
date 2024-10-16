@@ -6,6 +6,8 @@
 
 [Метрики кибербезопасности](./metrics.md)
 
+[Методики организации совместного рабочего процесса (Agile, Scrum и Kanban);](./metodologies.md)
+
 
 ## Архитектура
 
@@ -24,13 +26,13 @@
 
 ## DevSecOps / SSDLC / AppSec
 
+[Процесс безопасной разработки](./ssdlc.md)
+
 [Процесс CI/CD](./cicd.md)
 
 [Работа в GIT](./git.md)
 
 [Работа в mercurial](./mercurial.md)
-
-[Процесс безопасной разработки](./ssdlc.md)
 
 [Работа в Kubernetes](./kuber.md)
 
