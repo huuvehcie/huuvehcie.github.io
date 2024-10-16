@@ -11,7 +11,11 @@
 
 [Методики организации совместного рабочего процесса (Agile, Scrum и Kanban);](./prceses/metodologies.md)
 
-[Процесс защиты ПДн](./prcses/zpdn.md)
+[Процесс защиты ПДн](./prceses/zpdn.md)
+
+[Процесс сертификации ПО](./prceses/cert_soft.md)
+
+[Процесс аттестации АС](./prceses/attestation.md)
 
 
 ## Архитектура
