@@ -42,6 +42,8 @@
 
 [Работа в TeamCity](./teamcity.md)
 
+[Работа в GitLab CI/CD](./gitlab_cicd.md)
+
 ## Угрозы
 
 [Угрозы искуственного интеллекта (AI)](./threats/threats_ai.md)
