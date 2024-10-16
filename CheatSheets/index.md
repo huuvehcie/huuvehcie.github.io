@@ -36,7 +36,7 @@
 
 [Работа в Docker](./docker.md)
 
-
+[Работа в Docker Compose](./docker-compose.md)
 
 ## Угрозы
 
