@@ -38,6 +38,10 @@
 
 [Работа в Docker Compose](./docker-compose.md)
 
+[Работа в jenkins](./jenkins.md)
+
+[Работа в TeamCity](./teamcity.md)
+
 ## Угрозы
 
 [Угрозы искуственного интеллекта (AI)](./threats/threats_ai.md)
