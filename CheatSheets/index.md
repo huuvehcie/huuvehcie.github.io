@@ -34,6 +34,9 @@
 
 [Работа в Kubernetes](./kuber.md)
 
+[Работа в Docker](./docker.md)
+
+
 
 ## Угрозы
 
