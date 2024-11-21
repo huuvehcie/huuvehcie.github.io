@@ -70,8 +70,4 @@
 | stx4-any | StarterX4 \<starterx4\[at\]gmail.com> | Любые – некоторые шрифты и fakepkgs; x86\_64 – архивные, которые все еще могут быть полезными (например, PacmanXG4) и некоторые AUR-программные обеспечения, которые я использую. | \- | \- | \- | \- | \- | https://github.com/StarterX4/StarterX4.github.io | \- | \[stx4-any\]\\nServer = https://starterx4.github.io/repos/arch/$arch/stx4 |
 | stx4-x86\_64 | StarterX4 \<starterx4\[at\]gmail.com> | \- | \- | \- | \- | \- | \- | \- | \- | \[stx4-x86\_64\]\\nServer = https://starterx4.github.io/repos/arch/$arch/stx4 |
 | vdr4arch | CReimer, M-Reimer | Набор пакетов VDR для Arch Linux. | \- | https://github.com/VDR4Arch/vdr4arch | \- | \- | \- | \- | \- | 
-\[vdr4arch\]
-
-Server = https://vdr4arch.github.io/$arch
-
- |
+\[vdr4arch\] Server = https://vdr4arch.github.io/$arch|
