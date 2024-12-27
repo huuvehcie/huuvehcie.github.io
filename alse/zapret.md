@@ -28,36 +28,19 @@ sudo bash ~/uninstall_easy.sh
 
 ## Настройки для различных провайдеров
 
-### Beeline проводной интернет
+### BEELINE
 
-| Ресурс | HTTP | HTTP | TLS 1.2 | TLS 1.2 | TLS 1.3 | TLS 1.3 |
-|---|---|---|---|---|---|---|
-|  | tpws | nfqws | tpws | nfqws | tpws | nfqws |
-| ej.ru | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | - | - |
-| grani.ru | - | - | --split-pos=1 | --dpi-desync=split2 | - | - |
-| blackseanews.net | --methodeol | --dpi-desync=disorder2 | --split-pos=2 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| www.kasparov.ru | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| sputnikipogrom.com | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| euroradio.fm | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| 9tv.co.il | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| www.slavicsac.com | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| activatica.org | --methodeol | --dpi-desync=disorder2 | --split-pos=2 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| www.ekhokavkaza.com | --hostcase | --hostspell=hoSt | - | - | --split-pos=1 | --dpi-desync=split2 |
-| sobesednik.com | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | - | - |
-| zasekin.ru | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=2 | --dpi-desync=split2 |
-| www.dw.com | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| echo.msk.ru | --methodeol | --dpi-desync=disorder2 | --split-pos=2 | --dpi-desync=split2 | --split-pos=2 | --dpi-desync=split2 |
-| hromadske.ua | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| krymr.com | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| mignews.com | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| zahav.ru | --methodeol | --dpi-desync=disorder2 | --split-pos=1 | --dpi-desync=split2 | --split-pos=1 | --dpi-desync=split2 |
-| rus.delfi.lv | --methodeol | --dpi-desync=split | - | --dpi-desync=fake,split2 | --split-pos=1 | --dpi-desync=split2 |
-| bihus.info | --methodeol | --dpi-desync=split | - | --dpi-desync=fake,split2 | --split-pos=1 | --dpi-desync=split2 |
-| suspilne.media | --methodeol | --dpi-desync=split | - | --dpi-desync=fake,split2 | --split-pos=2 | --dpi-desync=split2 |
-| www.hs.fi | --hostdot | --hostnospace | - | --dpi-desync=fake,split2 | --split-pos=1 | --dpi-desync=split2 |
-| politiken.dk | --methodeol | --dpi-desync=split | - | --dpi-desync=fake,split2 | --split-pos=2 | --dpi-desync=split2 |
-| postimees.ee | --methodeol | --dpi-desync=split | - | --dpi-desync=fake,split2 | --split-pos=2 | --dpi-desync=split2 |
-| itsmycity.ru | --methodeol | --dpi-desync=split | - | --dpi-desync=fake,split2 | - | - |
+#### TPWS
 
+```
+TPWS_OPT="	--filter-tcp=80 --hostpad=16384 --hostnospace --hostdot --hostcase --domcase --hosttab --split-pos=method+2,midsld -oob --methodeol <HOSTLIST> --new
+			--filter-tcp=443 --split-pos=2,sniext+4,host+1,midsld,endhost-1 --mss=88 --oob --disorder <HOSTLIST>"
+```
 
-## Ссылки на конфиги
+#### NFQWS
+
+```
+NFQWS_OPT="	--filter-tcp=80 --dpi-desync=fake,fakeddisorder,fakedsplit,multidisorder,multisplitsyndata --dpi-desync-ttl=11 --dpi-desync-fooling=md5sig --dpi-desync-split-pos=midsld --dpi-desync-fake-syndata=/opt/zapret/files/fake/http_iana_org.bin --dpi-desync-split-pos=method+2,midsld --dpi-desync-fake-http=0x00000000 <HOSTLIST> --new
+			--filter-tcp=443 --dpi-desync=fake,fakeddisorder,fakedsplit,multidisorder,multisplit,syndata --dpi-desync-ttl=7 --dpi-desync-fooling=badseq --dpi-desync-split-pos=10,sniext+4,host+1,midsld-2,midsld,midsld+2,endhost-1 --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --wssize 1:06:00 --dpi-desync-split-seqovl=336 --dpi-desync-autottl=5 --dpi-desync-fake-tls=0x00000000 <HOSTLIST> --new
+			--filter-udp=443 --dpi-desync-autottl=5 --dpi-desync-fake-http=0x00000000 --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-fake-tls=0x00000000 --dpi-desync-fooling=badseq,badsum,datanoack,md5sig --dpi-desync-ipfrag-pos-udp=64 --dpi-desync-split-pos=10,sniext+4,host+1,midsld-2,midsld,midsld+2,endhost-1 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-split-seqovl=336 --dpi-desync-ttl=11 --dpi-desync=fake,fakeddisorder,fakedsplit,multisplit,ipfrag2,syndata <HOSTLIST_NOAUTO>"
+```
