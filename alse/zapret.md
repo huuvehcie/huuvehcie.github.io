@@ -1,5 +1,9 @@
 # Инструкция по оптимизации Интернет-протоколов с помощью утилиты Zapret от bol-van
 
+## Репозиторий
+
+https://github.com/bol-van/zapret
+
 ## Установка утилиты
 
 Скачать крайнюю версию репозитория
@@ -52,6 +56,5 @@ NFQWS_OPT="	--filter-tcp=80 --dpi-desync=fake,fakeddisorder,fakedsplit,multidiso
 ```
 NFQWS_OPT=" --filter-l7=http --dpi-desync-fake-http=0x00000000 --dpi-desync-split-pos=method+2,midsld --dpi-desync-ttl=11 --dpi-desync=fake,multidisorder --methodeol <HOSTLIST> --new
 --filter-l7=tls --dpi-desync=fake,multidisorder,multisplit --dpi-desync-ttl=6 --dpi-desync-split-pos=2,midsld,sniext+1 <HOSTLIST> --new
---filter-l7=quic --dpi-desync-repeats=20 --dpi-desync=fake <HOSTLIST>
-
+--filter-l7=quic --dpi-desync-repeats=20 --dpi-desync=fake <HOSTLIST>"
 ```
