@@ -44,3 +44,14 @@ NFQWS_OPT="	--filter-tcp=80 --dpi-desync=fake,fakeddisorder,fakedsplit,multidiso
 			--filter-tcp=443 --dpi-desync=fake,fakeddisorder,fakedsplit,multidisorder,multisplit,syndata --dpi-desync-ttl=7 --dpi-desync-fooling=badseq --dpi-desync-split-pos=10,sniext+4,host+1,midsld-2,midsld,midsld+2,endhost-1 --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --wssize 1:06:00 --dpi-desync-split-seqovl=336 --dpi-desync-autottl=5 --dpi-desync-fake-tls=0x00000000 <HOSTLIST> --new
 			--filter-udp=443 --dpi-desync-autottl=5 --dpi-desync-fake-http=0x00000000 --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-fake-tls=0x00000000 --dpi-desync-fooling=badseq,badsum,datanoack,md5sig --dpi-desync-ipfrag-pos-udp=64 --dpi-desync-split-pos=10,sniext+4,host+1,midsld-2,midsld,midsld+2,endhost-1 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-split-seqovl=336 --dpi-desync-ttl=11 --dpi-desync=fake,fakeddisorder,fakedsplit,multisplit,ipfrag2,syndata <HOSTLIST_NOAUTO>"
 ```
+
+### FREEDH
+
+#### NFQWS
+
+```
+NFQWS_OPT=" --filter-l7=http --dpi-desync-fake-http=0x00000000 --dpi-desync-split-pos=method+2,midsld --dpi-desync-ttl=11 --dpi-desync=fake,multidisorder --methodeol <HOSTLIST> --new
+--filter-l7=tls --dpi-desync=fake,multidisorder,multisplit --dpi-desync-ttl=6 --dpi-desync-split-pos=2,midsld,sniext+1 <HOSTLIST> --new
+--filter-l7=quic --dpi-desync-repeats=20 --dpi-desync=fake <HOSTLIST>
+
+```
