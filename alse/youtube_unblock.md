@@ -25,6 +25,7 @@ sudo make install
 sudo nft add table inet fw4 ; \
 sudo nft add chain inet fw4 youtubeUnblock '{ type filter hook postrouting priority mangle - 1; policy accept; }' ; \
 sudo nft add rule inet fw4 youtubeUnblock 'tcp dport 443 ct original packets < 20 counter queue num 537 bypass' ; \
+sudo nft add chain inet fw4 output '{ type filter hook output priority 0; }' ; \
 sudo nft insert rule inet fw4 output 'mark and 0x8000 \== 0x8000 counter accept'
 ```
 ## Шаг 4: Настройка системного сервиса
