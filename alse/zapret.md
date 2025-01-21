@@ -58,3 +58,12 @@ NFQWS_OPT=" --filter-l7=http --dpi-desync-fake-http=0x00000000 --dpi-desync-spli
 --filter-l7=tls --dpi-desync=fake,multidisorder,multisplit --dpi-desync-ttl=6 --dpi-desync-split-pos=2,midsld,sniext+1 <HOSTLIST> --new
 --filter-l7=quic --dpi-desync-repeats=20 --dpi-desync=fake <HOSTLIST>"
 ```
+
+### BeeLine для aur.archlinux.org
+
+#### NFQWS
+
+```
+NFQWS_OPT="--filter-l7=http --dpi-desync=syndata,multisplit --dpi-desync-split-pos=method+2 --dpi-desync-fake-syndata=/opt/zapret/files/fake/http_iana_org.bin --methodeol <HOSTLIST> --new
+--filter-l7=tls --dpi-desync=syndata,multisplit --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-split-pos=1 --wssize1:6 <HOSTLIST>"
+```
