@@ -132,5 +132,5 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws" # Источник модуля
   version = "3.14.0" # Версия модуля
   cidr    = "10.0.0.0/16" # Параметры модуля
-```
 }
+```
