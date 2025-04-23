@@ -1,4 +1,4 @@
-# Руководство по использованию Docker Compose для начинающих
+# Docker Compose
 
 ## Содержание
 1. [Введение в Docker Compose](#введение-в-docker-compose)
