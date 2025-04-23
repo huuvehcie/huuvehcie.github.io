@@ -89,7 +89,7 @@ Terraform — это инструмент для управления инфра
 
 Ниже приведен полный список ключевых параметров конфигурации и команд Terraform с комментариями. Этот раздел служит справочником для быстрого доступа к синтаксису и настройкам.
 
-<xaiArtifact artifact_id="5f0cf5a8-a677-4f7d-8507-bf83bb1d6342" artifact_version_id="36e7e3e1-d757-4854-903b-eb98d9251ed9" title="terraform_config_reference.tf" contentType="text/hcl">
+```terraform
 # Блок провайдера
 provider "aws" {
   region = "us-east-1" # Регион для ресурсов AWS
@@ -132,4 +132,5 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws" # Источник модуля
   version = "3.14.0" # Версия модуля
   cidr    = "10.0.0.0/16" # Параметры модуля
+```
 }
