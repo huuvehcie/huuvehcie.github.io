@@ -1,3 +1,9 @@
+1. [Основные компоненты архитектуры Docker Compose](#основные-компоненты-архитектуры-docker-compose)
+2. [Основные термины Docker Compose](#основные-термины-docker-compose)
+3. [Основные операции Docker Compose](#основные-операции-docker-compose)
+4. [Пример файла docker-compose](#пример-файла-docker-compose)
+
+
 ## Основные компоненты архитектуры Docker Compose
 
 | Компонент | Описание |
