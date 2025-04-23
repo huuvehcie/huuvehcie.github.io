@@ -1,6 +1,0 @@
-#!/bin/bash
-
-git add .
-git commit -a -m FilesCommit
-git pull -s recursive
-git push
