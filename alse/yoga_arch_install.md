@@ -107,7 +107,4 @@ KONSOLEFONT="UniCyrExt_8x16"
 
 # Установка драйверов
 
-paru -S aic94xx-firmware wd719x-firmware linux-firmware-qlogic linux-firmware upd72020x-fw
-
-	logout
-
+	paru -S aic94xx-firmware wd719x-firmware linux-firmware-qlogic linux-firmware upd72020x-fw
