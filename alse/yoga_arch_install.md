@@ -104,5 +104,10 @@ KONSOLEFONT="UniCyrExt_8x16"
 
 	systemctl enable dhcpcd
 
+
+# Установка драйверов
+
+paru -S aic94xx-firmware wd719x-firmware linux-firmware-qlogic linux-firmware upd72020x-fw
+
 	logout
 
