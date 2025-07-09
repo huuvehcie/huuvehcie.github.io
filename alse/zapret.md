@@ -72,3 +72,22 @@ NFQWS_OPT=" --filter-l7=http --dpi-desync-fake-http=0x00000000 --dpi-desync-spli
 NFQWS_OPT="--filter-l7=http --dpi-desync=syndata,multisplit --dpi-desync-split-pos=method+2 --dpi-desync-fake-syndata=/opt/zapret/files/fake/http_iana_org.bin --methodeol <HOSTLIST> --new
 --filter-l7=tls --dpi-desync=syndata,multisplit --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-split-pos=1 --wssize1:6 <HOSTLIST>"
 ```
+
+
+
+
+### FREEDH
+
+#### NFQWS
+
+```
+NFQWS_OPT=" --filter-l7=http --dpi-desync-split-seqovl=1,midsld-1,method+1 --dpi-desync=fake,fakeddisorder,fakedsplit,multidisorder,multisplit --dpi-desync-autottl=-5 --dpi-desync-fake-http=0x00000000 --dpi-desync-fake-syndata=/opt/zapret/files/fake/http_iana_org.bin --dpi-desync-fooling=badseq,badsum,datanoack,md5sig --dpi-desync-split-pos=method+2,midsld --dpi-desync-ttl=7 --dpi-desync=syndata,multisplit,multidisorder --dup-cutoff=n2 --dup-fooling=md5sig --dup=1 --hostnospace --hostspell=hoSt --orig-autottl=+3 --methodeol <HOSTLIST> --new
+--filter-l7=tls --wssize 1:06 --dpi-desync-autottl=-5 --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-fake-tls-mod=rnd,dupsid,rndsni,padencap --dpi-desync-fake-tls=! --dpi-desync-fooling=badseq,badsum,datanoack,md5sig --dpi-desync-split-pos=10,sniext+1,host+1,midsld-2,midsld,midsld+2,endhost-1,sniext+4 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-split-seqovl=336,midsld-1,sniext+3 --dpi-desync-ttl=9 --dpi-desync=fake --dpi-desync=fake,fakeddisorder,fakedsplit,multisplit,multidisorder,syndata --dup-cutoff=n2 --dup-fooling=md5sig --dup=1 --orig-autottl=+3 <HOSTLIST>"
+```
+
+#### TPWS
+
+```
+TPWS_OPT="--filter-tcp=80 --disorder --fix-seg --oob -hostcase -hostnospace -hostpad=16384 -methodeol -methodspace -split-pos=method+2,midsld <HOSTLIST> --new
+--filter-tcp=443 --disorder --fix-seg --mss=88 --oob -split-pos=2,sniext+4,host+1,midsld,endhost-1 -tlsrec=midsld,sniext+4 <HOSTLIST>"
+```
