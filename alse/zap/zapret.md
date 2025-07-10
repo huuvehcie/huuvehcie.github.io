@@ -54,15 +54,6 @@ NFQWS_OPT="	--filter-tcp=80 --methodeol --dpi-desync=fake,fakedsplit,fakeddisord
 			--filter-tcp=443 --dpi-desync=fake,fakedsplit,fakeddisorder,multisplit,multidisorder,syndata --dpi-desync-ttl=11 --dpi-desync-autottl=5 --dpi-desync-fooling=badseq,md5sig --dpi-desync-split-pos=10,sniext+4,host+1,midsld-2,midsld,endhost-1 --dpi-desync-split-seqovl=336 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-fake-tls=0x00000000  <HOSTLIST>"
 ```
 
-### FREEDH
-
-#### NFQWS
-
-```
-NFQWS_OPT=" --filter-l7=http --dpi-desync-fake-http=0x00000000 --dpi-desync-split-pos=method+2,midsld --dpi-desync-ttl=11 --dpi-desync=fake,multidisorder --methodeol <HOSTLIST> --new
---filter-l7=tls --dpi-desync=fake,multidisorder,multisplit --dpi-desync-ttl=6 --dpi-desync-split-pos=2,midsld,sniext+1 <HOSTLIST> --new
---filter-l7=quic --dpi-desync-repeats=20 --dpi-desync=fake <HOSTLIST>"
-```
 
 ### BeeLine для aur.archlinux.org
 
@@ -73,21 +64,19 @@ NFQWS_OPT="--filter-l7=http --dpi-desync=syndata,multisplit --dpi-desync-split-p
 --filter-l7=tls --dpi-desync=syndata,multisplit --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-split-pos=1 --wssize1:6 <HOSTLIST>"
 ```
 
-
-
-
 ### FREEDH
 
 #### NFQWS
 
 ```
-NFQWS_OPT=" --filter-l7=http --dpi-desync-split-seqovl=1,midsld-1,method+1 --dpi-desync=fake,fakeddisorder,fakedsplit,multidisorder,multisplit --dpi-desync-autottl=-5 --dpi-desync-fake-http=0x00000000 --dpi-desync-fake-syndata=/opt/zapret/files/fake/http_iana_org.bin --dpi-desync-fooling=badseq,badsum,datanoack,md5sig --dpi-desync-split-pos=method+2,midsld --dpi-desync-ttl=7 --dpi-desync=syndata,multisplit,multidisorder --dup-cutoff=n2 --dup-fooling=md5sig --dup=1 --hostnospace --hostspell=hoSt --orig-autottl=+3 --methodeol <HOSTLIST> --new
---filter-l7=tls --wssize 1:06 --dpi-desync-autottl=-5 --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-fake-tls-mod=rnd,dupsid,rndsni,padencap --dpi-desync-fake-tls=! --dpi-desync-fooling=badseq,badsum,datanoack,md5sig --dpi-desync-split-pos=10,sniext+1,host+1,midsld-2,midsld,midsld+2,endhost-1,sniext+4 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-split-seqovl=336,midsld-1,sniext+3 --dpi-desync-ttl=9 --dpi-desync=fake --dpi-desync=fake,fakeddisorder,fakedsplit,multisplit,multidisorder,syndata --dup-cutoff=n2 --dup-fooling=md5sig --dup=1 --orig-autottl=+3 <HOSTLIST>"
+NFQWS_OPT="	--filter-l7=http --dpi-desync-split-seqovl=1,midsld-1,method+1 --dpi-desync=fakedsplit --dpi-desync-autottl=-5 --dpi-desync-fake-http=0x00000000 	
+			--dpi-desync-fake-syndata=/opt/zapret/files/fake/http_iana_org.bin --dpi-desync-fooling=badseq,badsum,datanoack,md5sig --dpi-desync-split-pos=method+2,midsld --dpi-desync-ttl=7 --dpi-desync=syndata,multisplit --dup-cutoff=n2 --dup-fooling=md5sig --dup=1 --hostspell=hoSt --orig-autottl=+3 --methodeol <HOSTLIST> --new
+			--filter-l7=tls --wssize 1:06 --dpi-desync-autottl=-5 --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-fake-tls-mod=rnd,dupsid,rndsni,padencap --dpi-desync-fake-tls=! --dpi-desync-fooling=badseq,badsum,datanoack,md5sig --dpi-desync-split-pos=10,sniext+1,host+1,midsld-2,midsld,midsld+2,endhost-1,sniext+4 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-split-seqovl=336,midsld-1,sniext+3 --dpi-desync-ttl=9 --dpi-desync=fake --dpi-desync=fake --dup-cutoff=n2 --dup-fooling=md5sig --dup=1 --orig-autottl=+3 <HOSTLIST>"
 ```
 
 #### TPWS
 
 ```
-TPWS_OPT="--filter-tcp=80 --disorder --fix-seg --oob -hostcase -hostnospace -hostpad=16384 -methodeol -methodspace -split-pos=method+2,midsld <HOSTLIST> --new
---filter-tcp=443 --disorder --fix-seg --mss=88 --oob -split-pos=2,sniext+4,host+1,midsld,endhost-1 -tlsrec=midsld,sniext+4 <HOSTLIST>"
+TPWS_OPT="	--filter-tcp=80 --split-pos=method+2 --disorder <HOSTLIST> --new
+			--filter-tcp=443 --tlsrec=sniext+1 --split-pos=1,midsld --fix-seg --oob --disorder <HOSTLIST>"
 ```
