@@ -108,3 +108,23 @@ KONSOLEFONT="UniCyrExt_8x16"
 # Установка драйверов
 
 	paru -S aic94xx-firmware wd719x-firmware linux-firmware-qlogic linux-firmware upd72020x-fw
+
+# Отключение не нужного в Gnome
+
+	systemctl --user mask org.gnome.SettingsDaemon.Wacom.service # Интеграция с граф.планшетом Wacom
+	systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service # уведомления о печати принтером
+	systemctl --user mask org.gnome.SettingsDaemon.Color.service # служба управления цветовыми профилями. Без этого сервиса не будет работать "теплый" режим.
+	systemctl --user mask org.gnome.SettingsDaemon.A11ySettings.service # служба для управления специальными возможностями (для людей с ограниченными возможностями)
+	systemctl --user mask org.gnome.SettingsDaemon.Wwan.service # отключение службы для работы с беспроводными сетями. Не отключать, если вы пользуетесь WiFi.
+	systemctl --user mask org.gnome.SettingsDaemon.UsbProtection.service # отключение служб защиты от сторонних USB при блокировке экрана
+	systemctl --user mask org.gnome.SettingsDaemon.ScreensaverProxy.service # автоматическая блокировка экрана (скринсейвер)
+	systemctl --user mask org.gnome.SettingsDaemon.Sharing.service # общий доступ к каталогам и файлам
+	systemctl --user mask org.gnome.SettingsDaemon.Rfkill.service # Отключение службы управления подсистемой rfkill, отвечающей за отключения любого радиопередатчика в системе (WiFi и Bluetooth)
+	systemctl --user mask org.gnome.SettingsDaemon.Keyboard.service # Отключение службы управления клавиатурой и раскладками GNOME. Можно смело отключать если уже настроили все раскладки и настройки клавиатуры заранее, ибо все предыдущие настройки сохраняются при отключении.
+	systemctl --user mask org.gnome.SettingsDaemon.Sound.service # Отключаем службу управления звуком GNOME. Отключает ТОЛЬКО настройки звука GNOME, а не вообще всё управлением звуком в системе.
+	systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service # интеграция с кард-ридером
+	systemctl --user mask org.gnome.SettingsDaemon.Housekeeping.service # служба слежения за свободным местом на диске
+	systemctl --user mask org.gnome.SettingsDaemon.Power.service # служба управления электропитанием
+
+	# Для включения службы:
+	systemctl --user unmask --now СЛУЖБА
