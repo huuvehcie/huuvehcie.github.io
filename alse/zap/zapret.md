@@ -69,14 +69,14 @@ NFQWS_OPT="--filter-l7=http --dpi-desync=syndata,multisplit --dpi-desync-split-p
 #### NFQWS
 
 ```
-NFQWS_OPT="	--filter-l7=http --dpi-desync-split-seqovl=1,midsld-1,method+1 --dpi-desync=fakedsplit --dpi-desync-autottl=-5 --dpi-desync-fake-http=0x00000000 	
-			--dpi-desync-fake-syndata=/opt/zapret/files/fake/http_iana_org.bin --dpi-desync-fooling=badseq,badsum,datanoack,md5sig --dpi-desync-split-pos=method+2,midsld --dpi-desync-ttl=7 --dpi-desync=syndata,multisplit --dup-cutoff=n2 --dup-fooling=md5sig --dup=1 --hostspell=hoSt --orig-autottl=+3 --methodeol <HOSTLIST> --new
-			--filter-l7=tls --wssize 1:06 --dpi-desync-autottl=-5 --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-fake-tls-mod=rnd,dupsid,rndsni,padencap --dpi-desync-fake-tls=! --dpi-desync-fooling=badseq,badsum,datanoack,md5sig --dpi-desync-split-pos=10,sniext+1,host+1,midsld-2,midsld,midsld+2,endhost-1,sniext+4 --dpi-desync-split-seqovl-pattern=/opt/zapret/files/fake/tls_clienthello_iana_org.bin --dpi-desync-split-seqovl=336,midsld-1,sniext+3 --dpi-desync-ttl=9 --dpi-desync=fake --dpi-desync=fake --dup-cutoff=n2 --dup-fooling=md5sig --dup=1 --orig-autottl=+3 <HOSTLIST>"
+NFQWS_OPT=" --filter-l7=http --dpi-desync-ttl=1 --dpi-desync-split-pos=method+2 --dpi-desync-fake-http=0x00000000 --orig-autottl=+3 --dpi-desync-autottl=-1 --dpi-desync-fooling=md5sig --dup-cutoff=n2 --dup-fooling=md5sig --dup=1 --dpi-desync-fake-syndata=/opt/zapret/files/fake/http_iana_org.bin --hostspell=host <HOSTLIST> --new
+			--filter-l7=tls --dpi-desync-ttl=1 --dpi-desync-fake-tls=0x00000000 --dpi-desync-split-pos=midsld --dpi-desync=fake,multisplit --dpi-desync-fake-tls-mod=rnd,dupsid,rndsni,padencap --orig-autottl=+3 --dup-cutoff=n2 --dup-fooling=md5sig --dup=1 --dpi-desync-fooling=badsum --dpi-desync-split-seqovl=1 --dpi-desync-fake-syndata=/opt/zapret/files/fake/tls_clienthello_iana_org.bin <HOSTLIST> --new
+			--filter-l7=quic --dpi-desync-ipfrag-pos-udp=64 --dpi-desync-repeats=20 --dpi-desync=fake <HOSTLIST>"
 ```
 
 #### TPWS
 
 ```
-TPWS_OPT="	--filter-tcp=80 --split-pos=method+2 --disorder <HOSTLIST> --new
-			--filter-tcp=443 --tlsrec=sniext+1 --split-pos=1,midsld --fix-seg --oob --disorder <HOSTLIST>"
+TPWS_OPT="	--filter-tcp=80 --hostpad=16384 --hostcase --fix-seg --split-pos=method+2,midsld --disorder --oob <HOSTLIST> --new
+ 			--filter-tcp=443 --tlsrec=sniext+4 --fix-seg --split-pos=midsld --disorder --mss=88 --oob <HOSTLIST>"
 ```
