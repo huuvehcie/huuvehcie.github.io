@@ -6,7 +6,9 @@
 	cfdisk
 
 #/dev/sda1	/boot	100M
+
 #/dev/sda2	/	70%
+
 #/dev/sda3	/home	30%
 
 	mkfs.ext2  /dev/sda1 -L boot_part
