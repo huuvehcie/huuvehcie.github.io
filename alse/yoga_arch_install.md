@@ -132,19 +132,63 @@ KONSOLEFONT="UniCyrExt_8x16"
 
 	systemctl --user unmask --now СЛУЖБА
 
-#Оптимизация и хардинг сетевого стека
+#Оптимизация и хардинг сетевого стек
+
+	# --- Оптимизация управления памятью ---
+	vm.swappiness = 1                     # Минимизация использования swap
+	vm.dirty_ratio = 10                   # Оптимизация записи на диск
+	vm.dirty_background_ratio = 3
+	vm.dirty_expire_centisecs = 1000
+	vm.dirty_writeback_centisecs = 500
+	vm.vfs_cache_pressure = 50            # Управление кэшем файловой системы
+	vm.min_free_kbytes = 131072           # Минимальный объем свободной памяти
+	vm.page-cluster = 0                   # Оптимизация виртуальной памяти
+	vm.overcommit_memory = 1              # Более агрессивное выделение памяти
+
+	# --- Дополнительная сетевая оптимизация ---
+	net.ipv4.tcp_rmem = 8192 262144 134217728  # Буферы чтения TCP
+	net.ipv4.tcp_wmem = 8192 262144 134217728  # Буферы записи TCP
+	net.ipv4.tcp_sack = 1                 # Включить SACK (Selective ACK)
+	net.ipv4.tcp_window_scaling = 1       # Масштабирование окна TCP
+
+	# --- Оптимизация планировщика процессов ---
+	kernel.sched_latency_ns = 4000000     # Параметры планировщика CFS
+	kernel.sched_min_granularity_ns = 500000
+	kernel.sched_wakeup_granularity_ns = 2000000
+	kernel.sched_migration_cost_ns = 250000
+	kernel.sched_autogroup_enabled = 0    # Отключение автогруппировки
+
+	# --- Файловая система ---
+	fs.file-max = 4194304                 # Максимальное количество открытых файлов
+	fs.inotify.max_user_watches = 1048576 # Лимиты inotify
+	fs.inotify.max_user_instances = 1024
+
+	# --- Ресурсы системы ---
+	kernel.pid_max = 4194304              # Увеличенный лимит PID
+	kernel.threads-max = 2097152          # Максимальное количество потоков
+
+	# --- Real-time параметры ---
+	kernel.sched_rt_runtime_us = -1       # Настройки real-time
+	kernel.sched_rt_period_us = 1000000
+
+	# --- Дополнительные сетевые буферы ---
+	net.core.rmem_default = 262144        # Значения по умолчанию
+	net.core.wmem_default = 262144
+	net.core.optmem_max = 4194304        # Макс. буфер опций сокета
+	net.ipv4.tcp_max_syn_backlog = 8192  # Увеличенный лимит SYN
+	net.ipv4.tcp_max_tw_buckets = 2000000 # Увеличенный лимит TIME_WAIT
 
 	# --- Основное (маршрутизация, NAT, производительность) ---
 	net.ipv4.ip_forward = 0                  # Отключено (клиентский режим)
-	
+
 	# --- Надежность TCP и защита ---
 	net.ipv4.tcp_syncookies = 1             # Защита от SYN flood
 	net.ipv4.tcp_rfc1337 = 1                # Защита от TIME_WAIT spoofing
 	net.ipv4.tcp_fin_timeout = 15           # Увеличено до 15 сек (было 10)
-	
+
 	# --- Быстрое открытие TCP-соединений ---
 	net.ipv4.tcp_fastopen = 3               # Клиент и сервер
-	
+
 	# --- Безопасность и фильтрация ---
 	# Антиспуфинг
 	net.ipv4.conf.all.rp_filter = 2         # Strict mode
@@ -152,7 +196,7 @@ KONSOLEFONT="UniCyrExt_8x16"
 	net.ipv4.conf.all.arp_ignore = 1        # Игнорировать ARP на нелокальные интерфейсы
 	net.ipv4.conf.all.arp_announce = 2      # Не отвечать на ARP с чужим адресом
 	net.ipv4.conf.all.arp_filter = 1        # Фильтрация ARP-пакетов
-	
+
 	# ICMP-ограничения
 	net.ipv4.conf.all.accept_redirects = 0  # Отключить ICMP redirect
 	net.ipv4.conf.default.accept_redirects = 0
@@ -163,7 +207,7 @@ KONSOLEFONT="UniCyrExt_8x16"
 	net.ipv4.icmp_echo_ignore_broadcasts = 1  # Игнорировать broadcast ping
 	net.ipv4.icmp_ignore_bogus_error_responses = 1  # Игнорировать поддельные ICMP-ошибки
 	net.ipv4.icmp_echoreply_rate = 100      # Ограничение ответов на ping
-	
+
 	# --- Оптимизация TCP ---
 	net.ipv4.tcp_abort_on_overflow = 1      # Быстрое закрытие переполненных соединений
 	net.ipv4.tcp_mtu_probing = 1            # Автоопределение MTU
@@ -173,11 +217,11 @@ KONSOLEFONT="UniCyrExt_8x16"
 	net.ipv4.tcp_max_tw_buckets = 65536     # Макс. сокетов в TIME_WAIT
 	net.ipv4.tcp_synack_retries = 3         # Повторы SYN-ACK
 	net.ipv4.tcp_syn_retries = 3            # Повторы SYN
-	
+
 	# --- Современный congestion control ---
 	net.core.default_qdisc = fq             # Очередь пакетов
 	net.ipv4.tcp_congestion_control = bbr   # Алгоритм BBR
-	
+
 	# --- Дополнительные параметры безопасности ---
 	# Защита ядра
 	kernel.dmesg_restrict = 1               # Только root видит dmesg
@@ -187,16 +231,16 @@ KONSOLEFONT="UniCyrExt_8x16"
 	kernel.pid_max = 65536                  # Макс. PID
 	kernel.sysrq = 0                        # Отключить magic key
 	kernel.core_uses_pid = 1                # PID в имени core-файла
-	
+
 	# Защита от DoS
 	vm.mmap_min_addr = 65536                # Минимальный адрес mmap
 	net.ipv4.tcp_low_latency = 1            # Для сетей с низкой задержкой (опционально)
-	
+
 	# --- Настройки фрагментации ---
 	net.ipv4.ipfrag_time = 30               # Время жизни фрагментов (сек)
 	net.ipv4.ipfrag_high_thresh = 262144    # Макс. память для фрагментов (KB)
 	net.ipv4.ipfrag_low_thresh = 196608     # Мин. память для фрагментов (KB)
-	
+
 	# --- Дополнительные параметры производительности ---
 	# Буферы и порты
 	net.core.rmem_max = 16777216            # Макс. приемный буфер
@@ -207,7 +251,7 @@ KONSOLEFONT="UniCyrExt_8x16"
 	net.ipv4.ip_local_port_range = 1024 65535  # Диапазон локальных портов
 	net.core.netdev_max_backlog = 300000    # Очередь пакетов на интерфейсе
 	net.core.somaxconn = 4096               # Макс. ожидающих подключений
-	
+
 	# --- Опциональные настройки ---
-	# net.ipv4.tcp_window_scaling = 1        # Увеличение окна TCP (для больших задержек)
-	# net.ipv4.tcp_congestion_control = cubic  # Альтернатива BBR
+	net.ipv4.tcp_window_scaling = 1        # Увеличение окна TCP (для больших задержек)
+	net.ipv4.tcp_congestion_control = cubic  # Альтернатива BBR
