@@ -156,3 +156,28 @@
 |417|AMD Ryzen 5 5560U |3MB + 16MB |25 |2300 ‑ 4000|6/12 |7 |3 |
 |423|AMD Ryzen 5 5500U |3MB + 8MB |25 |2100 ‑ 4000|6/12 |7 |3 |
 |438|Intel Core i5-1145G7 |5MB + 8MB |28 |2600 ‑ 4400|4/8 |10 |2 |
+
+## Apple
+
+№	Модель	Код. имя	кэш 2 ур. + кэш 3 ур.	TDP (Вт)	МГц	Ядра / Потоки	
+Литография (нм)
+ 
+7	Apple M4 Max (16 cores)		4MB	90	2592	16/16	3
+26*	Apple M4 Max (14 cores)		4MB	80	2592	14/14	3
+27	Apple M4 Pro (14 cores)		4MB	40	2592	14/14	3
+40*	Apple M3 Max 16-Core			78	2748	16/16	3
+44*	Apple M4 Pro (12 cores)		4MB	32	2592	12/12	3
+84*	Apple M3 Max 14-Core			78	2748	14/14	3
+124*	Apple M3 Pro 12-Core			27	2748	12/12	3
+145*	Apple M3 Pro 11-Core			27	2748	11/11	3
+152	Apple M2 Max		36MB + 48MB	79	2424	12/12	5
+153	Apple M2 Pro		36MB + 24MB		2424	12/12	5
+186	Apple M1 Max		28MB + 48MB		2060	10/10	5
+187*	Apple M2 Pro 10-Core		36MB + 24MB		2424	10/10	5
+188	Apple M4 (10 cores)		4MB	40	2890	10/10	3
+189	Apple M1 Pro		28MB + 24MB		2064	10/10	5
+240*	Apple M4 (9 cores)		4MB	9	2900	9/9	3
+264	Apple M1 Pro 8-Core		28MB + 16MB		2060	8/8	5
+332	Apple M3		4MB		2748	8/8	3
+377	Apple M2		20MB + 8MB	20	2424	8/8	5
+385	Apple M1		16MB + 8MB		2064	8/8	5
