@@ -184,55 +184,55 @@
 
 ### AMD
 
-|Модель ноутбука                             |Процессор                |Батарея,<br>Вт/ч|TDP<br>Вт|%   |
-|--------------------------------------------|-------------------------|----------------|---------|----|
-|Asus ZenBook 14 UM3402Y                     |AMD Ryzen 7 7730U        |75              |15       |5,00|
-|LG UltraPC 14 14U70Q-G.AA79G                |AMD Ryzen 7 5825U        |72              |15       |4,80|
-|Lenovo Yoga 6 13 83B2001SGE                 |AMD Ryzen 7 7730U        |59              |15       |3,93|
-|Lenovo ThinkPad E14 G4 21EB0041GE           |AMD Ryzen 7 5825U        |57              |15       |3,80|
-|Lenovo ThinkPad E14 G5-21JSS05C00           |AMD Ryzen 7 7730U        |57              |15       |3,80|
-|Lenovo ThinkPad E16 G1-21JUS08X00           |AMD Ryzen 7 7730U        |57              |15       |3,80|
-|Lenovo ThinkPad L15 Gen 4 21H70021GE        |AMD Ryzen 7 PRO 7730U    |57              |15       |3,80|
-|HP Envy x360 15-fh0077ng                    |AMD Ryzen 7 7730U        |55              |15       |3,67|
-|SCHENKER XMG Core 15 (M25)                  |AMD Ryzen AI 7 350       |99,80           |28       |3,56|
-|SCHENKER XMG Core 16 M25                    |AMD Ryzen AI 9 HX 370    |99,80           |28       |3,56|
-|Lenovo IdeaPad Flex 5 16ABR G8              |AMD Ryzen 7 7730U        |52,50           |15       |3,50|
-|Asus ProArt P16 H7606WI                     |AMD Ryzen AI 9 HX 370    |90              |28       |3,21|
-|Asus ProArt P16 H7606WP                     |AMD Ryzen AI 9 HX 370    |90              |28       |3,21|
-|Asus ROG Zephyrus G16 GA605WV               |AMD Ryzen AI 9 HX 370    |90              |28       |3,21|
-|Asus TUF Gaming A16 FA608WV                 |AMD Ryzen AI 9 HX 370    |90              |28       |3,21|
-|Razer Blade 16 2025 RTX 5090                |AMD Ryzen AI 9 HX 370    |90              |28       |3,21|
-|Lenovo IdeaPad Pro 5 14AKP G10              |AMD Ryzen AI 7 350       |84              |28       |3,00|
-|Lenovo Yoga Pro 7 14AKP G10                 |AMD Ryzen AI 7 350       |84              |28       |3,00|
-|Tuxedo Infinity Book Pro 14 Gen10 AMD       |AMD Ryzen AI 9 HX 370    |80              |28       |2,86|
-|Asus Zenbook S 16 UM5606-RK333W             |AMD Ryzen AI 9 HX 370    |78              |28       |2,79|
-|HP EliteBook 8 G1a 16 AI                    |AMD Ryzen AI 7 PRO 350   |77              |28       |2,75|
-|Gigabyte Aero X16 1WH                       |AMD Ryzen AI 7 350       |76              |28       |2,71|
-|Asus Zenbook 14 OLED UM3406HA               |AMD Ryzen 7 8840HS       |75              |28       |2,68|
-|Asus ZenBook 14 OLED UM3406K, Ryzen AI 7 350|AMD Ryzen AI 7 350       |75              |28       |2,68|
-|Asus VivoBook S 14 OLED M5406WA             |AMD Ryzen AI 9 HX 370    |75              |28       |2,68|
-|Asus ProArt PX13 HN7306                     |AMD Ryzen AI 9 HX 370    |73              |28       |2,61|
-|Asus ROG Zephyrus G14 2025 GA403WW          |AMD Ryzen AI 9 HX 370    |73              |28       |2,61|
-|Asus TUF Gaming A14 FA401WV-WB94            |AMD Ryzen AI 9 HX 370    |73              |28       |2,61|
-|Lenovo Yoga 7 2-in-1 14AHP9                 |AMD Ryzen 7 8840HS       |71              |28       |2,54|
-|Lenovo Yoga 7 2-in-1 14AKP10                |AMD Ryzen AI 5 340       |70              |28       |2,50|
-|Lenovo Yoga Slim 7 14AKP G10                |AMD Ryzen AI 7 350       |70              |28       |2,50|
-|HP Envy x360 2-in-1 16-ad0097nr             |AMD Ryzen 7 8840HS       |68              |28       |2,43|
-|ONEXPLAYER X1 Pro GA15H-HX370-32GB-1TB-H    |AMD Ryzen AI 9 HX 370    |65              |28       |2,32|
-|Lenovo ThinkPad E14 Gen 7 21T0003NGE        |AMD Ryzen 7 250          |64              |28       |2,29|
-|Dell 14 Plus 2-in-1                         |AMD Ryzen AI 7 350       |64              |28       |2,29|
-|HP EliteBook 8 G1a 14 AD3E9ET               |AMD Ryzen 7 250          |62              |28       |2,21|
-|Framework Laptop 13.5 Ryzen AI 9 HX 370     |AMD Ryzen AI 9 HX 370    |61              |28       |2,18|
-|Lenovo LOQ 15AHP10                          |AMD Ryzen 7 250          |60              |28       |2,14|
-|Lenovo IdeaPad Slim 3 14 AHP G10            |AMD Ryzen 7 8840HS       |60              |28       |2,14|
-|Lenovo ThinkPad T14s Gen 6 21M2S00G00       |AMD Ryzen AI 7 PRO 360   |58              |28       |2,07|
-|Lenovo IdeaPad 5 2-in-1 14AKP10 83KT0033GE  |AMD Ryzen AI 7 350       |57              |28       |2,04|
-|Lenovo ThinkPad P14s Gen 6 21RV0017GE       |AMD Ryzen AI 9 HX PRO 370|57              |28       |2,04|
-|HP EliteBook 845 G11                        |AMD Ryzen 7 PRO 8840HS   |56              |28       |2,00|
-|Dell Inspiron 14 7445 2-in-1                |AMD Ryzen 7 8840HS       |54              |28       |1,93|
-|Lenovo ThinkPad P14s G5 21ME000TGE          |AMD Ryzen 7 PRO 8840HS   |52,50           |28       |1,88|
-|GPD Pocket 4                                |AMD Ryzen AI 9 HX 370    |45              |28       |1,61|
-|Asus Vivobook 16 M1606K                     |AMD Ryzen AI 7 350       |42              |28       |1,50|
+| №<br>пп | Модель ноутбука                              | Процессор                 | Батарея,<br>Вт/ч | TDP<br>Вт | %    |
+| ------- | -------------------------------------------- | ------------------------- | ---------------- | --------- | ---- |
+| 1       | Asus ZenBook 14 UM3402Y                      | AMD Ryzen 7 7730U         | 75               | 15        | 5,00 |
+| 2       | LG UltraPC 14 14U70Q-G.AA79G                 | AMD Ryzen 7 5825U         | 72               | 15        | 4,80 |
+| 3       | Lenovo Yoga 6 13 83B2001SGE                  | AMD Ryzen 7 7730U         | 59               | 15        | 3,93 |
+| 4       | Lenovo ThinkPad E14 G4 21EB0041GE            | AMD Ryzen 7 5825U         | 57               | 15        | 3,80 |
+| 5       | Lenovo ThinkPad E14 G5-21JSS05C00            | AMD Ryzen 7 7730U         | 57               | 15        | 3,80 |
+| 6       | Lenovo ThinkPad E16 G1-21JUS08X00            | AMD Ryzen 7 7730U         | 57               | 15        | 3,80 |
+| 7       | Lenovo ThinkPad L15 Gen 4 21H70021GE         | AMD Ryzen 7 PRO 7730U     | 57               | 15        | 3,80 |
+| 8       | HP Envy x360 15-fh0077ng                     | AMD Ryzen 7 7730U         | 55               | 15        | 3,67 |
+| 9       | SCHENKER XMG Core 15 (M25)                   | AMD Ryzen AI 7 350        | 99,80            | 28        | 3,56 |
+| 10      | SCHENKER XMG Core 16 M25                     | AMD Ryzen AI 9 HX 370     | 99,80            | 28        | 3,56 |
+| 11      | Lenovo IdeaPad Flex 5 16ABR G8               | AMD Ryzen 7 7730U         | 52,50            | 15        | 3,50 |
+| 12      | Asus ProArt P16 H7606WI                      | AMD Ryzen AI 9 HX 370     | 90               | 28        | 3,21 |
+| 13      | Asus ProArt P16 H7606WP                      | AMD Ryzen AI 9 HX 370     | 90               | 28        | 3,21 |
+| 14      | Asus ROG Zephyrus G16 GA605WV                | AMD Ryzen AI 9 HX 370     | 90               | 28        | 3,21 |
+| 15      | Asus TUF Gaming A16 FA608WV                  | AMD Ryzen AI 9 HX 370     | 90               | 28        | 3,21 |
+| 16      | Razer Blade 16 2025 RTX 5090                 | AMD Ryzen AI 9 HX 370     | 90               | 28        | 3,21 |
+| 17      | Lenovo IdeaPad Pro 5 14AKP G10               | AMD Ryzen AI 7 350        | 84               | 28        | 3,00 |
+| 18      | Lenovo Yoga Pro 7 14AKP G10                  | AMD Ryzen AI 7 350        | 84               | 28        | 3,00 |
+| 19      | Tuxedo Infinity Book Pro 14 Gen10 AMD        | AMD Ryzen AI 9 HX 370     | 80               | 28        | 2,86 |
+| 20      | Asus Zenbook S 16 UM5606-RK333W              | AMD Ryzen AI 9 HX 370     | 78               | 28        | 2,79 |
+| 21      | HP EliteBook 8 G1a 16 AI                     | AMD Ryzen AI 7 PRO 350    | 77               | 28        | 2,75 |
+| 22      | Gigabyte Aero X16 1WH                        | AMD Ryzen AI 7 350        | 76               | 28        | 2,71 |
+| 23      | Asus Zenbook 14 OLED UM3406HA                | AMD Ryzen 7 8840HS        | 75               | 28        | 2,68 |
+| 24      | Asus ZenBook 14 OLED UM3406K, Ryzen AI 7 350 | AMD Ryzen AI 7 350        | 75               | 28        | 2,68 |
+| 25      | Asus VivoBook S 14 OLED M5406WA              | AMD Ryzen AI 9 HX 370     | 75               | 28        | 2,68 |
+| 26      | Asus ProArt PX13 HN7306                      | AMD Ryzen AI 9 HX 370     | 73               | 28        | 2,61 |
+| 27      | Asus ROG Zephyrus G14 2025 GA403WW           | AMD Ryzen AI 9 HX 370     | 73               | 28        | 2,61 |
+| 28      | Asus TUF Gaming A14 FA401WV-WB94             | AMD Ryzen AI 9 HX 370     | 73               | 28        | 2,61 |
+| 29      | Lenovo Yoga 7 2-in-1 14AHP9                  | AMD Ryzen 7 8840HS        | 71               | 28        | 2,54 |
+| 30      | Lenovo Yoga 7 2-in-1 14AKP10                 | AMD Ryzen AI 5 340        | 70               | 28        | 2,50 |
+| 31      | Lenovo Yoga Slim 7 14AKP G10                 | AMD Ryzen AI 7 350        | 70               | 28        | 2,50 |
+| 32      | HP Envy x360 2-in-1 16-ad0097nr              | AMD Ryzen 7 8840HS        | 68               | 28        | 2,43 |
+| 33      | ONEXPLAYER X1 Pro GA15H-HX370-32GB-1TB-H     | AMD Ryzen AI 9 HX 370     | 65               | 28        | 2,32 |
+| 34      | Lenovo ThinkPad E14 Gen 7 21T0003NGE         | AMD Ryzen 7 250           | 64               | 28        | 2,29 |
+| 35      | Dell 14 Plus 2-in-1                          | AMD Ryzen AI 7 350        | 64               | 28        | 2,29 |
+| 36      | HP EliteBook 8 G1a 14 AD3E9ET                | AMD Ryzen 7 250           | 62               | 28        | 2,21 |
+| 37      | Framework Laptop 13.5 Ryzen AI 9 HX 370      | AMD Ryzen AI 9 HX 370     | 61               | 28        | 2,18 |
+| 38      | Lenovo LOQ 15AHP10                           | AMD Ryzen 7 250           | 60               | 28        | 2,14 |
+| 39      | Lenovo IdeaPad Slim 3 14 AHP G10             | AMD Ryzen 7 8840HS        | 60               | 28        | 2,14 |
+| 40      | Lenovo ThinkPad T14s Gen 6 21M2S00G00        | AMD Ryzen AI 7 PRO 360    | 58               | 28        | 2,07 |
+| 41      | Lenovo IdeaPad 5 2-in-1 14AKP10 83KT0033GE   | AMD Ryzen AI 7 350        | 57               | 28        | 2,04 |
+| 42      | Lenovo ThinkPad P14s Gen 6 21RV0017GE        | AMD Ryzen AI 9 HX PRO 370 | 57               | 28        | 2,04 |
+| 43      | HP EliteBook 845 G11                         | AMD Ryzen 7 PRO 8840HS    | 56               | 28        | 2,00 |
+| 44      | Dell Inspiron 14 7445 2-in-1                 | AMD Ryzen 7 8840HS        | 54               | 28        | 1,93 |
+| 45      | Lenovo ThinkPad P14s G5 21ME000TGE           | AMD Ryzen 7 PRO 8840HS    | 52,50            | 28        | 1,88 |
+| 46      | GPD Pocket 4                                 | AMD Ryzen AI 9 HX 370     | 45               | 28        | 1,61 |
+| 47      | Asus Vivobook 16 M1606K                      | AMD Ryzen AI 7 350        | 42               | 28        | 1,50 |
 
 
 
