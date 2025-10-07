@@ -320,8 +320,47 @@
 
 ### Qualcomm
 
-
+|№ пп|Модель ноутбука|Процессор|Батарея, Вт/ч|TDP Вт|%|
+|---|---|---|---|---|---|
+|1|Asus Vivobook S 15 OLED Snapdragon|Qualcomm Snapdragon X Elite X1E-78-100|70|23.00|3.04|
+|2|Lenovo Yoga Slim 7X 14Q8X9|Qualcomm Snapdragon X Elite X1E-78-100|70|23.00|3.04|
+|3|Medion SPRCHRGD 14 S1 Elite|Qualcomm Snapdragon X Elite X1E-78-100|65|23.00|2.83|
+|4|Lenovo ThinkBook 16 G7 QOY 21NH0005GE|Qualcomm Snapdragon X Plus X1P-42-100|84|30.00|2.80|
+|5|Asus Vivobook S16 S3607QA|Qualcomm Snapdragon X X1-26-100|70|25.00|2.80|
+|6|Asus ZenBook A14 UX3407QA|Qualcomm Snapdragon X X1-26-100|70|25.00|2.80|
+|7|HP EliteBook Ultra G1q 14|Qualcomm Snapdragon X Elite X1E-78-100|59|23.00|2.57|
+|8|HP OmniBook X 14|Qualcomm Snapdragon X Elite X1E-78-100|59|23.00|2.57|
+|9|Lenovo ThinkPad T14s Gen 6 21N10007GE|Qualcomm Snapdragon X Elite X1E-78-100|58|23.00|2.52|
+|10|Acer Swift Go 14 AI|Qualcomm Snapdragon X Plus X1P-42-100|75|30.00|2.50|
+|11|Lenovo IdeaPad Slim 3 15Q8X10|Qualcomm Snapdragon X X1-26-100|60|25.00|2.40|
+|12|Asus ProArt PZ13 HT5306|Qualcomm Snapdragon X Plus X1P-42-100|70|30.00|2.33|
+|13|Lenovo IdeaPad 5 2-in-1 14Q8X9|Qualcomm Snapdragon X Plus X1P-42-100|57|30.00|1.90|
+|14|Microsoft Surface Laptop 15 Snapdragon X Elite|Qualcomm Snapdragon X Elite X1E-80-100|64|35.00|1.83|
+|15|Samsung Galaxy Book4 Edge 16|Qualcomm Snapdragon X Elite X1E-80-100|61,8|35.00|#VALUE!|
+|16|Honor MagicBook Art 14 Snapdragon|Qualcomm Snapdragon X Elite X1E-80-100|60|35.00|1.71|
+|17|Microsoft Surface Laptop 13|Qualcomm Snapdragon X Plus X1P-42-100|50|30.00|1.67|
+|18|Samsung Galaxy Book4 Edge 14|Qualcomm Snapdragon X Elite X1E-80-100|55,9|35.00|#VALUE!|
+|19|Dell XPS 13 9345|Qualcomm Snapdragon X Elite X1E-80-100|55|35.00|1.57|
+|20|Microsoft Surface Laptop 7 13.8 Copilot+|Qualcomm Snapdragon X Elite X1E-80-100|54|35.00|1.54|
+|21|Microsoft Surface Pro OLED Copilot+|Qualcomm Snapdragon X Elite X1E-80-100|53|35.00|1.51|
+|22|Microsoft Surface Pro Copilot+|Qualcomm Snapdragon X Plus X1P-64-100|47|35.00|1.34|
+|23|Microsoft Surface Pro 12|Qualcomm Snapdragon X Plus X1P-42-100|38|30.00|1.27|
 
 
 
 ### MacBooks
+
+| №<br>пп | Модель ноутбука                        | Процессор               | Батарея,<br>Вт/ч | TDP<br>Вт | %    |
+| ------- | -------------------------------------- | ----------------------- | ---------------- | --------- | ---- |
+| 1       | Apple MacBook Air 15 2023 M2 16 GB     | Apple M2                | 66,5             | 12,00     | 5,54 |
+| 2       | Apple MacBook Pro 14 2023 M3           | Apple M3                | 70               | 16,00     | 4,38 |
+| 3       | Apple MacBook Air 15 M3                | Apple M3                | 66,5             | 16,00     | 4,16 |
+| 4       | Apple MacBook Air 15 M4                | Apple M4 (10 cores)     | 66,5             | 18,00     | 3,69 |
+| 5       | Apple MacBook Air 13 M3 10C GPU        | Apple M3                | 52,6             | 16,00     | 3,29 |
+| 6       | Apple MacBook Air 13 M4 Entry          | Apple M4 (10 cores)     | 53,8             | 18,00     | 2,99 |
+| 7       | Apple MacBook Pro 16 2024 M4 Pro       | Apple M4 Pro (14 cores) | 99,6             | 38,00     | 2,62 |
+| 8       | Apple MacBook Pro 14 2023 M2 Pro       | Apple M2 Pro            | 70               | 30,00     | 2,33 |
+| 9       | Apple MacBook Pro 16 2023 M2 Max       | Apple M2 Max            | 99,6             | 45,00     | 2,21 |
+| 10      | Apple MacBook Pro 14 2024 M4 Pro Entry | Apple M4 Pro (12 cores) | 72,6             | 38,00     | 1,91 |
+| 11      | Apple MacBook Pro 14 2024 M4 Pro       | Apple M4 Pro (14 cores) | 72,6             | 38,00     | 1,91 |
+| 12      | Apple MacBook Pro 16 2023 M3 Max       | Apple M3 Max 16-Core    | 99,6             | 55,00     | 1,81 |
