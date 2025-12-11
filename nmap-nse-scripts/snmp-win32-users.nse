@@ -1,0 +1,1 @@
+../../../Cellar/nmap/7.60/share/nmap/scripts/snmp-win32-users.nse

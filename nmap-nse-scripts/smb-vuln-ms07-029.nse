@@ -1,0 +1,1 @@
+../../../Cellar/nmap/7.60/share/nmap/scripts/smb-vuln-ms07-029.nse
