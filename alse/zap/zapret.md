@@ -80,3 +80,15 @@ NFQWS_OPT="	--filter-l7=http --dpi-desync-split-seqovl=1,midsld-1,method+1 --dpi
 TPWS_OPT="	--filter-tcp=80 --split-pos=method+2 --disorder <HOSTLIST> --new
 			--filter-tcp=443 --tlsrec=sniext+1 --split-pos=1,midsld --fix-seg --oob --disorder <HOSTLIST>"
 ```
+
+### Beeline (zapret2)
+
+#### NFQWS2
+
+```
+NFQWS2_OPT="
+	--filter-tcp=80 --filter-l7=http <HOSTLIST> --payload=http_req --lua-desync=fake:blob=fake_default_http:tcp_ts=-1000 --lua-desync=multisplit:pos=method+2 --new
+	--filter-tcp=443 --filter-l7=tls <HOSTLIST> --payload=tls_client_hello --lua-desync=fake:blob=fake_default_tls:tcp_ts=-1000 --lua-desync=multidisorder:pos=midsld --new
+	--filter-udp=443 --filter-l7=quic <HOSTLIST_NOAUTO> --payload=quic_initial --lua-desync=fake:blob=fake_default_quic:repeats=6
+"
+```
