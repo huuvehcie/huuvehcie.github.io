@@ -4,6 +4,19 @@
 echo '=== BUILD INFO ===' && getprop | grep -E 'ro.build|ro.product|ro.board' && echo -e '\n=== CPU & MEM ===' && cat /proc/cpuinfo | head -20 && echo -e '\n=== MEMORY ===' && free -m && echo -e '\n=== STORAGE ===' && df -h /data /system && echo -e '\n=== NETWORK ===' && ip addr show && echo -e '\n=== RUNNING PROCESSES ===' && ps -A | head -30 && echo -e '\n=== LOGCAT LAST ERRORS ===' && logcat -d -s AndroidRuntime:* *:E | tail -20
 ```
 
+# Описание устройства
+
+## Харакетристики
+
+- _SoC:_ Allwinner H313 (он же IK316), 4 ядра ARM Cortex-A53.
+- _GPU:_ ARM Mali-G31 MP2.
+- _RAM:_ ~1 ГБ (в логе видно 813 МБ total, часть зарезервирована системой)
+- _Storage:_ 8 ГБ eMMC (раздел /data около 3.5 ГБ доступного)
+- _Android:_ Версия 10 (API 29), сборка от октября 2025 года (судя по дате в логе, прошивка кастомная или с будущей датой сборки) 
+- _Платформа:_ cupid, Устройство: titan-p1.
+	
+# Дамп собранной информации
+
 ## === BUILD INFO ===
 
 ```
