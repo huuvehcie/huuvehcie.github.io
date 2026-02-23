@@ -14,6 +14,12 @@ echo '=== BUILD INFO ===' && getprop | grep -E 'ro.build|ro.product|ro.board' &&
 - _Storage:_ 8 ГБ eMMC (раздел /data около 3.5 ГБ доступного)
 - _Android:_ Версия 10 (API 29), сборка от октября 2025 года (судя по дате в логе, прошивка кастомная или с будущей датой сборки) 
 - _Платформа:_ cupid, Устройство: titan-p1.
+
+## Аналогичные устройства
+
+- X96Q Allwinner H313
+- Topleo Allwinner IK316 ATV Box
+- Mortal Q1 / T1 TV Box
 	
 # Дамп собранной информации
 
