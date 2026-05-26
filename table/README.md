@@ -24,3 +24,5 @@
 ![image](table_right.png)
 
 --
+
+Исходники в [Draw.IO](Table-NG.drawio)
