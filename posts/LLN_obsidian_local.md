@@ -1,23 +1,21 @@
-## Полная инструкция: локальный AI-ассистент в Obsidian (MLX) – финальная версия
+## Локальный AI-ассистент в Obsidian (MLX + Ollama) — финальная версия
 
-Ниже **все шаги от начала до конца**, с учётом реальных проблем (отсутствие `mlx_lm download`, недоступность `huggingface-cli`).  
-Работает на Apple Silicon (M5), без Docker, без Ollama, без загрязнения системы Python-пакетами.
+Ниже описаны **все шаги от начала до конца** с учётом реально возникших проблем: отсутствие `mlx_lm download`, недоступность `huggingface-cli`, невозможность найти MLX‑версию `bge‑m3`. В итоге используется связка: **MLX (чат‑модель Qwen2.5 14B) + Ollama (эмбеддинг‑модель bge‑m3)**. Никакого Docker, npm, платных подписок, только изолированные пакеты и нативные приложения. Управление серверами через алиасы в `~/.zshrc`.
 
 ---
 
 ### 1. Подготовка хранилища Obsidian
 
 Убедитесь, что ваши встречи лежат в `~/Work/Obsidian/Work/Meetings`.  
-Если у вас ещё есть файлы с YAML-фронтматтером (начинаются с `---`), их нужно преобразовать в читаемый блок.  
+Если у вас ещё есть файлы с YAML‑фронтматтером (начинаются с `---`), их нужно преобразовать в читаемый блок.  
 Скрипт `convert.sh` делает это рекурсивно, пропуская уже обработанные файлы.
 
-Скачайте скрипт (или создайте в корне хранилища) и выполните:
+Создайте скрипт в корне хранилища и выполните:
 ```bash
 cd ~/Work/Obsidian/Work
 chmod +x convert.sh
 ./convert.sh
 ```
-
 (Текст скрипта `convert.sh` приведён в одном из предыдущих ответов; он заменяет `---`‑блок на читаемые строки «Дата совещания: …» и т.д.)
 
 После конвертации закройте Obsidian.
@@ -40,7 +38,7 @@ pipx ensurepath
 
 ---
 
-### 3. Установка `mlx-lm` в изолированное окружение
+### 3. Установка `mlx‑lm` в изолированное окружение
 
 ```bash
 pipx install mlx-lm
@@ -53,70 +51,103 @@ mlx_lm --help
 
 ---
 
-### 4. Загрузка моделей (чат и эмбеддинги)
+### 4. Загрузка чат-модели (Qwen2.5 14B) через Python
 
-Поскольку у вас нет `mlx_lm download`, используем Python из окружения `mlx-lm` напрямую.
+Поскольку `mlx_lm download` у вас отсутствует, загружаем модель напрямую через Python из окружения `mlx‑lm`.
 
-Установите библиотеку `huggingface_hub` внутрь этого же окружения:
+Установите библиотеку `huggingface_hub` внутрь того же окружения:
 ```bash
 pipx runpip mlx-lm install huggingface_hub
 ```
 
-Загрузите модели одной командой:
+Загрузите модель:
 ```bash
 ~/.local/share/pipx/venvs/mlx-lm/bin/python -c "
 from huggingface_hub import snapshot_download
 snapshot_download('mlx-community/Qwen2.5-14B-Instruct-4bit',
                   local_dir='$HOME/.cache/huggingface/hub/models--mlx-community--Qwen2.5-14B-Instruct-4bit')
-snapshot_download('mlx-community/bge-m3',
-                  local_dir='$HOME/.cache/huggingface/hub/models--mlx-community--bge-m3')
 "
 ```
 
-Проверьте, что папки не пусты:
+Проверьте, что папка не пуста:
 ```bash
 ls ~/.cache/huggingface/hub/models--mlx-community--Qwen2.5-14B-Instruct-4bit
-ls ~/.cache/huggingface/hub/models--mlx-community--bge-m3
 ```
 
 ---
 
-### 5. Запуск серверов через tmux + алиасы
+### 5. Установка и настройка Ollama (только для эмбеддингов)
 
-Установите tmux:
+Скачайте и установите Ollama с [ollama.com](https://ollama.com/download/mac) (нативное приложение, без командной строки).
+
+После запуска в строке меню появится иконка Ollama. Сервер автоматически поднимается на `localhost:11434`.
+
+Загрузите эмбеддинг‑модель:
 ```bash
-brew install tmux
+ollama pull bge-m3
 ```
 
-Добавьте в `~/.zshrc` алиасы:
+Проверьте:
 ```bash
-alias mlx-chat-start='tmux new-session -d -s mlx-chat "mlx_lm server --model mlx-community/Qwen2.5-14B-Instruct-4bit --host 0.0.0.0 --port 8080" && echo "Chat server started on :8080"'
-alias mlx-emb-start='tmux new-session -d -s mlx-emb "mlx_lm server --model mlx-community/bge-m3 --host 0.0.0.0 --port 8081" && echo "Embedding server started on :8081"'
-alias mlx-start='mlx-chat-start && mlx-emb-start'
-alias mlx-stop='tmux kill-session -t mlx-chat 2>/dev/null; tmux kill-session -t mlx-emb 2>/dev/null; echo "All MLX servers stopped"'
-alias mlx-chat-log='tmux attach -t mlx-chat'
-alias mlx-emb-log='tmux attach -t mlx-emb'
+curl http://localhost:11434/api/tags
 ```
 
-Примените:
+---
+
+### 6. Алиасы в `~/.zshrc` для управления серверами
+
+Добавьте в конец файла `~/.zshrc`:
+
+```bash
+# === AI серверы ===
+
+# Запуск всего
+alias mlx-start='
+  # Ollama (в фоне, если ещё не запущена)
+  pgrep -x ollama > /dev/null || (ollama serve > /dev/null 2>&1 &)
+  # Чат MLX в tmux
+  tmux new-session -d -s mlx-chat "mlx_lm server --model mlx-community/Qwen2.5-14B-Instruct-4bit --host 0.0.0.0 --port 8080" 2>/dev/null
+  sleep 2
+  echo "Статус:"
+  curl -s -o /dev/null -w "  Чат (8080): %{http_code}\n" http://localhost:8080/v1/models
+  curl -s -o /dev/null -w "  Эмбеддинги (11434): %{http_code}\n" http://localhost:11434/api/tags
+'
+
+# Остановка всего
+alias mlx-stop='
+  tmux kill-session -t mlx-chat 2>/dev/null
+  pkill ollama 2>/dev/null
+  echo "Серверы остановлены"
+'
+
+# Логи (чат — через tmux, ollama — хвост лог-файла)
+alias mlx-log='
+  echo "=== Чат-сервер (выход: Ctrl+B D) ==="
+  tmux attach -t mlx-chat
+  echo "=== Последние логи Ollama ==="
+  tail -20 ~/.ollama/logs/server.log 2>/dev/null || echo "Лог Ollama не найден"
+'
+```
+
+Примените изменения:
 ```bash
 source ~/.zshrc
 ```
 
-Запустите оба сервера:
+Запустите серверы:
 ```bash
 mlx-start
 ```
 
 Проверьте:
 ```bash
-curl http://localhost:8080/v1/models   # должна вернуть JSON с моделью
-curl http://localhost:8081/v1/models   # тоже JSON
+curl http://localhost:8080/v1/models   # должна вернуть JSON с Qwen2.5
+curl http://localhost:11434/api/tags   # должен содержать bge-m3
 ```
 
 ---
 
-### 6. Настройка Copilot в Obsidian
+### 7. Настройка Copilot в Obsidian
 
 1. Откройте Obsidian → Настройки → Сторонние плагины → Copilot → шестерёнка.
 2. **Chat Model**:
@@ -125,36 +156,19 @@ curl http://localhost:8081/v1/models   # тоже JSON
    - API Key: `no-key` (любая строка)
    - Нажмите «Refresh Models», выберите `mlx-community/Qwen2.5-14B-Instruct-4bit`
 3. **Embedding Model**:
-   - Provider: `OpenAI`
-   - Base URL: `http://localhost:8081/v1`
-   - API Key: `no-key`
-   - Model: `mlx-community/bge-m3`
-4. В разделе **Semantic Search & Indexing**:
-   - ✅ Enable Semantic Search
-   - Auto-Index Strategy: `ON FILE CHANGE`
-   - Max Sources: **15** (для скорости)
-   - Embedding Batch Size: **32** (можно 64, если не падает)
-   - Requests per Minute: **120**
+   - Provider: `Ollama`
+   - Model: `bge-m3`
+4. Остальные параметры Semantic Search & Indexing — согласно таблице ниже.
 5. Сохраните настройки.
 
 ---
 
-### 7. Индексация хранилища
+### 8. Индексация хранилища
 
 `Cmd+P` → **Copilot: Force Reindex Vault**  
 Дождитесь завершения (индикатор в строке состояния).  
-Первая индексация 1800+ файлов займёт 10–20 минут.
-
----
-
-### 8. Удаление Ollama (если было)
-
-Если раньше стояла Ollama, полностью удалите:
-```bash
-# Остановите приложение (иконка в строке меню → Quit)
-rm -rf /Applications/Ollama.app
-rm -rf ~/.ollama
-```
+Первая индексация 1800+ файлов займёт 10–20 минут.  
+В дальнейшем новые заметки будут подхватываться автоматически (`Auto-Index Strategy: ON FILE CHANGE`).
 
 ---
 
@@ -167,42 +181,40 @@ rm -rf ~/.ollama
   - «Сделай сводку встреч по сертификации за июль 2026»
 
 После перезагрузки Mac запускайте серверы командой `mlx-start`.  
-Останавливайте при необходимости: `mlx-stop` (освободит ~15 ГБ памяти).
+Останавливайте при необходимости: `mlx-stop` (освободит память).
 
 ---
 
-### 10. Автозапуск серверов при входе в систему (по желанию)
+### 10. Идеальные параметры Copilot для вашей конфигурации
 
-Создайте файл `~/Library/LaunchAgents/com.mlx.all.plist`:
+Ниже приведены все ключевые настройки и их оптимальные значения для связки MLX‑чат (Qwen2.5 14B) + Ollama‑эмбеддинги (bge‑m3) на MacBook Pro M5 с 24 ГБ объединённой памяти и хранилищем 1800+ транскрипций.
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>Label</key>
-    <string>com.mlx.all</string>
-    <key>ProgramArguments</key>
-    <array>
-        <string>/bin/zsh</string>
-        <string>-c</string>
-        <string>/Users/$USER/.local/bin/mlx_lm server --model mlx-community/Qwen2.5-14B-Instruct-4bit --host 0.0.0.0 --port 8080 &amp; /Users/$USER/.local/bin/mlx_lm server --model mlx-community/bge-m3 --host 0.0.0.0 --port 8081 &amp; wait</string>
-    </array>
-    <key>RunAtLoad</key>
-    <true/>
-    <key>KeepAlive</key>
-    <true/>
-    <key>StandardOutPath</key>
-    <string>/tmp/mlx_all.log</string>
-    <key>StandardErrorPath</key>
-    <string>/tmp/mlx_all.err</string>
-</dict>
-</plist>
-```
+| Настройка | Назначение | Идеальное значение | Пояснение |
+|-----------|-------------|---------------------|-----------|
+| `Conversation turns in context` | Сколько последних реплик диалога попадает в контекст | **5–10** | При большом количестве реплик контекст быстро растёт. 5–10 сохранят связность диалога без переполнения памяти. |
+| `Auto‑compact threshold` | Порог (в токенах), при котором Copilot принудительно обрезает контекст | **12000** | Модель 14B имеет лимит 32k токенов, но на практике при большом контексте падает. 12k — безопасный лимит с запасом. |
+| `Max Sources` | Число фрагментов (чанков) заметок, подаваемых в модель | **12** | При среднем чанке ~1000 токенов 12 источников дают ~12 000 токенов — безопасно. Если уменьшить размер чанка до 300–400, можно увеличить до 16–20. |
+| `Requests per Minute` | Лимит запросов к embedding‑модели | **120** | Локальный сервер не имеет внешних ограничений, можно ускорить индексацию. |
+| `Embedding Batch Size` | Размер пакета для векторизации | **32–64** | 128 может занять 6–8 ГБ RAM при индексации, что для 24 ГБ рискованно. 32–64 безопасно и достаточно быстро. |
+| `Number of Partitions` | На сколько частей разбит поисковый индекс | **1** | Для 1800 заметок увеличение числа разделов только замедлит поиск. Оставьте 1. (Изменение требует переиндексации) |
+| `Lexical Search RAM Limit` | Макс. память под полнотекстовый индекс | **256 МБ** | 1 ГБ отнимает память у GPU. 256 МБ хватит для вашего объёма заметок. |
+| `Enable Folder and Graph Boosts` | Усиливать релевантность по папкам и связям в графе | **Вкл** | Ваша структура папок и внутренние ссылки дают полезный сигнал — точность ответов растёт. |
+| `Enable Obsidian Sync for Copilot index` | Хранить индекс в `.obsidian` для синхронизации | **Выкл** | Если не пользуетесь Obsidian Sync, отключение экономит ресурсы. |
+| `Disable index loading on mobile` | Не загружать индекс на мобильных устройствах | **Вкл** | Не используется на Mac, можно оставить. |
+| `Custom Prompt Templating` | Шаблоны промптов | **Вкл** | Не влияет на память, даёт гибкость настройки ответов. |
+| `Enable Autonomous Agent` | Автономный агент (запись в файлы, веб‑поиск и т.д.) | **Выкл** | Агент создаёт множество итераций, каждая требует вызова модели и увеличивает контекст. При ограниченной памяти опасно. |
+| `Max Iterations` | Макс. шагов агента (если включён) | **4** | При выключенном агенте не используется. |
+| `Reference Recent Conversation` | Добавлять историю текущего диалога в контекст | **Вкл** | Без истории модель не помнит предыдущие сообщения. Вместе с `Conversation turns = 5–10` даёт связный диалог и контролируемый контекст. |
+| `Max Recent Conversations` | Сколько завершённых диалогов хранить на диске | **10** | Влияет только на размер базы чатов, не на память при генерации. |
+| `Reference Saved Memories` | Добавлять «памятки» в контекст | **Выкл** | Если не ведёте базу фактов, отключите, чтобы не раздувать контекст. |
+| `Auto‑Add Active Content to Context` | Автоматически добавлять содержимое активной заметки в контекст | **Выкл** (или **Вкл** по необходимости) | При включении любая открытая заметка попадает в контекст, увеличивая его. Лучше добавлять только выделенные фрагменты вручную. |
+| `Auto‑Add Selection to Context` | Автоматически добавлять выделенный текст в контекст | **Вкл** | Удобно для уточняющих вопросов по конкретному отрывку, не раздувает контекст без вашего ведома. |
+| `Images in Markdown` | Отображать картинки в чате | **Выкл** | В транскрипциях изображений нет, включение не даст эффекта. |
+| `Suggested Prompts` | Показывать подсказки‑вопросы над строкой ввода | **Вкл** | Не влияет на производительность, просто удобство. |
+| `Relevant Notes` | Панель «Похожие заметки» в чате | **Вкл** | Позволяет видеть, какие заметки были найдены и переданы модели. Полезно для отладки точности, не влияет на память. |
+| `Autosave Chat` | Автосохранение истории чата в файл | **Вкл** | Позволяет возвращаться к старым обсуждениям, не влияет на память. |
+| `Generate AI Chat Title on Save` | Генерация заголовка чата моделью при сохранении | **Вкл** | Добавляет один короткий запрос (~200 токенов) при сохранении. Если экономите каждый запрос — отключите. |
 
-Загрузите:
-```bash
-launchctl load ~/Library/LaunchAgents/com.mlx.all.plist
-```
+**Обязательно:** после изменения `Number of Partitions` выполните **Force Reindex Vault**. Остальные параметры не требуют переиндексации.
 
-Теперь серверы будут стартовать автоматически при входе в систему.
+Теперь ваш полностью локальный AI‑помощник готов к работе. Ответы на русском, быстрый чат благодаря MLX, точный поиск благодаря Ollama‑эмбеддингам, и всё управляется тремя алиасами.
