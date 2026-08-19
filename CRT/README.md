@@ -551,6 +551,11 @@ grep -r "Russian Trusted Root CA" /etc/ssl/certs/ && echo "СТАРЫЙ КОРЕ
 4. Найдите сертификат → Правый клик → «Удалить»
 5. Введите пароль администратора для подтверждения
 
+Или просто
+```bash
+security delete-certificate -Z 8FF915CCAB7BC16F8C5C8099D53E0E115B3AEC2F ~/Library/Keychains/login.keychain-db
+```
+
 **Шаг 2: Установка через Terminal (рекомендуется)**
 
 ```bash
