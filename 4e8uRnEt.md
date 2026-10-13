@@ -24,3 +24,6 @@
 |Beeline Spb|-d1 -d3+s -s6+s -s9+s -s12+s -s20+s -d25+s -s30+s -a1 -At,r,s|
 | |-d1 -s1+s -d3+s -s6+s -s9+s -s15+s -s20+s -d25+s -s30+s -a1|
 | | -d3+s -q4+hm -o2 -t5 -a1|
+|NWGSM|-f1 -t5 -n "gosuslugi.ru" -q3+h -Qr -f2 -q1 -r1+s -t15 -q1 -o2 -a1|
+| |-n "gosuslugi.ru" -Qr -f-1 -d1 -s1+s -a1 -At,r,s -f-204 -s1:5+sm -q1 -a1 -As -o1 -r5 -Mh -a1|
+| |-n "gosuslugi.ru" -Qr -m2 -f-1 -d7 -a1|
