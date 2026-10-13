@@ -21,3 +21,6 @@
 |Corbina Spb|-d1 -s4 -d8 -s1+s -d5+s -s10+s -d20+s -a1 -At,r,s -f-1 -S -n "gosuslugi.ru" -Qr -t8|
 | |-d1 -s1+s -d3+s -s6+s -s9+s -s12+s -s20+s -s30+s -a1 -At,r,s -f-1 -S -t8 -n "gosuslugi.ru" -Qr|
 | |-d1 -s4 -d8 -s1+s -d5+s -s10+s -d20+s -a1 -At,r,s -f-1 -S -n "gosuslugi.ru" -Qr -t8|
+|Beeline Spb|-d1 -d3+s -s6+s -s9+s -s12+s -s20+s -d25+s -s30+s -a1 -At,r,s|
+| |-d1 -s1+s -d3+s -s6+s -s9+s -s15+s -s20+s -d25+s -s30+s -a1|
+| | -d3+s -q4+hm -o2 -t5 -a1|
