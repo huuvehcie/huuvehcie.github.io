@@ -1,3 +1,5 @@
+# Karing Subscriptions
+
 | № | Название подписки | Ссылка |
 |---|------------------|--------|
 | 1 | irbox | [https://raw.githubusercontent.com/frank-vpl/servers/refs/heads/main/irbox](https://raw.githubusercontent.com/frank-vpl/servers/refs/heads/main/irbox) |
@@ -11,3 +13,11 @@
 | 9 | 🏳️ WHITE LISTS \| SNI-RU | [https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt](https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt) |
 | 10 | bypass-all (GitHub Mirror Bypass) | [https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-all.txt](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-all.txt) |
 | 11 | vless_universal (White List) | [https://raw.githubusercontent.com/zieng2/wl/main/vless_universal.txt](https://raw.githubusercontent.com/zieng2/wl/main/vless_universal.txt) |
+
+# ByeByeDPI
+
+|Провайден|Стратегия|
+|---|---|
+|Corbina Spb|-d1 -s4 -d8 -s1+s -d5+s -s10+s -d20+s -a1 -At,r,s -f-1 -S -n "gosuslugi.ru" -Qr -t8|
+| |-d1 -s1+s -d3+s -s6+s -s9+s -s12+s -s20+s -s30+s -a1 -At,r,s -f-1 -S -t8 -n "gosuslugi.ru" -Qr|
+| |-d1 -s4 -d8 -s1+s -d5+s -s10+s -d20+s -a1 -At,r,s -f-1 -S -n "gosuslugi.ru" -Qr -t8|
