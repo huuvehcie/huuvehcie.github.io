@@ -1,0 +1,441 @@
+{
+  "total_requested": 79,
+  "total_dangerous_flagged": 34,
+  "declared_by_app": 2,
+  "declared_permissions": [
+    "com.radolyn.ayugram.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.radolyn.ayugram.permission.MAPS_RECEIVE"
+  ],
+  "requested_permissions": [
+    {
+      "permission": "android.permission.ACCESS_ADSERVICES_AD_ID",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.ACCESS_BACKGROUND_LOCATION",
+      "dangerous": true,
+      "note": "Местоположение в фоне (стиллер/трекер)"
+    },
+    {
+      "permission": "android.permission.ACCESS_COARSE_LOCATION",
+      "dangerous": true,
+      "note": "Грубое местоположение"
+    },
+    {
+      "permission": "android.permission.ACCESS_FINE_LOCATION",
+      "dangerous": true,
+      "note": "Точное местоположение (слежка)"
+    },
+    {
+      "permission": "android.permission.ACCESS_MEDIA_LOCATION",
+      "dangerous": true,
+      "note": "Геоданные медиа (EXIF)"
+    },
+    {
+      "permission": "android.permission.ACCESS_NETWORK_STATE",
+      "dangerous": true,
+      "note": "Состояние сети (проверка связи перед C2)"
+    },
+    {
+      "permission": "android.permission.ACCESS_WIFI_STATE",
+      "dangerous": true,
+      "note": "Состояние Wi-Fi"
+    },
+    {
+      "permission": "android.permission.AUTHENTICATE_ACCOUNTS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.BLUETOOTH",
+      "dangerous": true,
+      "note": "Bluetooth"
+    },
+    {
+      "permission": "android.permission.BLUETOOTH_CONNECT",
+      "dangerous": true,
+      "note": "Bluetooth-подключения"
+    },
+    {
+      "permission": "android.permission.CAMERA",
+      "dangerous": true,
+      "note": "Камера (фото/видео без ведома)"
+    },
+    {
+      "permission": "android.permission.CHANGE_WIFI_STATE",
+      "dangerous": true,
+      "note": "Изменение состояния Wi-Fi"
+    },
+    {
+      "permission": "android.permission.CREDENTIAL_MANAGER_SET_ORIGIN",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.FOREGROUND_SERVICE",
+      "dangerous": true,
+      "note": "Фоновый сервис"
+    },
+    {
+      "permission": "android.permission.FOREGROUND_SERVICE_CAMERA",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "dangerous": true,
+      "note": "Фоновая синхронизация"
+    },
+    {
+      "permission": "android.permission.FOREGROUND_SERVICE_LOCATION",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.GET_ACCOUNTS",
+      "dangerous": true,
+      "note": "Доступ к аккаунтам устройства"
+    },
+    {
+      "permission": "android.permission.INTERNET",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.MANAGE_ACCOUNTS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.MANAGE_EXTERNAL_STORAGE",
+      "dangerous": true,
+      "note": "Полный доступ к файловой системе (Android 11+)"
+    },
+    {
+      "permission": "android.permission.MANAGE_OWN_CALLS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.MODIFY_AUDIO_SETTINGS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.POST_NOTIFICATIONS",
+      "dangerous": true,
+      "note": "Уведомления"
+    },
+    {
+      "permission": "android.permission.QUERY_ALL_PACKAGES",
+      "dangerous": true,
+      "note": "Список всех приложений (профилирование, анти-анализ)"
+    },
+    {
+      "permission": "android.permission.READ_APP_BADGE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.READ_CLIPBOARD",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.READ_CONTACTS",
+      "dangerous": true,
+      "note": "Чтение контактов (спам, скам по соцграфу)"
+    },
+    {
+      "permission": "android.permission.READ_EXTERNAL_STORAGE",
+      "dangerous": true,
+      "note": "Чтение внешней памяти"
+    },
+    {
+      "permission": "android.permission.READ_MEDIA_AUDIO",
+      "dangerous": true,
+      "note": "Чтение аудио"
+    },
+    {
+      "permission": "android.permission.READ_MEDIA_IMAGES",
+      "dangerous": true,
+      "note": "Чтение изображений"
+    },
+    {
+      "permission": "android.permission.READ_MEDIA_VIDEO",
+      "dangerous": true,
+      "note": "Чтение видео"
+    },
+    {
+      "permission": "android.permission.READ_PHONE_NUMBERS",
+      "dangerous": true,
+      "note": "Чтение телефонных номеров"
+    },
+    {
+      "permission": "android.permission.READ_PHONE_STATE",
+      "dangerous": true,
+      "note": "Состояние телефона (IMEI, номер, идентификация)"
+    },
+    {
+      "permission": "android.permission.READ_PROFILE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.READ_SYNC_SETTINGS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.RECEIVE_BOOT_COMPLETED",
+      "dangerous": true,
+      "note": "Автозапуск после перезагрузки (персистентность)"
+    },
+    {
+      "permission": "android.permission.RECORD_AUDIO",
+      "dangerous": true,
+      "note": "Запись звука (прослушка)"
+    },
+    {
+      "permission": "android.permission.REQUEST_DELETE_PACKAGES",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.REQUEST_INSTALL_PACKAGES",
+      "dangerous": true,
+      "note": "Установка пакетов (dropper/rat)"
+    },
+    {
+      "permission": "android.permission.SCHEDULE_EXACT_ALARM",
+      "dangerous": true,
+      "note": "Точные будильники"
+    },
+    {
+      "permission": "android.permission.SYSTEM_ALERT_WINDOW",
+      "dangerous": true,
+      "note": "Оверлеи (overlay-атаки, фишинг паролей)"
+    },
+    {
+      "permission": "android.permission.USE_BIOMETRIC",
+      "dangerous": true,
+      "note": "Биометрия"
+    },
+    {
+      "permission": "android.permission.USE_FINGERPRINT",
+      "dangerous": true,
+      "note": "Отпечаток пальца"
+    },
+    {
+      "permission": "android.permission.USE_FULL_SCREEN_INTENT",
+      "dangerous": true,
+      "note": "Полноэкранные интенты (фишинг)"
+    },
+    {
+      "permission": "android.permission.VIBRATE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "android.permission.WAKE_LOCK",
+      "dangerous": true,
+      "note": "Wake Lock (удержание CPU)"
+    },
+    {
+      "permission": "android.permission.WRITE_CONTACTS",
+      "dangerous": true,
+      "note": "Изменение контактов"
+    },
+    {
+      "permission": "android.permission.WRITE_EXTERNAL_STORAGE",
+      "dangerous": true,
+      "note": "Запись во внешнюю память"
+    },
+    {
+      "permission": "android.permission.WRITE_SYNC_SETTINGS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.anddoes.launcher.permission.UPDATE_COUNT",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.android.launcher.permission.INSTALL_SHORTCUT",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.android.vending.BILLING",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.google.android.apps.aicore.service.BIND_SERVICE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.google.android.c2dm.permission.RECEIVE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.google.android.gms.permission.AD_ID",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.google.android.providers.gsf.permission.READ_GSERVICES",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.htc.launcher.permission.READ_SETTINGS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.htc.launcher.permission.UPDATE_SHORTCUT",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.huawei.android.launcher.permission.CHANGE_BADGE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.huawei.android.launcher.permission.READ_SETTINGS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.majeur.launcher.permission.UPDATE_BADGE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.oppo.launcher.permission.READ_SETTINGS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.oppo.launcher.permission.WRITE_SETTINGS",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.radolyn.ayugram.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.radolyn.ayugram.permission.MAPS_RECEIVE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.sec.android.provider.badge.permission.READ",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.sec.android.provider.badge.permission.WRITE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.sonyericsson.home.permission.BROADCAST_BADGE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "me.everything.badger.permission.BADGE_COUNT_READ",
+      "dangerous": false,
+      "note": ""
+    },
+    {
+      "permission": "me.everything.badger.permission.BADGE_COUNT_WRITE",
+      "dangerous": false,
+      "note": ""
+    }
+  ],
+  "suspicious_combinations": [
+    {
+      "combo": "Dropper-паттерн",
+      "perms": [
+        "android.permission.REQUEST_INSTALL_PACKAGES"
+      ],
+      "risk": "high",
+      "why": "Установка APK + overlay/accessibility: поведенческий паттерн дроппера"
+    },
+    {
+      "combo": "Камера+Микрофон",
+      "perms": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "risk": "medium",
+      "why": "Скрытая съёмка/прослушка (шпионское ПО) — у мессенджера легитимно"
+    },
+    {
+      "combo": "Фоновая геолокация",
+      "perms": [
+        "android.permission.ACCESS_BACKGROUND_LOCATION"
+      ],
+      "risk": "medium",
+      "why": "Непрерывный трекинг местоположения"
+    },
+    {
+      "combo": "Полный доступ к файлам",
+      "perms": [
+        "android.permission.MANAGE_EXTERNAL_STORAGE"
+      ],
+      "risk": "medium",
+      "why": "Все файлы: эксфильтрация документов, поиск ключей"
+    }
+  ]
+}

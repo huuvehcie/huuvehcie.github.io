@@ -1,0 +1,1253 @@
+{
+ "uses_permissions": [
+  "com.google.android.c2dm.permission.RECEIVE",
+  "com.radolyn.ayugram.permission.MAPS_RECEIVE",
+  "com.google.android.providers.gsf.permission.READ_GSERVICES",
+  "android.permission.ACCESS_COARSE_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.ACCESS_MEDIA_LOCATION",
+  "android.permission.SCHEDULE_EXACT_ALARM",
+  "android.permission.USE_FULL_SCREEN_INTENT",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.READ_CLIPBOARD",
+  "android.permission.BLUETOOTH_CONNECT",
+  "android.permission.INTERNET",
+  "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+  "android.permission.FOREGROUND_SERVICE_CAMERA",
+  "android.permission.FOREGROUND_SERVICE_LOCATION",
+  "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+  "android.permission.RECORD_AUDIO",
+  "android.permission.MODIFY_AUDIO_SETTINGS",
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.ACCESS_WIFI_STATE",
+  "android.permission.CHANGE_WIFI_STATE",
+  "android.permission.WAKE_LOCK",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.READ_MEDIA_IMAGES",
+  "android.permission.READ_MEDIA_VIDEO",
+  "android.permission.READ_MEDIA_AUDIO",
+  "android.permission.GET_ACCOUNTS",
+  "android.permission.READ_CONTACTS",
+  "android.permission.WRITE_CONTACTS",
+  "android.permission.MANAGE_ACCOUNTS",
+  "android.permission.READ_PROFILE",
+  "android.permission.WRITE_SYNC_SETTINGS",
+  "android.permission.READ_SYNC_SETTINGS",
+  "android.permission.AUTHENTICATE_ACCOUNTS",
+  "android.permission.VIBRATE",
+  "android.permission.SYSTEM_ALERT_WINDOW",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.USE_FINGERPRINT",
+  "android.permission.USE_BIOMETRIC",
+  "com.android.launcher.permission.INSTALL_SHORTCUT",
+  "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+  "android.permission.CAMERA",
+  "android.permission.BLUETOOTH",
+  "android.permission.MANAGE_OWN_CALLS",
+  "android.permission.REQUEST_INSTALL_PACKAGES",
+  "android.permission.READ_PHONE_NUMBERS",
+  "android.permission.POST_NOTIFICATIONS",
+  "com.sec.android.provider.badge.permission.READ",
+  "com.sec.android.provider.badge.permission.WRITE",
+  "com.htc.launcher.permission.READ_SETTINGS",
+  "com.htc.launcher.permission.UPDATE_SHORTCUT",
+  "com.sonyericsson.home.permission.BROADCAST_BADGE",
+  "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+  "com.anddoes.launcher.permission.UPDATE_COUNT",
+  "com.majeur.launcher.permission.UPDATE_BADGE",
+  "com.huawei.android.launcher.permission.CHANGE_BADGE",
+  "com.huawei.android.launcher.permission.READ_SETTINGS",
+  "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+  "android.permission.READ_APP_BADGE",
+  "com.oppo.launcher.permission.READ_SETTINGS",
+  "com.oppo.launcher.permission.WRITE_SETTINGS",
+  "me.everything.badger.permission.BADGE_COUNT_READ",
+  "me.everything.badger.permission.BADGE_COUNT_WRITE",
+  "com.android.vending.BILLING",
+  "android.permission.WRITE_EXTERNAL_STORAGE",
+  "android.permission.ACCESS_BACKGROUND_LOCATION",
+  "android.permission.QUERY_ALL_PACKAGES",
+  "android.permission.CREDENTIAL_MANAGER_SET_ORIGIN",
+  "android.permission.REQUEST_DELETE_PACKAGES",
+  "android.permission.MANAGE_EXTERNAL_STORAGE",
+  "com.google.android.apps.aicore.service.BIND_SERVICE",
+  "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+  "com.google.android.gms.permission.AD_ID",
+  "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+  "android.permission.ACCESS_ADSERVICES_AD_ID",
+  "com.radolyn.ayugram.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+ ],
+ "uses_cleartext": "true",
+ "network_security_config": null,
+ "debuggable": null,
+ "queries": [
+  {
+   "tag": "package",
+   "name": "com.google.android.apps.maps"
+  },
+  {
+   "tag": "package",
+   "name": "com.radolyn.ayugram.mediabridge"
+  },
+  {
+   "tag": "intent",
+   "name": null
+  },
+  {
+   "tag": "intent",
+   "name": null
+  },
+  {
+   "tag": "intent",
+   "name": null
+  },
+  {
+   "tag": "intent",
+   "name": null
+  },
+  {
+   "tag": "package",
+   "name": "com.google.android.aicore"
+  },
+  {
+   "tag": "package",
+   "name": "com.google.android.gms.policy_cast_dynamite"
+  },
+  {
+   "tag": "provider",
+   "name": "androidx.car.app.connection.provider"
+  }
+ ],
+ "exported_components": [
+  {
+   "tag": "activity",
+   "name": "org.telegram.ui.LaunchActivity",
+   "exported_attr": "true",
+   "intent_filters": 15,
+   "actions": [
+    "android.intent.action.MAIN",
+    "android.intent.action.SEND",
+    "android.intent.action.VIEW",
+    "android.intent.action.SEND",
+    "android.intent.action.SEND_MULTIPLE",
+    "android.intent.action.SEND",
+    "android.intent.action.SEND",
+    "android.intent.action.SEND_MULTIPLE"
+   ]
+  },
+  {
+   "tag": "activity",
+   "name": "org.telegram.ui.BubbleActivity",
+   "exported_attr": null,
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "org.telegram.ui.ShareActivity",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.VIEW"
+   ]
+  },
+  {
+   "tag": "activity",
+   "name": "org.telegram.ui.ExternalActionActivity",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "org.telegram.passport.AUTHORIZE"
+   ]
+  },
+  {
+   "tag": "activity",
+   "name": "org.telegram.ui.ChatsWidgetConfigActivity",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.appwidget.action.APPWIDGET_CONFIGURE"
+   ]
+  },
+  {
+   "tag": "activity",
+   "name": "org.telegram.ui.ContactsWidgetConfigActivity",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.appwidget.action.APPWIDGET_CONFIGURE"
+   ]
+  },
+  {
+   "tag": "activity",
+   "name": "org.telegram.messenger.OpenChatReceiver",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "org.telegram.messenger.OpenAttachedMenuBotReceiver",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "org.telegram.ui.PopupNotificationActivity",
+   "exported_attr": null,
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "org.telegram.ui.VoIPPermissionActivity",
+   "exported_attr": null,
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "org.telegram.ui.VoIPFeedbackActivity",
+   "exported_attr": null,
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "androidx.credentials.playservices.controllers.identityauth.HiddenActivity",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "androidx.credentials.playservices.controllers.identitycredentials.IdentityCredentialApiHiddenActivity",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "com.google.android.gms.auth.api.signin.internal.SignInHubActivity",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "com.android.billingclient.api.ProxyBillingActivity",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "com.android.billingclient.api.ProxyBillingActivityV2",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "com.google.android.gms.common.api.GoogleApiActivity",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "androidx.car.app.CarAppPermissionActivity",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity",
+   "name": "com.google.android.play.core.common.PlayCoreDialogWrapperActivity",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "activity-alias",
+   "name": "org.telegram.ui.CallsActivity",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.VIEW"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.Google26Icon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.GoogleIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.OsuIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AuroraIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AmethystIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.SunsetIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.HumanIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.JellyfishIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.SpaceIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.CyberpunkIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.NasaIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.XpIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.PsychosisIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.FishIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.IceAgeIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.NyanCatIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.FlappyIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.InvincibleIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.SpongeIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.HamsterIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.FrogIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.SusIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.GuitarIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.CandyIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AvatarIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.EchpochmakIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.MoleIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.EditorIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.OrbitIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.WinterIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.MonetIconExtera",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.ExteraIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AyuTyan",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AyuGramYaPlus",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AyuGramBard",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AyuGramNothing",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AyuGramExtera",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AyuGramSpotify",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AyuGramDiscord",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.AyuGramAlt",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.MonetIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "activity-alias",
+   "name": "com.exteragram.messenger.DefaultIcon",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MAIN"
+   ]
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.GcmPushListenerService",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ]
+  },
+  {
+   "tag": "service",
+   "name": "com.exteragram.messenger.plugins.analyzer.PluginAnalyzerService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.AuthenticatorService",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.accounts.AccountAuthenticator"
+   ]
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.ContactsSyncAdapterService",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.content.SyncAdapter"
+   ]
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.KeepAliveJob",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.BringAppForegroundService",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.NotificationsService",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.NotificationRepeat",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.VideoEncodingService",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.ui.Stories.recorder.StoryUploadingService",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.ImportingService",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.LocationSharingService",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.voip.VoIPService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.MusicPlayerService",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.MusicBrowserService",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.media.browse.MediaBrowserService"
+   ]
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.voip.TelegramConnectionService",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.telecom.ConnectionService"
+   ]
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.WearAuthListenerService",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "com.google.android.gms.wearable.MESSAGE_RECEIVED"
+   ]
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.ChatsWidgetService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.ContactsWidgetService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.FilesMigrationService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "org.telegram.messenger.car.TelegramCarAppService",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "androidx.car.app.CarAppService"
+   ]
+  },
+  {
+   "tag": "service",
+   "name": "androidx.camera.core.impl.MetadataHolderService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "com.google.android.gms.cast.framework.ReconnectionService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "com.google.firebase.messaging.FirebaseMessagingService",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "com.google.firebase.MESSAGING_EVENT"
+   ]
+  },
+  {
+   "tag": "service",
+   "name": "com.google.firebase.components.ComponentDiscoveryService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "com.google.android.gms.measurement.AppMeasurementService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "com.google.android.gms.measurement.AppMeasurementJobService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "com.google.firebase.sessions.SessionLifecycleService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "androidx.car.app.CarAppMetadataHolderService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "androidx.sharetarget.ChooserTargetServiceCompat",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.service.chooser.ChooserTargetService"
+   ]
+  },
+  {
+   "tag": "service",
+   "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "service",
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.AutoMessageHeardReceiver",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "org.telegram.messenger.ACTION_MESSAGE_HEARD"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.CopyCodeReceiver",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "org.telegram.messenger.ACTION_COPY_CODE"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.NotificationsDisabledReceiver",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "android.app.action.NOTIFICATION_CHANNEL_BLOCK_STATE_CHANGED"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.SmsReceiver",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.CallReceiver",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.PHONE_STATE"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "com.exteragram.messenger.updater.UpdaterUtils$UpdateReceiver",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MY_PACKAGE_REPLACED"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.MusicPlayerReceiver",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "org.telegram.android.musicplayer.close",
+    "org.telegram.android.musicplayer.pause",
+    "org.telegram.android.musicplayer.next",
+    "org.telegram.android.musicplayer.play",
+    "org.telegram.android.musicplayer.previous",
+    "android.intent.action.MEDIA_BUTTON",
+    "android.media.AUDIO_BECOMING_NOISY"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.voip.VoIPMediaButtonReceiver",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.MEDIA_BUTTON"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.AppStartReceiver",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "org.telegram.start",
+    "android.intent.action.BOOT_COMPLETED"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.RefererReceiver",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "com.android.vending.INSTALL_REFERRER"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.WearReplyReceiver",
+   "exported_attr": null,
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.StopLiveLocationReceiver",
+   "exported_attr": null,
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.PopupReplyReceiver",
+   "exported_attr": null,
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.NotificationCallbackReceiver",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.ShareBroadcastReceiver",
+   "exported_attr": null,
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.CustomTabsCopyReceiver",
+   "exported_attr": null,
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.NotificationDismissReceiver",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.voip.VoIPActionsReceiver",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.ShortcutResultReceiver",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.ChatsWidgetProvider",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "org.telegram.messenger.ContactsWidgetProvider",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "android.appwidget.action.APPWIDGET_UPDATE"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported_attr": "false",
+   "intent_filters": 1,
+   "actions": [
+    "android.intent.action.BOOT_COMPLETED"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "com.google.android.gms.cast.framework.media.MediaIntentReceiver",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+   "exported_attr": "true",
+   "intent_filters": 1,
+   "actions": [
+    "com.google.android.c2dm.intent.RECEIVE"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "com.google.android.gms.measurement.AppMeasurementReceiver",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "androidx.car.app.notification.CarAppNotificationBroadcastReceiver",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "receiver",
+   "name": "androidx.profileinstaller.ProfileInstallReceiver",
+   "exported_attr": "true",
+   "intent_filters": 4,
+   "actions": [
+    "androidx.profileinstaller.action.INSTALL_PROFILE",
+    "androidx.profileinstaller.action.SKIP_FILE",
+    "androidx.profileinstaller.action.SAVE_PROFILE",
+    "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+   ]
+  },
+  {
+   "tag": "receiver",
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "provider",
+   "name": "androidx.core.content.FileProvider",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "provider",
+   "name": "org.telegram.messenger.NotificationImageProvider",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "provider",
+   "name": "com.exteragram.messenger.icons.IconPackProvider",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "provider",
+   "name": "org.telegram.messenger.voip.CallNotificationSoundProvider",
+   "exported_attr": "true",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "provider",
+   "name": "androidx.startup.InitializationProvider",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "provider",
+   "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  },
+  {
+   "tag": "provider",
+   "name": "com.google.firebase.provider.FirebaseInitProvider",
+   "exported_attr": "false",
+   "intent_filters": 0,
+   "actions": []
+  }
+ ],
+ "application_class": "org.telegram.messenger.ApplicationLoader",
+ "sdk_versions": {
+  "minSdkVersion": "24",
+  "targetSdkVersion": "36"
+ }
+}

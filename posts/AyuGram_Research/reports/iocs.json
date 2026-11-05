@@ -1,0 +1,88 @@
+{
+  "generated": "2026-11-05T12:48:47+00:00",
+  "sample": {
+    "filename": "file.apk",
+    "size_bytes": 133795216,
+    "sha256": "b7195bd9f3126543566acf3e1e5d3d1cc1fa163db927e85918877f7cb65cb113",
+    "md5": "98d2ef202dabf1b65f77d6e3b6b77a95",
+    "package": "com.radolyn.ayugram",
+    "version": "13.1.1 (72379)"
+  },
+  "signature": {
+    "type": "self-signed (scheme v2)",
+    "subject": "Common Name: AlexeyZavar, Organizational Unit: Mobile, Organization: Radolyn Labs, Locality: Moscow, State/Province: Russia, Country: RU",
+    "sha256_fingerprint": "50 FD F8 7A 75 D5 E5 22 D0 8D 5F C9 F1 5C FD 1F ED 8A 93 EA EB C0 6C 96 87 93 C8 87 1D 9A 22 B3",
+    "validity": "2024-04-06 14:29:46+00:00 .. 2059-03-29 14:29:46+00:00",
+    "verdict": "Совпадает с известным автором AyuGram (Radolyn Labs). Признаков перепаковки нет."
+  },
+  "network_indicators": {
+    "c2": [],
+    "suspicious_domains": [],
+    "onion": [],
+    "raw_suspicious_ips": [],
+    "benign_official_telegram_dc_ips": [
+      "149.154.175.117",
+      "149.154.175.100",
+      "149.154.167.91",
+      "149.154.175.50",
+      "149.154.171.5",
+      "149.154.175.40",
+      "149.154.167.40",
+      "95.161.76.100"
+    ],
+    "urls_benign_ecosystem_top40": [
+      "https://t.me/",
+      "http://schemas.android.com/apk/res/android",
+      "https://firebase.google.com/support/privacy/init-options.",
+      "https://tonviewer.com/",
+      "https://telegram.org/",
+      "http://ns.adobe.com/xap/1.0/",
+      "https://play.google.com/store/apps/details?id=com.google.android.webview",
+      "https://ss3.4sqi.net/img/categories_v2/building/government_capitolbuilding_64.png",
+      "https://ss3.4sqi.net/img/categories_v2/travel/hotel_64.png",
+      "https://telegram.org/dl",
+      "https://issuetracker.google.com/issues/new?component=618491&template=1257717",
+      "https://fragment.com/username/",
+      "https://t.me/$",
+      "https://t.me/proxy?",
+      "https://t.me/socks?",
+      "https://github.com/Kunzisoft/KeePassDX",
+      "https://github.com/bitwarden/android",
+      "https://ss3.4sqi.net/img/categories_v2/",
+      "https://issuetracker.google.com/issues/new?component=907884&template=1466542",
+      "https://issuetracker.google.com/issues/241760537",
+      "https://developer.android.com/training/articles/direct-boot",
+      "https://suggestqueries.google.com/complete/search?client=chrome&q=",
+      "https://yandex.ru/legal/confidential",
+      "https://mini.ya.ru/",
+      "https://ya.ru/search/?text=",
+      "https://cdn.jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/thirdparties/easyprivacy.txt",
+      "https://cdn.jsdelivr.net/gh/dimisa-RUAdList/RUAdListCDN@main/lists/ruadlist.ubo.min.txt",
+      "https://ublockorigin.github.io/uAssetsCDN/filters/filters.min.txt",
+      "https://ublockorigin.github.io/uAssetsCDN/filters/badware.min.txt",
+      "https://ublockorigin.github.io/uAssetsCDN/filters/privacy.min.txt",
+      "https://ublockorigin.github.io/uAssetsCDN/filters/unbreak.min.txt",
+      "https://ublockorigin.github.io/uAssetsCDN/filters/quick-fixes.min.txt",
+      "https://filters.adtidy.org/extension/ublock/filters/11.txt",
+      "https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt",
+      "https://cdn.jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/thirdparties/easylist.txt",
+      "https://github.com/Remix-Design/RemixIcon)",
+      "https://app-measurement.com/a",
+      "https://app-measurement.com/s/d",
+      "https://firebase.google.com/support/guides/disable-analytics",
+      "https://goo.gl/NAOOOI."
+    ],
+    "urls_unique_total": 267
+  },
+  "internal_markers": {
+    "build_path": "/Users/alexeyzavar/Projects/AyuGram4A/TMessagesProj (libtmessages.49.so)",
+    "rust_crate_author_path": "C:\\Users\\bleizix\\.cargo\\registry (libetgadblock.so)",
+    "updater_endpoints": [
+      "https://api.exteragram.app/api/v1/",
+      "https://plugins.exteragram.app/",
+      "https://t.me/ayugramreleases"
+    ],
+    "plugin_repo": "https://t.me/exteraPluginRepo"
+  },
+  "classification": "Без вредоносных IOC. Все сетевые индикаторы относятся к легитимной экосистеме Telegram/exteraGram/AyuGram."
+}

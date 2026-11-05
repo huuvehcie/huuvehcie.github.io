@@ -1,0 +1,257 @@
+{
+  "per_dex": {
+    "classes.dex": {
+      "method_ref_tags": {
+        "dx_compiler_api": 5
+      },
+      "class_desc_tags": {
+        "dx_compiler": 5,
+        "mvel_expression_engine": 7,
+        "runtime": 1,
+        "chaquopy": 8,
+        "simplifiles_unknown": 87,
+        "x509_trust_manager": 5,
+        "location_manager": 1,
+        "audio_record": 1,
+        "package_installer": 1,
+        "process_builder": 1
+      }
+    },
+    "classes2.dex": {
+      "method_ref_tags": {},
+      "class_desc_tags": {}
+    },
+    "classes3.dex": {
+      "method_ref_tags": {
+        "dx_compiler_api": 2
+      },
+      "class_desc_tags": {
+        "location_manager": 1,
+        "dx_compiler": 2,
+        "runtime": 1,
+        "mvel_expression_engine": 6
+      }
+    },
+    "classes4.dex": {
+      "method_ref_tags": {
+        "dx_compiler_api": 617
+      },
+      "class_desc_tags": {
+        "chaquopy": 53,
+        "package_installer": 1,
+        "audio_record": 1,
+        "dx_compiler": 663,
+        "inmemory_dex_loader": 1,
+        "runtime": 1,
+        "mvel_expression_engine": 10,
+        "simplifiles_unknown": 14
+      }
+    },
+    "classes5.dex": {
+      "method_ref_tags": {
+        "dx_compiler_api": 6
+      },
+      "class_desc_tags": {
+        "simplifiles_unknown": 136,
+        "x509_trust_manager": 2,
+        "dx_compiler": 6,
+        "vmruntime": 1,
+        "runtime": 1,
+        "mvel_expression_engine": 552
+      }
+    },
+    "classes6.dex": {
+      "method_ref_tags": {
+        "dx_compiler_api": 2
+      },
+      "class_desc_tags": {
+        "location_manager": 1,
+        "audio_record": 1,
+        "media_projection": 1,
+        "dx_compiler": 2,
+        "runtime": 1,
+        "mvel_expression_engine": 6
+      }
+    },
+    "classes7.dex": {
+      "method_ref_tags": {},
+      "class_desc_tags": {
+        "location_manager": 1,
+        "mvel_expression_engine": 1
+      }
+    },
+    "classes8.dex": {
+      "method_ref_tags": {
+        "dx_compiler_api": 2
+      },
+      "class_desc_tags": {
+        "location_manager": 1,
+        "audio_record": 1,
+        "media_projection": 1,
+        "dx_compiler": 2,
+        "runtime": 1,
+        "mvel_expression_engine": 4
+      }
+    }
+  },
+  "merged": {
+    "dx_compiler_api": {
+      "kind": "method_ref",
+      "count": 617,
+      "samples": [
+        "Lcom/android/dx/AnnotationId$Element;",
+        "Lcom/android/dx/AnnotationId;",
+        "Lcom/android/dx/AnnotationId<",
+        "Lcom/android/dx/AppDataDirGuesser;",
+        "Lcom/android/dx/BinaryOp$10;",
+        "Lcom/android/dx/BinaryOp$11;",
+        "Lcom/android/dx/BinaryOp$1;",
+        "Lcom/android/dx/BinaryOp$2;",
+        "Lcom/android/dx/BinaryOp$3;",
+        "Lcom/android/dx/BinaryOp$4;",
+        "Lcom/android/dx/BinaryOp$5;",
+        "Lcom/android/dx/BinaryOp$6;"
+      ]
+    },
+    "dx_compiler": {
+      "kind": "class_desc",
+      "count": 663,
+      "samples": [
+        "Lcom/android/dx/AnnotationId$Element;",
+        "Lcom/android/dx/AnnotationId;",
+        "Lcom/android/dx/AnnotationId<",
+        "Lcom/android/dx/AppDataDirGuesser;",
+        "Lcom/android/dx/BinaryOp$10;",
+        "Lcom/android/dx/BinaryOp$11;",
+        "Lcom/android/dx/BinaryOp$1;",
+        "Lcom/android/dx/BinaryOp$2;",
+        "Lcom/android/dx/BinaryOp$3;",
+        "Lcom/android/dx/BinaryOp$4;",
+        "Lcom/android/dx/BinaryOp$5;",
+        "Lcom/android/dx/BinaryOp$6;"
+      ]
+    },
+    "mvel_expression_engine": {
+      "kind": "class_desc",
+      "count": 552,
+      "samples": [
+        "Lorg/mvel2/CompileException;",
+        "Lorg/mvel2/ConversionException;",
+        "Lorg/mvel2/ConversionHandler;",
+        "Lorg/mvel2/DataConversion$ArrayTypeMarker;",
+        "Lorg/mvel2/DataConversion;",
+        "Lorg/mvel2/DataTypes;",
+        "Lorg/mvel2/ErrorDetail;",
+        "Lorg/mvel2/ImmutableElementException;",
+        "Lorg/mvel2/MVEL$$ExternalSyntheticBUOutline0;",
+        "Lorg/mvel2/MVEL;",
+        "Lorg/mvel2/MVELInterpretedRuntime;",
+        "Lorg/mvel2/MVELRuntime;"
+      ]
+    },
+    "runtime": {
+      "kind": "class_desc",
+      "count": 1,
+      "samples": [
+        "Ljava/lang/Runtime;"
+      ]
+    },
+    "chaquopy": {
+      "kind": "class_desc",
+      "count": 54,
+      "samples": [
+        "()Lcom/chaquo/python/PyObject;",
+        "(Landroid/view/View;Lcom/chaquo/python/PyObject;Lcom/chaquo/python/PyObject;Lcom/chaquo/python/PyObject;Ljava/lang/String;)V",
+        "(Lcom/chaquo/python/PyObject;)V",
+        "(Lcom/chaquo/python/PyObject;Lcom/chaquo/python/PyObject;Lcom/chaquo/python/PyObject;Ljava/lang/String;)V",
+        "(Lcom/chaquo/python/PyObject;Ljava/lang/Class;)Ljava/lang/Object;",
+        "(Lcom/chaquo/python/PyObject;Ljava/lang/Object;)Lcom/chaquo/python/PyObject;",
+        "(Lcom/chaquo/python/PyObject;Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Lcom/exteragram/messenger/plugins/PythonPluginsEngine$PyMethodCaller;Lorg/telegram/messenger/Utilities$Callback;)Lcom/exteragram/messenger/plugins/PluginsController$HookResult;",
+        "(Lcom/chaquo/python/PyObject;Ljava/lang/String;[Ljava/lang/String;)[Ljava/lang/String;",
+        "(Lcom/exteragram/messenger/plugins/Plugin;Ljava/lang/String;Ljava/util/List;Lcom/chaquo/python/PyObject;Ljava/lang/String;)V",
+        "(Lcom/exteragram/messenger/plugins/models/CustomSetting$Factory;Lcom/chaquo/python/PyObject;Lcom/chaquo/python/PyObject;Lcom/chaquo/python/PyObject;Lcom/chaquo/python/PyObject;Ljava/lang/String;)V",
+        "(Lcom/exteragram/messenger/plugins/models/CustomSetting$Factory;Lcom/chaquo/python/PyObject;Lcom/chaquo/python/PyObject;Lcom/chaquo/python/PyObject;Ljava/lang/String;)V",
+        "(Ljava/lang/String;Lcom/chaquo/python/PyObject;)V"
+      ]
+    },
+    "simplifiles_unknown": {
+      "kind": "class_desc",
+      "count": 181,
+      "samples": [
+        "()Lorg/simplifiles/archive/ArchiveEntryFilter;",
+        "()Lorg/simplifiles/archive/ArchiveExtractionOptions;",
+        "()Lorg/simplifiles/archive/ArchiveFormat;",
+        "()Lorg/simplifiles/archive/ArchiveIssueSeverity;",
+        "()Lorg/simplifiles/archive/ArchiveProgressListener;",
+        "()Lorg/simplifiles/archive/ArchiveSaveOptions;",
+        "()Lorg/simplifiles/archive/ArchiveSaveProgressListener;",
+        "()Lorg/simplifiles/archive/CancellationToken;",
+        "()Lorg/simplifiles/archive/ExtractionTargetPolicy;",
+        "()Lorg/simplifiles/archive/ValidationReport;",
+        "()Lorg/simplifiles/archive/security/DuplicatePolicy;",
+        "()Lorg/simplifiles/archive/security/SecurityPolicy;"
+      ]
+    },
+    "x509_trust_manager": {
+      "kind": "class_desc",
+      "count": 6,
+      "samples": [
+        "()Ljavax/net/ssl/X509TrustManager;",
+        "(Ljavax/net/ssl/SSLSocketFactory;Ljavax/net/ssl/X509TrustManager;)Lokhttp3/OkHttpClient$Builder;",
+        "(Ljavax/net/ssl/X509TrustManager;)V",
+        "(Ljavax/net/ssl/X509TrustManager;Landroid/net/http/X509TrustManagerExtensions;)V",
+        "(Ljavax/net/ssl/X509TrustManager;Ljava/lang/reflect/Method;)V",
+        "Ljavax/net/ssl/X509TrustManager;"
+      ]
+    },
+    "location_manager": {
+      "kind": "class_desc",
+      "count": 1,
+      "samples": [
+        "Landroid/location/LocationManager;"
+      ]
+    },
+    "audio_record": {
+      "kind": "class_desc",
+      "count": 1,
+      "samples": [
+        "Landroid/media/AudioRecord;"
+      ]
+    },
+    "package_installer": {
+      "kind": "class_desc",
+      "count": 1,
+      "samples": [
+        "Landroid/content/pm/PackageInstaller;"
+      ]
+    },
+    "process_builder": {
+      "kind": "class_desc",
+      "count": 1,
+      "samples": [
+        "Ljava/lang/ProcessBuilder;"
+      ]
+    },
+    "inmemory_dex_loader": {
+      "kind": "class_desc",
+      "count": 1,
+      "samples": [
+        "Ldalvik/system/InMemoryDexClassLoader;"
+      ]
+    },
+    "vmruntime": {
+      "kind": "class_desc",
+      "count": 1,
+      "samples": [
+        "Ldalvik/system/VMRuntime;"
+      ]
+    },
+    "media_projection": {
+      "kind": "class_desc",
+      "count": 1,
+      "samples": [
+        "Landroid/media/projection/MediaProjection;"
+      ]
+    }
+  }
+}

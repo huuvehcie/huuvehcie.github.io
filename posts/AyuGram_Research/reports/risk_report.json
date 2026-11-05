@@ -1,0 +1,1093 @@
+{
+  "report": {
+    "title": "Static Malware Risk Assessment — AyuGram (Telegram fork)",
+    "generated_utc": "2026-11-05T12:48:47+00:00",
+    "toolchain": "androguard 4.1.4 (static, no execution), Python 3.12",
+    "method": "Неподписанный статический анализ: манифест, 8 DEX, assets, native .so strings, сертификат подписи. Образец не запускался.",
+    "analyst_skill": "analyzing-android-malware-with-apktool v1.0 (7-step workflow)"
+  },
+  "identification": {
+    "package": "com.radolyn.ayugram",
+    "app_name": "AyuGram",
+    "version_name": "13.1.1",
+    "version_code": "72379",
+    "min_sdk": "24",
+    "target_sdk": "36",
+    "apk_sha256": "b7195bd9f3126543566acf3e1e5d3d1cc1fa163db927e85918877f7cb65cb113",
+    "apk_md5": "98d2ef202dabf1b65f77d6e3b6b77a95",
+    "size_bytes": 133795216,
+    "signed_schemes": {
+      "v1": false,
+      "v2": true,
+      "v3": false
+    },
+    "certificate": {
+      "scheme": "v2",
+      "subject": "Common Name: AlexeyZavar, Organizational Unit: Mobile, Organization: Radolyn Labs, Locality: Moscow, State/Province: Russia, Country: RU",
+      "issuer": "Common Name: AlexeyZavar, Organizational Unit: Mobile, Organization: Radolyn Labs, Locality: Moscow, State/Province: Russia, Country: RU",
+      "serial_number": "1",
+      "not_valid_before": "2024-04-06 14:29:46+00:00",
+      "not_valid_after": "2059-03-29 14:29:46+00:00",
+      "sha256_fingerprint": "50 FD F8 7A 75 D5 E5 22 D0 8D 5F C9 F1 5C FD 1F ED 8A 93 EA EB C0 6C 96 87 93 C8 87 1D 9A 22 B3",
+      "sha1_fingerprint": "DB E5 11 BC 79 9A 0D 56 B6 DC 20 41 6A F7 B1 41 41 6F A7 EF",
+      "md5_fingerprint": "04c54334dade6e0aab2e00cde53637b0",
+      "key_size": null,
+      "signature_algorithm": "sha256"
+    },
+    "identification_verdict": "AyuGram — известный open-source форк Telegram (базируется на exteraGram/Telegram for Android). Сборка подписана самоподписанным сертификатом разработчика Radolyn Labs (CN=AlexeyZavar, Moscow, RU); build-путь в native-библиотеке подтверждает авторство. Признаков чужой перепаковки не выявлено."
+  },
+  "codebase_stats": {
+    "dex_files": 8,
+    "classes_total": 60238,
+    "strings_total": 477740,
+    "methods_scanned": 331458,
+    "instructions_scanned": 6030052,
+    "native_libs_arm64": [
+      "libtmessages.49.so",
+      "libvosk.so",
+      "libextera_analyzer.so",
+      "libpython3.11.so",
+      "libcrypto_python.so",
+      "libetgadblock.so",
+      "libc++_shared.so",
+      "libsqlite3_python.so",
+      "liblanguage_id_l2c_jni.so",
+      "libssl_python.so",
+      "libchaquopy_java.so",
+      "libjnidispatch.so",
+      "libshadowhook.so",
+      "libimage_processing_util_jni.so",
+      "libdatastore_shared_counter.so",
+      "libsurface_util_jni.so",
+      "libyuv.so",
+      "libcrypto_chaquopy.so",
+      "libsqlite3_chaquopy.so",
+      "libpython3.so",
+      "libssl_chaquopy.so",
+      "libshadowhook_nothing.so"
+    ],
+    "notable_assets": [
+      "assets/chaquopy/* (Python 3.11 runtime)",
+      "assets/pyPluginsSdk.imy (exteraGram Plugin SDK)",
+      "DebugProbesKt.bin"
+    ]
+  },
+  "permissions_analysis": {
+    "total_requested": 79,
+    "dangerous_flagged": 34,
+    "dangerous_list": [
+      "android.permission.ACCESS_BACKGROUND_LOCATION",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.ACCESS_MEDIA_LOCATION",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.CAMERA",
+      "android.permission.CHANGE_WIFI_STATE",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "android.permission.GET_ACCOUNTS",
+      "android.permission.MANAGE_EXTERNAL_STORAGE",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.QUERY_ALL_PACKAGES",
+      "android.permission.READ_CONTACTS",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.READ_MEDIA_AUDIO",
+      "android.permission.READ_MEDIA_IMAGES",
+      "android.permission.READ_MEDIA_VIDEO",
+      "android.permission.READ_PHONE_NUMBERS",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.REQUEST_INSTALL_PACKAGES",
+      "android.permission.SCHEDULE_EXACT_ALARM",
+      "android.permission.SYSTEM_ALERT_WINDOW",
+      "android.permission.USE_BIOMETRIC",
+      "android.permission.USE_FINGERPRINT",
+      "android.permission.USE_FULL_SCREEN_INTENT",
+      "android.permission.WAKE_LOCK",
+      "android.permission.WRITE_CONTACTS",
+      "android.permission.WRITE_EXTERNAL_STORAGE"
+    ],
+    "suspicious_combinations": [
+      {
+        "combo": "Dropper-паттерн",
+        "perms": [
+          "android.permission.REQUEST_INSTALL_PACKAGES"
+        ],
+        "risk": "high",
+        "why": "Установка APK + overlay/accessibility: поведенческий паттерн дроппера"
+      },
+      {
+        "combo": "Камера+Микрофон",
+        "perms": [
+          "android.permission.CAMERA",
+          "android.permission.RECORD_AUDIO"
+        ],
+        "risk": "medium",
+        "why": "Скрытая съёмка/прослушка (шпионское ПО) — у мессенджера легитимно"
+      },
+      {
+        "combo": "Фоновая геолокация",
+        "perms": [
+          "android.permission.ACCESS_BACKGROUND_LOCATION"
+        ],
+        "risk": "medium",
+        "why": "Непрерывный трекинг местоположения"
+      },
+      {
+        "combo": "Полный доступ к файлам",
+        "perms": [
+          "android.permission.MANAGE_EXTERNAL_STORAGE"
+        ],
+        "risk": "medium",
+        "why": "Все файлы: эксфильтрация документов, поиск ключей"
+      }
+    ],
+    "assessment": "Набор разрешений типичен для полнофункционального мессенджера (камера, микрофон, медиа, контакты, геолокация). Особое внимание: REQUEST_INSTALL_PACKAGES (внутренний апдейтер форка, MY_PACKAGE_REPLACED-ресивер), SYSTEM_ALERT_WINDOW, MANAGE_EXTERNAL_STORAGE, QUERY_ALL_PACKAGES. SMS-разрешений (SEND/RECEIVE/READ) нет; SMS-приёмник использует только Google SMS Retriever API.",
+    "sms_retriever_note": "org.telegram.messenger.SmsReceiver слушает com.google.android.gms.auth.api.phone.SMS_RETRIEVED — легитимный автоподстановщик кодов, а не перехват SMS."
+  },
+  "component_inventory": {
+    "counts": {
+      "activities": 19,
+      "services": 38,
+      "receivers": 30,
+      "providers": 8
+    },
+    "exported_flagged": [
+      {
+        "tag": "activity",
+        "name": "org.telegram.ui.LaunchActivity",
+        "exported_attr": "true",
+        "intent_filters": 15,
+        "actions": [
+          "android.intent.action.MAIN",
+          "android.intent.action.SEND",
+          "android.intent.action.VIEW",
+          "android.intent.action.SEND",
+          "android.intent.action.SEND_MULTIPLE",
+          "android.intent.action.SEND",
+          "android.intent.action.SEND",
+          "android.intent.action.SEND_MULTIPLE"
+        ]
+      },
+      {
+        "tag": "activity",
+        "name": "org.telegram.ui.ShareActivity",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.VIEW"
+        ]
+      },
+      {
+        "tag": "activity",
+        "name": "org.telegram.ui.ExternalActionActivity",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "org.telegram.passport.AUTHORIZE"
+        ]
+      },
+      {
+        "tag": "activity",
+        "name": "org.telegram.ui.ChatsWidgetConfigActivity",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.appwidget.action.APPWIDGET_CONFIGURE"
+        ]
+      },
+      {
+        "tag": "activity",
+        "name": "org.telegram.ui.ContactsWidgetConfigActivity",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.appwidget.action.APPWIDGET_CONFIGURE"
+        ]
+      },
+      {
+        "tag": "activity",
+        "name": "org.telegram.messenger.OpenChatReceiver",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "activity",
+        "name": "org.telegram.messenger.OpenAttachedMenuBotReceiver",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "activity-alias",
+        "name": "org.telegram.ui.CallsActivity",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.VIEW"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.Google26Icon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.GoogleIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.OsuIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AuroraIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AmethystIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.SunsetIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.HumanIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.JellyfishIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.SpaceIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.CyberpunkIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.NasaIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.XpIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.PsychosisIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.FishIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.IceAgeIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.NyanCatIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.FlappyIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.InvincibleIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.SpongeIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.HamsterIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.FrogIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.SusIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.GuitarIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.CandyIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AvatarIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.EchpochmakIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.MoleIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.EditorIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.OrbitIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.WinterIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.MonetIconExtera",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.ExteraIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AyuTyan",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AyuGramYaPlus",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AyuGramBard",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AyuGramNothing",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AyuGramExtera",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AyuGramSpotify",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AyuGramDiscord",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.AyuGramAlt",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.MonetIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "activity-alias",
+        "name": "com.exteragram.messenger.DefaultIcon",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MAIN"
+        ]
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.AuthenticatorService",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.accounts.AccountAuthenticator"
+        ]
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.ContactsSyncAdapterService",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.content.SyncAdapter"
+        ]
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.BringAppForegroundService",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.NotificationsService",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.VideoEncodingService",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.ui.Stories.recorder.StoryUploadingService",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.ImportingService",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.LocationSharingService",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.MusicPlayerService",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.MusicBrowserService",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.media.browse.MediaBrowserService"
+        ]
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.voip.TelegramConnectionService",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.telecom.ConnectionService"
+        ]
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.WearAuthListenerService",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "com.google.android.gms.wearable.MESSAGE_RECEIVED"
+        ]
+      },
+      {
+        "tag": "service",
+        "name": "org.telegram.messenger.car.TelegramCarAppService",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "androidx.car.app.CarAppService"
+        ]
+      },
+      {
+        "tag": "service",
+        "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "service",
+        "name": "androidx.work.impl.background.systemjob.SystemJobService",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      },
+      {
+        "tag": "service",
+        "name": "androidx.sharetarget.ChooserTargetServiceCompat",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.service.chooser.ChooserTargetService"
+        ]
+      },
+      {
+        "tag": "receiver",
+        "name": "org.telegram.messenger.SmsReceiver",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
+        ]
+      },
+      {
+        "tag": "receiver",
+        "name": "com.exteragram.messenger.updater.UpdaterUtils$UpdateReceiver",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "android.intent.action.MY_PACKAGE_REPLACED"
+        ]
+      },
+      {
+        "tag": "receiver",
+        "name": "org.telegram.messenger.RefererReceiver",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "com.android.vending.INSTALL_REFERRER"
+        ]
+      },
+      {
+        "tag": "receiver",
+        "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+        ]
+      },
+      {
+        "tag": "receiver",
+        "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+        "exported_attr": "true",
+        "intent_filters": 1,
+        "actions": [
+          "com.google.android.c2dm.intent.RECEIVE"
+        ]
+      },
+      {
+        "tag": "receiver",
+        "name": "androidx.profileinstaller.ProfileInstallReceiver",
+        "exported_attr": "true",
+        "intent_filters": 4,
+        "actions": [
+          "androidx.profileinstaller.action.INSTALL_PROFILE",
+          "androidx.profileinstaller.action.SKIP_FILE",
+          "androidx.profileinstaller.action.SAVE_PROFILE",
+          "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+        ]
+      },
+      {
+        "tag": "provider",
+        "name": "org.telegram.messenger.voip.CallNotificationSoundProvider",
+        "exported_attr": "true",
+        "intent_filters": 0,
+        "actions": []
+      }
+    ],
+    "exported_count": 73,
+    "notable_receivers": [
+      {
+        "name": "org.telegram.messenger.AppStartReceiver",
+        "actions": [
+          "BOOT_COMPLETED"
+        ],
+        "purpose": "перезапуск фоновых сервисов (официальный код)"
+      },
+      {
+        "name": "com.exteragram.messenger.updater.UpdaterUtils$UpdateReceiver",
+        "actions": [
+          "MY_PACKAGE_REPLACED"
+        ],
+        "purpose": "пост-обновленческая логика форка"
+      },
+      {
+        "name": "org.telegram.messenger.SmsReceiver",
+        "actions": [
+          "SMS_RETRIEVED"
+        ],
+        "purpose": "Google SMS Retriever"
+      }
+    ],
+    "assessment": "Все exported-компоненты стандартны для Telegram (LaunchActivity, ShareActivity, виджеты, синхронизация контактов, VoIP-ConnectionService, алиасы иконок). Внешне доступных новых точек входа форк не добавляет."
+  },
+  "dynamic_code_loading": {
+    "summary": "Ключевая особенность архитектуры: приложение может загружать и исполнять сторонний код во время работы.",
+    "mechanisms": [
+      {
+        "name": "Python-плагины (Chaquopy)",
+        "evidence": [
+          "com/exteragram/messenger/plugins/PythonPluginsEngine",
+          "PythonPluginsEngine.createPluginInstance / installPluginDependencies / installSdkArchive",
+          "runtime pip (PipController)",
+          "SDK: requests, lxml, bs4, PIL, yaml, debugpy"
+        ],
+        "trigger": "установка плагина пользователем (t.me/exteraPluginRepo, plugins.exteragram.app)"
+      },
+      {
+        "name": "Xposed-совместимый Java-хукинг",
+        "evidence": [
+          "de/robv/android/xposed/XposedBridge: hookMethod, hookAllConstructors, invokeOriginalMethod, deoptimizeMethod, disableHiddenApiRestrictions",
+          "PythonPluginsEngine.executeHook (executePreRequestHook/executePostRequestHook/executeSendMessageHook/executeUpdateHook)"
+        ],
+        "trigger": "плагин объявляет хуки"
+      },
+      {
+        "name": "Генерация и загрузка DEX в памяти",
+        "evidence": [
+          "com/exteragram/messenger/plugins/utils/ClassProxy.createProxyClass (DexMaker)",
+          "InMemoryDexClassLoader (2 call-site)",
+          "com/android/dx + com/android/dex (649 классов)",
+          "org/mvel2 (expression engine, executeMvelMethod)"
+        ],
+        "trigger": "создание прокси-классов для плагинов"
+      },
+      {
+        "name": "Нативный инлайн-хукинг",
+        "evidence": [
+          "libshadowhook.so (ByteDance shadowhook)",
+          "com/exteragram/messenger/adblock/interop/NativeAdBlock"
+        ],
+        "trigger": "adblock-модуль"
+      },
+      {
+        "name": "Обход ограничений платформы",
+        "evidence": [
+          "org/lsposed/hiddenapibypass/HiddenApiBypass",
+          "XposedBridge.disableHiddenApiRestrictions"
+        ],
+        "trigger": "совместимость/хукинг"
+      }
+    ],
+    "defense": {
+      "plugin_analyzer": "com.exteragram.messenger.plugins.analyzer.PluginAnalyzerService + libextera_analyzer.so: статический анализ плагина перед загрузкой (ищет опасные API: beforeHookedMethod/afterHookedMethod, base64.b85decode, exec/eval, запросы истории getHistory/searchGlobal и т.п.)",
+      "sensitive_request_sheet": "com.exteragram.messenger.security.SensitiveRequestSheet — интерактивное подтверждение чувствительных запросов с проверкой подлинности ввода (isGenuine(InputEvent))"
+    }
+  },
+  "obfuscation": {
+    "found": true,
+    "details": [
+      "org/lsposed/lsparanoid/Deobfuscator$AyuGram4A$TMessagesProj — компиляционная обфускация строк (ChaCha20), применяется к исходникам AyuGram",
+      "libextera_analyzer.so собран с OLLVM (строка 'ollvm-ndk30-based-on-llvm21' внутри библиотеки)",
+      "R8-оптимизация и синтетические классы ($r8$lambda) — стандартно"
+    ],
+    "assessment": "Обфускация ограничена защитой интеллектуальной собственности форка; идентификация классов Telegram/exteraGram сохранена (не переименованы). Признаков массового переименования/упаковки (packers: Bangcle, Ijiami, etc.) нет."
+  },
+  "suspicious_api_scan": {
+    "sms_telephony_abuse": "не обнаружено (нет sendTextMessage/getDeviceId/getSubscriberId/getInstalledPackages-абьюза; getInstalledPackages — только обёртка AyuPackageManager)",
+    "runtime_exec": "2 call-site: com.sun.jna.NativeLibrary (загрузка нативных библиотек) и org.mvel2.sh.ShellSession (библиотечный класс); malicious use не выявлено",
+    "process_builder": "1 call-site: org/telegram/messenger/EmuDetector (официальный антиэмулятор Telegram)",
+    "reflection": "259 call-sites — характерно для мессенджера (XposedBridge, jna, mvel2, Telegram-код: AndroidUtilities, ApplicationLoader, MediaController, VoIPService)",
+    "trust_manager_bypass": "0 собственных реализаций checkServerTrusted/checkClientTrusted — trust-all отсутствует",
+    "server_sockets": "NanoHTTPD (dev-server плагинов), SpotifyAuth callback (localhost:8898), WebProxyTransport (прокси Telegram)",
+    "crypto": "javax.crypto только в легитимных модулях (Passport, Wallet, Bot Biometry, Fingerprint)"
+  },
+  "network_indicators": {
+    "c2_found": false,
+    "summary": "267 уникальных URL, 4 'IP' (все ложные: 127.0.0.1, 10.0.2.15 — эммулятор, прочие — маски подсетей). Домены — экосистема Telegram (telegram.org, t.me, toncenter, fragment.com), форков (api.exteragram.app, plugins.exteragram.app), сервисов интеграций (Spotify, Apple Music, LRCLIB, Vosk, Яндекс-перевод, AI-провайдеры: OpenAI/OpenRouter/Perplexity/Gemini), adblock-листы (uBlock/AdGuard CDN).",
+    "telegram_dc_ips": [
+      "149.154.175.117",
+      "149.154.175.100",
+      "149.154.167.91",
+      "149.154.175.50",
+      "149.154.171.5",
+      "149.154.175.40",
+      "149.154.167.40",
+      "95.161.76.100"
+    ],
+    "uses_cleartext_traffic": "true"
+  },
+  "risk_score": {
+    "value": 5.9,
+    "scale": "0-10 (10 = максимум)",
+    "category": "MEDIUM — повышенный риск dual-use архитектуры",
+    "rubric": [
+      {
+        "factor": "Динамическая загрузка кода (Python-плагины Chaquopy, InMemoryDexClassLoader, DexMaker, runtime-pip)",
+        "weight": 2.5,
+        "score": 2.5,
+        "evidence": [
+          "com/exteragram/messenger/plugins/PythonPluginsEngine",
+          "com/exteragram/messenger/plugins/utils/ClassProxy",
+          "assets/chaquopy/app.imy",
+          "installPluginDependencies()"
+        ]
+      },
+      {
+        "factor": "Встроенный фреймворк хукинга (Xposed-API + shadowhook + HiddenApiBypass)",
+        "weight": 2.0,
+        "score": 2.0,
+        "evidence": [
+          "de/robv/android/xposed/XposedBridge (15 кл.)",
+          "libshadowhook.so",
+          "org/lsposed/hiddenapibypass"
+        ]
+      },
+      {
+        "factor": "Опасные разрешения (REQUEST_INSTALL_PACKAGES, SYSTEM_ALERT_WINDOW, MANAGE_EXTERNAL_STORAGE, QUERY_ALL_PACKAGES, ACCESS_BACKGROUND_LOCATION)",
+        "weight": 2.0,
+        "score": 1.5,
+        "evidence": [
+          "34 dangerous-flagged из 79",
+          "комбо Dropper-паттерн (install+overlay)"
+        ]
+      },
+      {
+        "factor": "Сетевые IOC / C2-индикаторы",
+        "weight": 2.0,
+        "score": 0.0,
+        "evidence": [
+          "C2 не обнаружено",
+          "только экосистема Telegram/exteraGram/AyuGram"
+        ]
+      },
+      {
+        "factor": "Обфускация (lsparanoid-строки, OLLVM-сборка analyzer.so)",
+        "weight": 0.5,
+        "score": 0.3,
+        "evidence": [
+          "org/lsposed/lsparanoid/Deobfuscator$AyuGram4A$TMessagesProj",
+          "github.com/luluovo1/ollvm-ndk30-based-on-llvm21 в libextera_analyzer.so"
+        ]
+      },
+      {
+        "factor": "SMS/телефонные abuse-API (sendTextMessage, getDeviceId...)",
+        "weight": 1.0,
+        "score": 0.0,
+        "evidence": [
+          "не найдено в пулах строк и инструкциях"
+        ]
+      },
+      {
+        "factor": "Обход проверки сертификатов (trust-all)",
+        "weight": 0.5,
+        "score": 0.0,
+        "evidence": [
+          "0 собственных реализаций checkServerTrusted"
+        ]
+      },
+      {
+        "factor": "Антианализ (эмулятор-детект)",
+        "weight": 0.5,
+        "score": 0.1,
+        "evidence": [
+          "org/telegram/messenger/EmuDetector (код официального Telegram)"
+        ]
+      },
+      {
+        "factor": "Митигаторы: самоподписанный сертификат автора AyuGram (CN=AlexeyZavar/Radolyn Labs), build-путь /Users/alexeyzavar/Projects/AyuGram4A,open-source-линейка форка, встроенный анализатор плагинов",
+        "weight": -0.5,
+        "score": -0.5,
+        "evidence": []
+      }
+    ]
+  },
+  "verdict": {
+    "classification": "МОДИФИЦИРОВАННЫЙ ЛЕГИТИМНЫЙ КЛИЕНТ (форк) — признаки вредоносного ПО НЕ ОБНАРУЖЕНЫ",
+    "rationale": [
+      "Совпадение подписи и build-путей с известным автором AyuGram (Radolyn Labs / alexeyzavar)",
+      "Отсутствуют C2-индикаторы, SMS-абьюз, trust-all, stolen-data-эксфильтрация, устройства-админы, accessibility-абьюз",
+      "Опасные механизмы (хуки, динамическая загрузка) — заявленные функции форка, активируются пользователем, есть встроенный анализатор плагинов"
+    ],
+    "residual_risk": [
+      "Установка недоверенного Python-плагина = произвольный код с доступом ко всем чатам (потенциальная кража OTP/сообщений) — T1407",
+      "Внутренний апдейтер (REQUEST_INSTALL_PACKAGES) обновляет APK вне Play Protect; подмена источника обновления компрометирует устройство",
+      "HiddenApiBypass/хукинг ослабляют изоляцию платформы; антивирусы могут флгать как potentially-unwanted",
+      "usesCleartextTraffic=true допускает нешифрованный HTTP-трафик (как у официального Telegram)"
+    ]
+  },
+  "mitre_attack_mobile": [
+    {
+      "technique": "T1406.002",
+      "name": "Obfuscated Files or Information: String Obfuscation",
+      "status": "observed (build-level)",
+      "confidence": "high",
+      "details": "lsparanoid-деобфускатор строк в сборке AyuGram4A; нативная библиотека анализатора собрана OLLVM. Интерпретация: защита IP, а не сокрытие зловреда."
+    },
+    {
+      "technique": "T1407",
+      "name": "Load New Payload",
+      "status": "capability (gated by user)",
+      "confidence": "high",
+      "details": "Плагин-система: загрузка Python-плагинов (Chaquopy), InMemoryDexClassLoader (ClassProxy.createProxyClass), DexMaker-генерация DEX, установка pip-зависимостей в рантайме (PipController)."
+    },
+    {
+      "technique": "T1625.001",
+      "name": "Hijack Execution Flow: System Runtime API Manipulation",
+      "status": "capability (in-app)",
+      "confidence": "high",
+      "details": "Встроенный Xposed-совместимый движок (XposedBridge.hookMethod/hookAllMethods/invokeOriginalMethod/deoptimizeMethod), инлайн-хукинг shadowhook, HiddenApiBypass (обход hidden-API ограничений). Хуки применяются внутри собственного процесса приложения."
+    },
+    {
+      "technique": "T1633.001",
+      "name": "Virtualization/Sandbox Evasion: System Checks",
+      "status": "present (official code)",
+      "confidence": "medium",
+      "details": "org/telegram/messenger/EmuDetector + ProcessBuilder: детект эмулятора присутствует и в официальном клиенте Telegram."
+    },
+    {
+      "technique": "T1521.001",
+      "name": "Encrypted Channel: Symmetric Cryptography",
+      "status": "by design",
+      "confidence": "high",
+      "details": "MTProto-шифрование messenger-трафика (libtmessages.49.so); также TLS для HTTP-клиентов."
+    }
+  ],
+  "nist_csf": [
+    {
+      "id": "DE.AE-02",
+      "note": "Потенциальные события: динамическая загрузка плагинов/DEX и хуки методами Xposed-API должны логироваться и мониториться на конечных устройствах."
+    },
+    {
+      "id": "DE.CM-01",
+      "note": "Сеть мониторится на предмет аномальных исходящих соединений; известных C2 нет, трафик — к инфраструктуре Telegram и экосистеме форка."
+    },
+    {
+      "id": "ID.RA-01",
+      "note": "Риски: установка недоверенных плагинов = произвольный код с доступом ко всем сообщениям; обновления вне Play Protect (REQUEST_INSTALL_PACKAGES)."
+    },
+    {
+      "id": "RS.AN-03",
+      "note": "Проведён статический анализ без исполнения: манифест, 8 DEX (60 238 классов), assets, native-библиотеки, подпись. Артефакты в отчёте."
+    }
+  ],
+  "recommendations": [
+    "Развёртывание в организации: запретить неофициальные клиенты Telegram (MDM/AppProtection policy), т.к. форки выводят трафик из-под контроля Play Protect и добавляют произвольную исполняемую логику",
+    "Если использование неизбежно: разрешать плагины только из доверенных источников, включить встроенный PluginAnalyzer, контролировать REQUEST_INSTALL_PACKAGES",
+    "Мониторинг: alerts на новые неизвестные домены от package com.radolyn.ayugram (DE.CM-01), контроль установленных пакетов (QUERY_ALL_PACKAGES позволяет профилирование)",
+    "Проверить совпадение SHA-256 APK с официальными релизами канала t.me/ayugramreleases перед доверием сборке",
+    "Для DTI/IOC: использовать iocs.json (фингерпринт сертификата, SHA-256, маркеры сборки)"
+  ],
+  "artifacts": {
+    "01_apk_info.json": "метаданные и хэши",
+    "02_permissions.json": "разрешения и комбинации",
+    "03_components.json": "инвентаризация компонентов",
+    "04_cert_assets.json": "сертификат подписи + assets",
+    "05_dex_stringscan.json": "скан пулов строк 8 DEX",
+    "06_stringscan_summary.json": "сводка строкового скана",
+    "07_dex_descriptors.json": "префиксный скан дескрипторов",
+    "08_ioc_strings.json": "URL/IP/t.me из строк",
+    "09_callers.json": "call-site'ы подозрительных API",
+    "10_deepdive_inventory.json": "классы unknown-пакетов + trust-скан",
+    "11_native_ioc.json": "строки native-библиотек",
+    "12_manifest_recheck.json": "экспортный разбор манифеста (v1)",
+    "13_manifest_v2.json": "манифест v2 (exported/queries/cleartext)",
+    "14_key_classes.json": "методы ключевых классов"
+  }
+}

@@ -1,0 +1,5816 @@
+{
+ "meta": {
+  "analyzed_at_utc": "2026-11-05T10:51:19.366020+00:00",
+  "tools": {
+   "androguard": "4.1.4",
+   "apktool": "2.9.3"
+  },
+  "pipeline": "static only, no execution",
+  "duration_sec": 64.8
+ },
+ "apk": {
+  "file": "/home/z/my-project/analysis/file.apk",
+  "size_bytes": 133795216,
+  "sha256": "b7195bd9f3126543566acf3e1e5d3d1cc1fa163db927e85918877f7cb65cb113",
+  "dex_files": [
+   {
+    "name": "classes.dex",
+    "size": 11731304,
+    "sha256": "2313a9606fc4046fb8f57470c25d7e72f8f91dfbcf8cc7cc4182d353f4cb0e45"
+   },
+   {
+    "name": "classes2.dex",
+    "size": 364744,
+    "sha256": "4bfc012446319fef9762ed2b2f31524ffb83465df114e7d28d043aa10da07362"
+   },
+   {
+    "name": "classes3.dex",
+    "size": 10190668,
+    "sha256": "d49f6355ee54da5ca991ba21e3a1cdaf5ee8f72ef92fdb7278872e9bf6d5dc73"
+   },
+   {
+    "name": "classes4.dex",
+    "size": 9287536,
+    "sha256": "cb609087d8b5a162c1e48516489a1c121362f8595d0cb1f18e5052790af98773"
+   },
+   {
+    "name": "classes5.dex",
+    "size": 8898728,
+    "sha256": "8042c194344cd90549e26e8994b9a39b0f1c538588266fd74ce6c4588b60bff7"
+   },
+   {
+    "name": "classes6.dex",
+    "size": 10222716,
+    "sha256": "926a8d01fee8a08139f98cdfb53e00c60fbc3b17b664f043a304bef344e1e943"
+   },
+   {
+    "name": "classes7.dex",
+    "size": 10047064,
+    "sha256": "f1fd2a100d60f02ec7b9238a607ce358023c249cc9e3c6b8a05d1724654447cf"
+   },
+   {
+    "name": "classes8.dex",
+    "size": 4433904,
+    "sha256": "f0f901f967a070b6e089942b6c13e9e2ad07adba4299bc7bff29210445e78a7d"
+   }
+  ],
+  "dex_count": 8,
+  "zip_entries": 9326,
+  "manifest": {
+   "package": "com.radolyn.ayugram",
+   "version_name": "13.1.1",
+   "version_code": "72379",
+   "install_location": "auto",
+   "compile_sdk": "36",
+   "platform_build_version": null,
+   "min_sdk": "24",
+   "target_sdk": "36",
+   "max_sdk": null,
+   "app_flags": {
+    "allowBackup": "true",
+    "usesCleartextTraffic": "true",
+    "extractNativeLibs": "true",
+    "requestLegacyExternalStorage": "true",
+    "appComponentFactory": "androidx.core.app.CoreComponentFactory"
+   },
+   "label_raw": "@string/exteraAppName",
+   "permissions": [
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_BACKGROUND_LOCATION",
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_MEDIA_LOCATION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.AUTHENTICATE_ACCOUNTS",
+    "android.permission.BLUETOOTH",
+    "android.permission.BLUETOOTH_CONNECT",
+    "android.permission.CAMERA",
+    "android.permission.CHANGE_WIFI_STATE",
+    "android.permission.CREDENTIAL_MANAGER_SET_ORIGIN",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_CAMERA",
+    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+    "android.permission.FOREGROUND_SERVICE_LOCATION",
+    "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+    "android.permission.GET_ACCOUNTS",
+    "android.permission.INTERNET",
+    "android.permission.MANAGE_ACCOUNTS",
+    "android.permission.MANAGE_EXTERNAL_STORAGE",
+    "android.permission.MANAGE_OWN_CALLS",
+    "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.QUERY_ALL_PACKAGES",
+    "android.permission.READ_APP_BADGE",
+    "android.permission.READ_CLIPBOARD",
+    "android.permission.READ_CONTACTS",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.READ_MEDIA_AUDIO",
+    "android.permission.READ_MEDIA_IMAGES",
+    "android.permission.READ_MEDIA_VIDEO",
+    "android.permission.READ_PHONE_NUMBERS",
+    "android.permission.READ_PHONE_STATE",
+    "android.permission.READ_PROFILE",
+    "android.permission.READ_SYNC_SETTINGS",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.REQUEST_DELETE_PACKAGES",
+    "android.permission.REQUEST_INSTALL_PACKAGES",
+    "android.permission.SCHEDULE_EXACT_ALARM",
+    "android.permission.SYSTEM_ALERT_WINDOW",
+    "android.permission.USE_BIOMETRIC",
+    "android.permission.USE_FINGERPRINT",
+    "android.permission.USE_FULL_SCREEN_INTENT",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "android.permission.WRITE_CONTACTS",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "android.permission.WRITE_SYNC_SETTINGS",
+    "com.anddoes.launcher.permission.UPDATE_COUNT",
+    "com.android.launcher.permission.INSTALL_SHORTCUT",
+    "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+    "com.android.vending.BILLING",
+    "com.google.android.apps.aicore.service.BIND_SERVICE",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.google.android.gms.permission.AD_ID",
+    "com.google.android.providers.gsf.permission.READ_GSERVICES",
+    "com.htc.launcher.permission.READ_SETTINGS",
+    "com.htc.launcher.permission.UPDATE_SHORTCUT",
+    "com.huawei.android.launcher.permission.CHANGE_BADGE",
+    "com.huawei.android.launcher.permission.READ_SETTINGS",
+    "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+    "com.majeur.launcher.permission.UPDATE_BADGE",
+    "com.oppo.launcher.permission.READ_SETTINGS",
+    "com.oppo.launcher.permission.WRITE_SETTINGS",
+    "com.radolyn.ayugram.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.radolyn.ayugram.permission.MAPS_RECEIVE",
+    "com.sec.android.provider.badge.permission.READ",
+    "com.sec.android.provider.badge.permission.WRITE",
+    "com.sonyericsson.home.permission.BROADCAST_BADGE",
+    "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+    "me.everything.badger.permission.BADGE_COUNT_READ",
+    "me.everything.badger.permission.BADGE_COUNT_WRITE"
+   ],
+   "declared_permissions": [
+    "com.radolyn.ayugram.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.radolyn.ayugram.permission.MAPS_RECEIVE"
+   ],
+   "components": {
+    "activities": [
+     {
+      "name": "androidx.car.app.CarAppPermissionActivity",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "androidx.credentials.playservices.controllers.identityauth.HiddenActivity",
+      "exported": "false",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "androidx.credentials.playservices.controllers.identitycredentials.IdentityCredentialApiHiddenActivity",
+      "exported": "false",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.android.billingclient.api.ProxyBillingActivity",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.android.billingclient.api.ProxyBillingActivityV2",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.gms.auth.api.signin.internal.SignInHubActivity",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.gms.common.api.GoogleApiActivity",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.play.core.common.PlayCoreDialogWrapperActivity",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.OpenAttachedMenuBotReceiver",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.OpenChatReceiver",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.ui.BubbleActivity",
+      "exported": null,
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.ui.ChatsWidgetConfigActivity",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.appwidget.action.APPWIDGET_CONFIGURE"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.ui.ContactsWidgetConfigActivity",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.appwidget.action.APPWIDGET_CONFIGURE"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.ui.ExternalActionActivity",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "org.telegram.passport.AUTHORIZE"
+      ],
+      "intent_categories": [
+       "android.intent.category.DEFAULT"
+      ],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.ui.LaunchActivity",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.intent.action.MAIN",
+       "android.intent.action.SEND",
+       "android.intent.action.VIEW",
+       "android.intent.action.SEND",
+       "android.intent.action.SEND_MULTIPLE",
+       "android.intent.action.SEND",
+       "android.intent.action.SEND",
+       "android.intent.action.SEND_MULTIPLE",
+       "android.intent.action.VIEW",
+       "android.intent.action.VIEW",
+       "android.intent.action.VIEW",
+       "android.intent.action.VIEW",
+       "android.intent.action.VIEW",
+       "android.intent.action.VIEW",
+       "org.telegram.messenger.CREATE_STICKER_PACK"
+      ],
+      "intent_categories": [
+       "android.intent.category.DEFAULT",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.BROWSABLE",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.BROWSABLE",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.BROWSABLE",
+       "android.intent.category.BROWSABLE",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.BROWSABLE",
+       "android.intent.category.DEFAULT",
+       "android.intent.category.BROWSABLE",
+       "android.intent.category.DEFAULT"
+      ],
+      "intent_data": [
+       {
+        "mimeType": "image/*"
+       },
+       {
+        "scheme": "file"
+       },
+       {
+        "scheme": "content"
+       },
+       {
+        "host": "*"
+       },
+       {
+        "pathPattern": ".*\\\\.icons"
+       },
+       {
+        "pathPattern": ".*\\\\.plugin"
+       },
+       {
+        "pathPattern": ".*\\\\.extera"
+       },
+       {
+        "mimeType": "application/*"
+       },
+       {
+        "mimeType": "video/*"
+       },
+       {
+        "mimeType": "image/*"
+       },
+       {
+        "mimeType": "text/plain"
+       },
+       {
+        "mimeType": "*/*"
+       },
+       {
+        "mimeType": "*/*"
+       },
+       {
+        "mimeType": "vnd.android.cursor.item/vnd.org.telegram.messenger.android.profile"
+       },
+       {
+        "host": "telegram.me",
+        "scheme": "http"
+       },
+       {
+        "host": "telegram.me",
+        "scheme": "https"
+       },
+       {
+        "host": "telegram.dog",
+        "scheme": "http"
+       },
+       {
+        "host": "telegram.dog",
+        "scheme": "https"
+       },
+       {
+        "host": "t.me",
+        "scheme": "http"
+       },
+       {
+        "host": "t.me",
+        "scheme": "https"
+       },
+       {
+        "host": "www.keepassdx.com",
+        "scheme": "http"
+       },
+       {
+        "host": "www.keepassdx.com",
+        "scheme": "https"
+       },
+       {
+        "scheme": "tonsite"
+       },
+       {
+        "scheme": "tg"
+       },
+       {
+        "host": "transfer",
+        "pathPrefix": "/",
+        "scheme": "ton"
+       },
+       {
+        "scheme": "tc"
+       },
+       {
+        "mimeType": "*/*"
+       }
+      ],
+      "meta_data": [
+       {
+        "name": "android.service.chooser.chooser_target_service",
+        "value": "androidx.sharetarget.ChooserTargetServiceCompat"
+       },
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       },
+       {
+        "name": "com.google.mlkit.vision.DEPENDENCIES",
+        "value": "subject_segment"
+       }
+      ]
+     },
+     {
+      "name": "org.telegram.ui.PopupNotificationActivity",
+      "exported": null,
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.ui.ShareActivity",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.intent.action.VIEW"
+      ],
+      "intent_categories": [
+       "android.intent.category.BROWSABLE",
+       "android.intent.category.DEFAULT"
+      ],
+      "intent_data": [
+       {
+        "scheme": "tgb"
+       }
+      ],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.ui.VoIPFeedbackActivity",
+      "exported": null,
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.ui.VoIPPermissionActivity",
+      "exported": null,
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     }
+    ],
+    "services": [
+     {
+      "name": "androidx.camera.core.impl.MetadataHolderService",
+      "exported": "false",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER",
+        "value": "androidx.camera.camera2.Camera2Config$DefaultProvider"
+       }
+      ]
+     },
+     {
+      "name": "androidx.car.app.CarAppMetadataHolderService",
+      "exported": "false",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "androidx.car.app.CarAppMetadataHolderService.CAR_HARDWARE_MANAGER",
+        "value": "androidx.car.app.hardware.ProjectedCarHardwareManager"
+       }
+      ]
+     },
+     {
+      "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+      "exported": "false",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "androidx.credentials.CREDENTIAL_PROVIDER_KEY",
+        "value": "androidx.credentials.playservices.CredentialProviderPlayServicesImpl"
+       }
+      ]
+     },
+     {
+      "name": "androidx.room.MultiInstanceInvalidationService",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "androidx.sharetarget.ChooserTargetServiceCompat",
+      "exported": "true",
+      "permission": "android.permission.BIND_CHOOSER_TARGET_SERVICE",
+      "enabled": null,
+      "intent_actions": [
+       "android.service.chooser.ChooserTargetService"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "androidx.work.impl.background.systemjob.SystemJobService",
+      "exported": "true",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "enabled": "@bool/enable_system_job_service_default",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "androidx.work.impl.foreground.SystemForegroundService",
+      "exported": "false",
+      "permission": null,
+      "enabled": "@bool/enable_system_foreground_service_default",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.exteragram.messenger.plugins.analyzer.PluginAnalyzerService",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "backend:com.google.android.datatransport.cct.CctBackendFactory",
+        "value": "cct"
+       }
+      ]
+     },
+     {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+      "exported": "false",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+      "exported": "true",
+      "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION",
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.gms.cast.framework.ReconnectionService",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.gms.measurement.AppMeasurementJobService",
+      "exported": "false",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.gms.measurement.AppMeasurementService",
+      "exported": "false",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.firebase.components.ComponentDiscoveryService",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       }
+      ]
+     },
+     {
+      "name": "com.google.firebase.messaging.FirebaseMessagingService",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "com.google.firebase.MESSAGING_EVENT"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.firebase.sessions.SessionLifecycleService",
+      "exported": "false",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "com.google.firebase.components:com.google.mlkit.nl.languageid.bundled.internal.ThickLanguageIdRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.mlkit.vision.segmentation.subject.internal.SubjectSegmentationRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.mlkit.vision.label.defaults.thin.ThinLabelRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.mlkit.nl.languageid.internal.LanguageIdRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       },
+       {
+        "name": "com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar",
+        "value": "com.google.firebase.components.ComponentRegistrar"
+       }
+      ]
+     },
+     {
+      "name": "org.telegram.messenger.AuthenticatorService",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.accounts.AccountAuthenticator"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.accounts.AccountAuthenticator",
+        "resource": "@xml/auth"
+       }
+      ]
+     },
+     {
+      "name": "org.telegram.messenger.BringAppForegroundService",
+      "exported": "true",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.ChatsWidgetService",
+      "exported": "false",
+      "permission": "android.permission.BIND_REMOTEVIEWS",
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.ContactsSyncAdapterService",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.content.SyncAdapter"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.content.SyncAdapter",
+        "resource": "@xml/sync_contacts"
+       },
+       {
+        "name": "android.provider.CONTACTS_STRUCTURE",
+        "resource": "@xml/contacts"
+       }
+      ]
+     },
+     {
+      "name": "org.telegram.messenger.ContactsWidgetService",
+      "exported": "false",
+      "permission": "android.permission.BIND_REMOTEVIEWS",
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.FilesMigrationService",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.GcmPushListenerService",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "com.google.firebase.MESSAGING_EVENT"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.ImportingService",
+      "exported": "true",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.KeepAliveJob",
+      "exported": "false",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.LocationSharingService",
+      "exported": "true",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.MusicBrowserService",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.media.browse.MediaBrowserService"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.MusicPlayerService",
+      "exported": "true",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.NotificationRepeat",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.NotificationsService",
+      "exported": "true",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.VideoEncodingService",
+      "exported": "true",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.WearAuthListenerService",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "com.google.android.gms.wearable.MESSAGE_RECEIVED"
+      ],
+      "intent_categories": [],
+      "intent_data": [
+       {
+        "host": "*",
+        "pathPrefix": "/tg-wear-auth/",
+        "scheme": "wear"
+       }
+      ],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.car.TelegramCarAppService",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "androidx.car.app.CarAppService"
+      ],
+      "intent_categories": [
+       "androidx.car.app.category.MESSAGING"
+      ],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.voip.TelegramConnectionService",
+      "exported": "true",
+      "permission": "android.permission.BIND_TELECOM_CONNECTION_SERVICE",
+      "enabled": null,
+      "intent_actions": [
+       "android.telecom.ConnectionService"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.voip.VoIPService",
+      "exported": "false",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.ui.Stories.recorder.StoryUploadingService",
+      "exported": "true",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     }
+    ],
+    "receivers": [
+     {
+      "name": "androidx.car.app.notification.CarAppNotificationBroadcastReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "androidx.profileinstaller.ProfileInstallReceiver",
+      "exported": "true",
+      "permission": "android.permission.DUMP",
+      "enabled": "true",
+      "intent_actions": [
+       "androidx.profileinstaller.action.INSTALL_PROFILE",
+       "androidx.profileinstaller.action.SKIP_FILE",
+       "androidx.profileinstaller.action.SAVE_PROFILE",
+       "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.BOOT_COMPLETED"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+      "exported": "true",
+      "permission": "android.permission.DUMP",
+      "enabled": "true",
+      "intent_actions": [
+       "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.exteragram.messenger.updater.UpdaterUtils$UpdateReceiver",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.intent.action.MY_PACKAGE_REPLACED"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.gms.cast.framework.media.MediaIntentReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.android.gms.measurement.AppMeasurementReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+      "exported": "true",
+      "permission": "com.google.android.c2dm.permission.SEND",
+      "enabled": null,
+      "intent_actions": [
+       "com.google.android.c2dm.intent.RECEIVE"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED",
+        "value": "true"
+       }
+      ]
+     },
+     {
+      "name": "org.telegram.messenger.AppStartReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [
+       "org.telegram.start",
+       "android.intent.action.BOOT_COMPLETED"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.AutoMessageHeardReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "org.telegram.messenger.ACTION_MESSAGE_HEARD"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.CallReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.intent.action.PHONE_STATE"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.ChatsWidgetProvider",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.appwidget.action.APPWIDGET_UPDATE"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.appwidget.provider",
+        "resource": "@xml/chats_widget_info"
+       }
+      ]
+     },
+     {
+      "name": "org.telegram.messenger.ContactsWidgetProvider",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.appwidget.action.APPWIDGET_UPDATE"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.appwidget.provider",
+        "resource": "@xml/contacts_widget_info"
+       }
+      ]
+     },
+     {
+      "name": "org.telegram.messenger.CopyCodeReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "org.telegram.messenger.ACTION_COPY_CODE"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.CustomTabsCopyReceiver",
+      "exported": null,
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.MusicPlayerReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "org.telegram.android.musicplayer.close",
+       "org.telegram.android.musicplayer.pause",
+       "org.telegram.android.musicplayer.next",
+       "org.telegram.android.musicplayer.play",
+       "org.telegram.android.musicplayer.previous",
+       "android.intent.action.MEDIA_BUTTON",
+       "android.media.AUDIO_BECOMING_NOISY"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.NotificationCallbackReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.NotificationDismissReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.NotificationsDisabledReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.app.action.NOTIFICATION_CHANNEL_BLOCK_STATE_CHANGED"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.PopupReplyReceiver",
+      "exported": null,
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.RefererReceiver",
+      "exported": "true",
+      "permission": "android.permission.INSTALL_PACKAGES",
+      "enabled": null,
+      "intent_actions": [
+       "com.android.vending.INSTALL_REFERRER"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.ShareBroadcastReceiver",
+      "exported": null,
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.ShortcutResultReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.SmsReceiver",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.StopLiveLocationReceiver",
+      "exported": null,
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.WearReplyReceiver",
+      "exported": null,
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.voip.VoIPActionsReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     },
+     {
+      "name": "org.telegram.messenger.voip.VoIPMediaButtonReceiver",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [
+       "android.intent.action.MEDIA_BUTTON"
+      ],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": []
+     }
+    ],
+    "providers": [
+     {
+      "name": "androidx.core.content.FileProvider",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.support.FILE_PROVIDER_PATHS",
+        "resource": "@xml/provider_paths"
+       }
+      ],
+      "authorities": "com.radolyn.ayugram.provider",
+      "grantUriPermissions": "true",
+      "readPermission": null,
+      "writePermission": null
+     },
+     {
+      "name": "androidx.startup.InitializationProvider",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "androidx.work.WorkManagerInitializer",
+        "value": "androidx.startup"
+       },
+       {
+        "name": "androidx.emoji2.text.EmojiCompatInitializer",
+        "value": "androidx.startup"
+       },
+       {
+        "name": "androidx.lifecycle.ProcessLifecycleInitializer",
+        "value": "androidx.startup"
+       },
+       {
+        "name": "androidx.profileinstaller.ProfileInstallerInitializer",
+        "value": "androidx.startup"
+       },
+       {
+        "name": "okhttp3.internal.platform.PlatformInitializer",
+        "value": "androidx.startup"
+       }
+      ],
+      "authorities": "com.radolyn.ayugram.androidx-startup",
+      "grantUriPermissions": null,
+      "readPermission": null,
+      "writePermission": null
+     },
+     {
+      "name": "com.exteragram.messenger.icons.IconPackProvider",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [],
+      "authorities": "com.radolyn.ayugram.icon_pack_provider",
+      "grantUriPermissions": "true",
+      "readPermission": null,
+      "writePermission": null
+     },
+     {
+      "name": "com.google.firebase.provider.FirebaseInitProvider",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [],
+      "authorities": "com.radolyn.ayugram.firebaseinitprovider",
+      "grantUriPermissions": null,
+      "readPermission": null,
+      "writePermission": null
+     },
+     {
+      "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [],
+      "authorities": "com.radolyn.ayugram.mlkitinitprovider",
+      "grantUriPermissions": null,
+      "readPermission": null,
+      "writePermission": null
+     },
+     {
+      "name": "org.telegram.messenger.NotificationImageProvider",
+      "exported": "false",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [],
+      "authorities": "com.radolyn.ayugram.notification_image_provider",
+      "grantUriPermissions": "true",
+      "readPermission": null,
+      "writePermission": null
+     },
+     {
+      "name": "org.telegram.messenger.voip.CallNotificationSoundProvider",
+      "exported": "true",
+      "permission": null,
+      "enabled": null,
+      "intent_actions": [],
+      "intent_categories": [],
+      "intent_data": [],
+      "meta_data": [],
+      "authorities": "com.radolyn.ayugram.call_sound_provider",
+      "grantUriPermissions": null,
+      "readPermission": null,
+      "writePermission": null
+     }
+    ],
+    "activity_aliases": [
+     {
+      "name": "com.exteragram.messenger.AmethystIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.AuroraIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.AvatarIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.AyuGramAlt",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.AyuGramBard",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.AyuGramDiscord",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.AyuGramExtera",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.AyuGramNothing",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.AyuGramSpotify",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.AyuGramYaPlus",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.AyuTyan",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.CandyIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.CyberpunkIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.DefaultIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "true",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.EchpochmakIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.EditorIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.ExteraIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.FishIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.FlappyIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.FrogIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.Google26Icon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.GoogleIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.GuitarIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.HamsterIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.HumanIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.IceAgeIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.InvincibleIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.JellyfishIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.MoleIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.MonetIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.MonetIconExtera",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.NasaIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.NyanCatIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.OrbitIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.OsuIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.PsychosisIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.SpaceIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.SpongeIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.SunsetIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.SusIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.WinterIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "com.exteragram.messenger.XpIcon",
+      "exported": "true",
+      "permission": null,
+      "enabled": "false",
+      "intent_actions": [
+       "android.intent.action.MAIN"
+      ],
+      "intent_categories": [
+       "android.intent.category.LAUNCHER",
+       "android.intent.category.MULTIWINDOW_LAUNCHER"
+      ],
+      "intent_data": [],
+      "meta_data": [
+       {
+        "name": "android.app.shortcuts",
+        "resource": "@xml/shortcuts"
+       }
+      ]
+     },
+     {
+      "name": "org.telegram.ui.CallsActivity",
+      "exported": "true",
+      "permission": "android.permission.CALL_PHONE",
+      "enabled": null,
+      "intent_actions": [
+       "android.intent.action.VIEW"
+      ],
+      "intent_categories": [
+       "android.intent.category.DEFAULT"
+      ],
+      "intent_data": [
+       {
+        "mimeType": "vnd.android.cursor.item/vnd.org.telegram.messenger.android.call"
+       },
+       {
+        "mimeType": "vnd.android.cursor.item/vnd.org.telegram.messenger.android.call.video"
+       }
+      ],
+      "meta_data": []
+     }
+    ]
+   },
+   "app_name": "AyuGram"
+  }
+ },
+ "permissions": {
+  "requested_total": 79,
+  "all_requested_short": [
+   "ACCESS_ADSERVICES_AD_ID",
+   "ACCESS_ADSERVICES_ATTRIBUTION",
+   "ACCESS_BACKGROUND_LOCATION",
+   "ACCESS_COARSE_LOCATION",
+   "ACCESS_FINE_LOCATION",
+   "ACCESS_MEDIA_LOCATION",
+   "ACCESS_NETWORK_STATE",
+   "ACCESS_WIFI_STATE",
+   "AD_ID",
+   "AUTHENTICATE_ACCOUNTS",
+   "BADGE_COUNT_READ",
+   "BADGE_COUNT_WRITE",
+   "BILLING",
+   "BIND_GET_INSTALL_REFERRER_SERVICE",
+   "BIND_SERVICE",
+   "BLUETOOTH",
+   "BLUETOOTH_CONNECT",
+   "BROADCAST_BADGE",
+   "CAMERA",
+   "CHANGE_BADGE",
+   "CHANGE_WIFI_STATE",
+   "CREDENTIAL_MANAGER_SET_ORIGIN",
+   "DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+   "FOREGROUND_SERVICE",
+   "FOREGROUND_SERVICE_CAMERA",
+   "FOREGROUND_SERVICE_DATA_SYNC",
+   "FOREGROUND_SERVICE_LOCATION",
+   "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+   "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+   "FOREGROUND_SERVICE_MICROPHONE",
+   "GET_ACCOUNTS",
+   "INSTALL_SHORTCUT",
+   "INTERNET",
+   "MANAGE_ACCOUNTS",
+   "MANAGE_EXTERNAL_STORAGE",
+   "MANAGE_OWN_CALLS",
+   "MAPS_RECEIVE",
+   "MODIFY_AUDIO_SETTINGS",
+   "POST_NOTIFICATIONS",
+   "PROVIDER_INSERT_BADGE",
+   "QUERY_ALL_PACKAGES",
+   "READ",
+   "READ_APP_BADGE",
+   "READ_CLIPBOARD",
+   "READ_CONTACTS",
+   "READ_EXTERNAL_STORAGE",
+   "READ_GSERVICES",
+   "READ_MEDIA_AUDIO",
+   "READ_MEDIA_IMAGES",
+   "READ_MEDIA_VIDEO",
+   "READ_PHONE_NUMBERS",
+   "READ_PHONE_STATE",
+   "READ_PROFILE",
+   "READ_SETTINGS",
+   "READ_SYNC_SETTINGS",
+   "RECEIVE",
+   "RECEIVE_BOOT_COMPLETED",
+   "RECORD_AUDIO",
+   "REQUEST_DELETE_PACKAGES",
+   "REQUEST_INSTALL_PACKAGES",
+   "SCHEDULE_EXACT_ALARM",
+   "SYSTEM_ALERT_WINDOW",
+   "UNINSTALL_SHORTCUT",
+   "UPDATE_BADGE",
+   "UPDATE_COUNT",
+   "UPDATE_SHORTCUT",
+   "USE_BIOMETRIC",
+   "USE_FINGERPRINT",
+   "USE_FULL_SCREEN_INTENT",
+   "VIBRATE",
+   "WAKE_LOCK",
+   "WRITE",
+   "WRITE_CONTACTS",
+   "WRITE_EXTERNAL_STORAGE",
+   "WRITE_SETTINGS",
+   "WRITE_SYNC_SETTINGS"
+  ],
+  "dangerous": [
+   "android.permission.ACCESS_BACKGROUND_LOCATION",
+   "android.permission.ACCESS_COARSE_LOCATION",
+   "android.permission.ACCESS_FINE_LOCATION",
+   "android.permission.CAMERA",
+   "android.permission.GET_ACCOUNTS",
+   "android.permission.MANAGE_EXTERNAL_STORAGE",
+   "android.permission.READ_CONTACTS",
+   "android.permission.READ_EXTERNAL_STORAGE",
+   "android.permission.READ_MEDIA_AUDIO",
+   "android.permission.READ_MEDIA_IMAGES",
+   "android.permission.READ_MEDIA_VIDEO",
+   "android.permission.READ_PHONE_NUMBERS",
+   "android.permission.READ_PHONE_STATE",
+   "android.permission.RECORD_AUDIO",
+   "android.permission.WRITE_CONTACTS",
+   "android.permission.WRITE_EXTERNAL_STORAGE"
+  ],
+  "special_and_bind": [
+   "android.permission.MANAGE_EXTERNAL_STORAGE",
+   "android.permission.QUERY_ALL_PACKAGES",
+   "android.permission.RECEIVE_BOOT_COMPLETED",
+   "android.permission.REQUEST_DELETE_PACKAGES",
+   "android.permission.REQUEST_INSTALL_PACKAGES",
+   "android.permission.SYSTEM_ALERT_WINDOW",
+   "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+   "com.oppo.launcher.permission.WRITE_SETTINGS"
+  ],
+  "signature_protected": [],
+  "normal": [
+   "android.permission.ACCESS_ADSERVICES_AD_ID",
+   "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+   "android.permission.ACCESS_MEDIA_LOCATION",
+   "android.permission.ACCESS_NETWORK_STATE",
+   "android.permission.ACCESS_WIFI_STATE",
+   "android.permission.AUTHENTICATE_ACCOUNTS",
+   "android.permission.BLUETOOTH",
+   "android.permission.BLUETOOTH_CONNECT",
+   "android.permission.CHANGE_WIFI_STATE",
+   "android.permission.CREDENTIAL_MANAGER_SET_ORIGIN",
+   "android.permission.FOREGROUND_SERVICE",
+   "android.permission.FOREGROUND_SERVICE_CAMERA",
+   "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+   "android.permission.FOREGROUND_SERVICE_LOCATION",
+   "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+   "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+   "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+   "android.permission.INTERNET",
+   "android.permission.MANAGE_ACCOUNTS",
+   "android.permission.MANAGE_OWN_CALLS",
+   "android.permission.MODIFY_AUDIO_SETTINGS",
+   "android.permission.POST_NOTIFICATIONS",
+   "android.permission.QUERY_ALL_PACKAGES",
+   "android.permission.READ_APP_BADGE",
+   "android.permission.READ_CLIPBOARD",
+   "android.permission.READ_PROFILE",
+   "android.permission.READ_SYNC_SETTINGS",
+   "android.permission.RECEIVE_BOOT_COMPLETED",
+   "android.permission.REQUEST_DELETE_PACKAGES",
+   "android.permission.REQUEST_INSTALL_PACKAGES",
+   "android.permission.SCHEDULE_EXACT_ALARM",
+   "android.permission.SYSTEM_ALERT_WINDOW",
+   "android.permission.USE_BIOMETRIC",
+   "android.permission.USE_FINGERPRINT",
+   "android.permission.USE_FULL_SCREEN_INTENT",
+   "android.permission.VIBRATE",
+   "android.permission.WAKE_LOCK",
+   "android.permission.WRITE_SYNC_SETTINGS"
+  ],
+  "custom_third_party": [
+   "com.anddoes.launcher.permission.UPDATE_COUNT",
+   "com.android.launcher.permission.INSTALL_SHORTCUT",
+   "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+   "com.android.vending.BILLING",
+   "com.google.android.apps.aicore.service.BIND_SERVICE",
+   "com.google.android.c2dm.permission.RECEIVE",
+   "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+   "com.google.android.gms.permission.AD_ID",
+   "com.google.android.providers.gsf.permission.READ_GSERVICES",
+   "com.htc.launcher.permission.READ_SETTINGS",
+   "com.htc.launcher.permission.UPDATE_SHORTCUT",
+   "com.huawei.android.launcher.permission.CHANGE_BADGE",
+   "com.huawei.android.launcher.permission.READ_SETTINGS",
+   "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+   "com.majeur.launcher.permission.UPDATE_BADGE",
+   "com.oppo.launcher.permission.READ_SETTINGS",
+   "com.oppo.launcher.permission.WRITE_SETTINGS",
+   "com.radolyn.ayugram.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+   "com.radolyn.ayugram.permission.MAPS_RECEIVE",
+   "com.sec.android.provider.badge.permission.READ",
+   "com.sec.android.provider.badge.permission.WRITE",
+   "com.sonyericsson.home.permission.BROADCAST_BADGE",
+   "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+   "me.everything.badger.permission.BADGE_COUNT_READ",
+   "me.everything.badger.permission.BADGE_COUNT_WRITE"
+  ],
+  "declared_by_app": [
+   "com.radolyn.ayugram.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+   "com.radolyn.ayugram.permission.MAPS_RECEIVE"
+  ],
+  "dangerous_combinations": [
+   {
+    "permissions": [
+     "RECORD_AUDIO",
+     "CAMERA",
+     "ACCESS_FINE_LOCATION"
+    ],
+    "weight": 3,
+    "rationale": "набор шпионского мониторинга"
+   },
+   {
+    "permissions": [
+     "REQUEST_INSTALL_PACKAGES",
+     "RECEIVE_BOOT_COMPLETED"
+    ],
+    "weight": 3,
+    "rationale": "dropper с автозапуском"
+   }
+  ],
+  "bind_perm_descriptions": {}
+ },
+ "components": {
+  "notable": [
+   {
+    "type": "exported_deeplink",
+    "name": "org.telegram.ui.LaunchActivity",
+    "data": [
+     {
+      "mimeType": "image/*"
+     },
+     {
+      "scheme": "file"
+     },
+     {
+      "scheme": "content"
+     }
+    ]
+   },
+   {
+    "type": "exported_deeplink",
+    "name": "org.telegram.ui.ShareActivity",
+    "data": [
+     {
+      "scheme": "tgb"
+     }
+    ]
+   },
+   {
+    "type": "receiver",
+    "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+    "tags": [
+     "BOOT_COMPLETED"
+    ]
+   },
+   {
+    "type": "receiver",
+    "name": "com.exteragram.messenger.updater.UpdaterUtils$UpdateReceiver",
+    "tags": [
+     "self_update_on_replace"
+    ]
+   },
+   {
+    "type": "receiver",
+    "name": "org.telegram.messenger.AppStartReceiver",
+    "tags": [
+     "BOOT_COMPLETED"
+    ]
+   },
+   {
+    "type": "provider",
+    "name": "androidx.core.content.FileProvider",
+    "authorities": "com.radolyn.ayugram.provider",
+    "exported": "false",
+    "grantUriPermissions": "true"
+   },
+   {
+    "type": "provider",
+    "name": "com.exteragram.messenger.icons.IconPackProvider",
+    "authorities": "com.radolyn.ayugram.icon_pack_provider",
+    "exported": "false",
+    "grantUriPermissions": "true"
+   },
+   {
+    "type": "provider",
+    "name": "org.telegram.messenger.NotificationImageProvider",
+    "authorities": "com.radolyn.ayugram.notification_image_provider",
+    "exported": "false",
+    "grantUriPermissions": "true"
+   },
+   {
+    "type": "provider",
+    "name": "org.telegram.messenger.voip.CallNotificationSoundProvider",
+    "authorities": "com.radolyn.ayugram.call_sound_provider",
+    "exported": "true",
+    "grantUriPermissions": null
+   }
+  ],
+  "counts": {
+   "activities": 19,
+   "services": 38,
+   "receivers": 30,
+   "providers": 7,
+   "activity_aliases": 43
+  }
+ },
+ "suspicious_apis": [
+  {
+   "category": "reflection",
+   "api": "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;",
+   "invocations": 356,
+   "callers_sample": [
+    "Landroidx/core/content/pm/ShortcutManagerCompat;->getShortcutInfoListeners",
+    "Landroidx/core/content/pm/ShortcutManagerCompat;->getShortcutInfoSaverInstance",
+    "Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->getResId",
+    "Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->getResPackage",
+    "Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->getType",
+    "Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->getUri",
+    "Landroidx/core/os/TraceCompat;-><clinit>",
+    "Landroidx/datastore/preferences/protobuf/UnsafeUtil;->determineAndroidSupportByAddressSize"
+   ]
+  },
+  {
+   "category": "reflection",
+   "api": "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;",
+   "invocations": 259,
+   "callers_sample": [
+    "Landroidx/core/content/pm/ShortcutManagerCompat;->getShortcutInfoListeners",
+    "Landroidx/core/content/pm/ShortcutManagerCompat;->getShortcutInfoSaverInstance",
+    "Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->getResId",
+    "Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->getResPackage",
+    "Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->getType",
+    "Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->getUri",
+    "Landroidx/core/view/ViewConfigurationCompat;->getLegacyScrollFactor",
+    "Landroidx/core/view/WindowInsetsCompat$Impl20;->getVisibleInsets"
+   ]
+  },
+  {
+   "category": "reflection",
+   "api": "Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;",
+   "invocations": 148,
+   "callers_sample": [
+    "Landroidx/core/view/WindowInsetsCompat$Impl20;->loadReflectionField",
+    "Landroidx/datastore/preferences/protobuf/Android;->getClassForName",
+    "Landroidx/datastore/preferences/protobuf/ExtensionRegistryFactory;->reflectExtensionRegistry",
+    "Landroidx/datastore/preferences/protobuf/ExtensionSchemas;->loadSchemaForFullRuntime",
+    "Landroidx/datastore/preferences/protobuf/ListFieldSchemas;->loadSchemaForFullRuntime",
+    "Landroidx/datastore/preferences/protobuf/ManifestSchemaFactory;->getDescriptorMessageInfoFactory",
+    "Landroidx/datastore/preferences/protobuf/MapFieldSchemas;->loadSchemaForFullRuntime",
+    "Landroidx/datastore/preferences/protobuf/NewInstanceSchemas;->loadSchemaForFullRuntime"
+   ]
+  },
+  {
+   "category": "reflection",
+   "api": "Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;",
+   "invocations": 108,
+   "callers_sample": [
+    "Landroidx/core/view/ViewCompat;->getAccessibilityDelegateThroughReflection",
+    "Landroidx/core/view/WindowInsetsCompat$Impl20;->getVisibleInsets",
+    "Landroidx/datastore/preferences/protobuf/UnsafeUtil$1;->run",
+    "Lcom/exteragram/messenger/debug/FreezeMonitor;->delegateName",
+    "Lcom/exteragram/messenger/debug/FreezeMonitor;->observers",
+    "Lcom/exteragram/messenger/feed/FeedRequestNormalizer;->getDialogId",
+    "Lcom/exteragram/messenger/feed/FeedRequestNormalizer;->getFieldValue",
+    "Lcom/exteragram/messenger/feed/FeedRequestNormalizer;->normalizeMessageIdField"
+   ]
+  },
+  {
+   "category": "reflection",
+   "api": "Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;",
+   "invocations": 104,
+   "callers_sample": [
+    "Landroidx/arch/core/executor/DefaultTaskExecutor;->createAsync",
+    "Landroidx/core/os/HandlerCompat;->createAsync",
+    "Landroidx/datastore/preferences/protobuf/ExtensionSchemas;->loadSchemaForFullRuntime",
+    "Landroidx/datastore/preferences/protobuf/ListFieldSchemas;->loadSchemaForFullRuntime",
+    "Landroidx/datastore/preferences/protobuf/MapFieldSchemas;->loadSchemaForFullRuntime",
+    "Landroidx/datastore/preferences/protobuf/NewInstanceSchemas;->loadSchemaForFullRuntime",
+    "Landroidx/datastore/preferences/protobuf/SchemaUtil;->getUnknownFieldSetSchema",
+    "Landroidx/lifecycle/Lifecycling;->createGeneratedAdapter"
+   ]
+  },
+  {
+   "category": "reflection",
+   "api": "Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;",
+   "invocations": 102,
+   "callers_sample": [
+    "Landroidx/core/view/ViewCompat;->getAccessibilityDelegateThroughReflection",
+    "Landroidx/core/view/WindowInsetsCompat$Impl20;->loadReflectionField",
+    "Landroidx/datastore/preferences/protobuf/MessageSchema;->reflectField",
+    "Landroidx/datastore/preferences/protobuf/UnsafeUtil;->field",
+    "Lcom/exteragram/messenger/debug/FreezeMonitor;->delegateName",
+    "Lcom/exteragram/messenger/debug/FreezeMonitor;->observers",
+    "Lcom/exteragram/messenger/utils/AppUtils;->getPrivateField",
+    "Lcom/exteragram/messenger/utils/AppUtils;->getPrivateStaticField"
+   ]
+  },
+  {
+   "category": "base64",
+   "api": "Landroid/util/Base64;->decode(Ljava/lang/String; I)[B",
+   "invocations": 92,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/proxy/ProxyController;->decode",
+    "Lcom/exteragram/messenger/proxy/ProxyController;->load",
+    "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoSchedulerService;->onStartJob",
+    "Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->maybeBase64Decode",
+    "Lcom/google/android/gms/common/util/Base64Utils;->decodeUrlSafeNoPadding",
+    "Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseEventBinaryImage",
+    "Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseFile",
+    "Lcom/google/firebase/crashlytics/internal/model/serialization/CrashlyticsReportJsonTransform;->parseSession"
+   ]
+  },
+  {
+   "category": "reflection",
+   "api": "Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;",
+   "invocations": 85,
+   "callers_sample": [
+    "Landroidx/core/view/ViewConfigurationCompat;-><clinit>",
+    "Landroidx/core/view/WindowInsetsCompat$Impl20;->loadReflectionField",
+    "Landroidx/datastore/preferences/protobuf/ExtensionRegistryFactory;->invokeSubclassFactory",
+    "Landroidx/datastore/preferences/protobuf/ManifestSchemaFactory;->getDescriptorMessageInfoFactory",
+    "Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->$r8$lambda$4rXSxUDV5Jwg_myyvvGbHMZMbGM",
+    "Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->$r8$lambda$dKqImjZeKtSaT9NYGZ8XQAtPq7s",
+    "Landroidx/work/impl/utils/ProcessUtils;->getProcessName",
+    "Lcom/exteragram/messenger/debug/FreezeMonitor;->countInstances"
+   ]
+  },
+  {
+   "category": "package_enumeration",
+   "api": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String; I)Landroid/content/pm/PackageInfo;",
+   "invocations": 50,
+   "callers_sample": [
+    "Landroidx/core/provider/FontProvider;->getProvider",
+    "Landroidx/emoji2/text/DefaultEmojiCompatConfig$DefaultEmojiCompatConfigHelper;->getSigningSignatures",
+    "Landroidx/emoji2/text/DefaultEmojiCompatConfig$DefaultEmojiCompatConfigHelper_API28;->getSigningSignatures",
+    "Landroidx/profileinstaller/ProfileInstaller;->writeProfile",
+    "Landroidx/profileinstaller/ProfileInstaller;->writeSkipFile",
+    "Landroidx/profileinstaller/ProfileVerifier;->getPackageLastUpdateTime",
+    "Lcom/google/android/datatransport/cct/CctTransportBackend;->getPackageVersionCode",
+    "Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->getApkVersion"
+   ]
+  },
+  {
+   "category": "reflection",
+   "api": "Ljava/lang/Class;->forName(Ljava/lang/String; Z Ljava/lang/ClassLoader;)Ljava/lang/Class;",
+   "invocations": 46,
+   "callers_sample": [
+    "Landroidx/core/content/pm/ShortcutManagerCompat;->getShortcutInfoListeners",
+    "Landroidx/core/content/pm/ShortcutManagerCompat;->getShortcutInfoSaverInstance",
+    "Landroidx/datastore/preferences/protobuf/GeneratedMessageLite;->getDefaultInstance",
+    "Landroidx/fragment/app/FragmentFactory;->loadClass",
+    "Landroidx/room/util/KClassUtil;->findAndInstantiateDatabaseImpl",
+    "Landroidx/savedstate/Recreator;->reflectiveNew",
+    "Landroidx/work/impl/utils/ProcessUtils;->getProcessName",
+    "Lcom/google/android/gms/internal/measurement/zzadu;->zzcr"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;",
+   "invocations": 45,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/icons/IconPackProvider;->getRasterizedIcon",
+    "Lcom/exteragram/messenger/security/SensitivePaymentForms;->capture",
+    "Lcom/google/android/gms/common/util/AndroidUtilsLight;->zza",
+    "Lcom/google/android/gms/measurement/internal/zzpp;->zzQ",
+    "Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->hash",
+    "Lcom/google/firebase/messaging/GmsRpc;->getHashedFirebaseAppName",
+    "Lcom/radolyn/ayugram/AyuInfra;->isAppModified",
+    "Lcom/radolyn/ayugram/utils/fcm/AyuMapsTokenService;->getCertificateFingerprint"
+   ]
+  },
+  {
+   "category": "network",
+   "api": "Ljava/net/URL;-><init>(Ljava/lang/String;)V",
+   "invocations": 42,
+   "callers_sample": [
+    "Lcom/google/android/datatransport/cct/CctTransportBackend;->doSend",
+    "Lcom/google/android/datatransport/cct/CctTransportBackend;->parseUrlOrThrow",
+    "Lcom/google/android/gms/measurement/internal/zzpp;->zzaw",
+    "Lcom/google/android/gms/measurement/internal/zzpp;->zzj",
+    "Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->getFullyQualifiedRequestUri",
+    "Lcom/google/firebase/messaging/TopicSubscriptionClient;->performTopicOperation",
+    "Lcom/google/firebase/remoteconfig/internal/ConfigFetchHttpClient;->createHttpURLConnection",
+    "Lcom/google/firebase/remoteconfig/internal/ConfigRealtimeHttpClient;->getUrl"
+   ]
+  },
+  {
+   "category": "reflection",
+   "api": "Ljava/lang/reflect/Field;->set(Ljava/lang/Object; Ljava/lang/Object;)V",
+   "invocations": 41,
+   "callers_sample": [
+    "Landroidx/appcompat/widget/DropDownListView$PreApi33Impl;->setSelectedChildViewEnabled",
+    "Lcom/exteragram/messenger/feed/FeedRequestNormalizer;->setInputChannel",
+    "Lcom/exteragram/messenger/feed/FeedRequestNormalizer;->setInputPeer",
+    "Lcom/exteragram/messenger/utils/AppUtils;->setPrivateField",
+    "Lcom/exteragram/messenger/utils/AppUtils;->setPrivateStaticField",
+    "Lcom/google/android/gms/dynamite/DynamiteModule;->zza",
+    "Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$2;->readIntoField",
+    "Lorg/telegram/messenger/NotificationBadge$XiaomiHomeBadger;->executeBadge"
+   ]
+  },
+  {
+   "category": "clipboard",
+   "api": "Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;",
+   "invocations": 31,
+   "callers_sample": [
+    "Landroidx/appcompat/widget/AppCompatReceiveContentHelper;->maybeHandleMenuActionViaPerformReceiveContent",
+    "Lcom/exteragram/messenger/ai/ui/activities/EditServiceActivity;->readClipboardText",
+    "Lcom/exteragram/messenger/components/ReceiveContentEditText;->handleMenuActionViaReceiveContent",
+    "Lcom/exteragram/messenger/icons/ui/components/ReplaceIconBottomSheet;->lambda$createView$2",
+    "Lcom/exteragram/messenger/icons/ui/components/ReplaceIconBottomSheet;->lambda$createView$5",
+    "Lcom/exteragram/messenger/reactions/ReactionsEditHelper;->parseClipboard",
+    "Lorg/telegram/ui/Components/EditTextCaption;->lambda$showInputDialog$8",
+    "Lorg/telegram/ui/Components/EditTextCaption;->onTextContextMenuItem"
+   ]
+  },
+  {
+   "category": "user_data",
+   "api": "Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;",
+   "invocations": 29,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/utils/IntentsController;->getViewFileExtension",
+    "Lorg/telegram/messenger/AndroidUtilities;->getDataColumn",
+    "Lorg/telegram/messenger/AndroidUtilities;->obtainLoginPhoneCall",
+    "Lorg/telegram/messenger/ContactsController;->checkContactsInternal",
+    "Lorg/telegram/messenger/ContactsController;->createOrUpdateConnectionServiceContact",
+    "Lorg/telegram/messenger/ContactsController;->deleteConnectionServiceContact",
+    "Lorg/telegram/messenger/ContactsController;->performWriteContactsToPhoneBookInternal",
+    "Lorg/telegram/messenger/ContactsController;->readContactsFromPhoneBook"
+   ]
+  },
+  {
+   "category": "native_library_loading",
+   "api": "Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+   "invocations": 20,
+   "callers_sample": [
+    "Landroidx/camera/core/ImageProcessingUtil;-><clinit>",
+    "Landroidx/camera/core/impl/utils/SurfaceUtil;-><clinit>",
+    "Landroidx/datastore/core/SharedCounter$Factory;->loadLib",
+    "Lc/a;->a",
+    "Lcom/chaquo/python/GenericPlatform;-><init>",
+    "Lcom/chaquo/python/android/AndroidPlatform;->loadNativeLibs",
+    "Lcom/google/firebase/sessions/FirebaseSessionsComponent$MainModule$Companion;->loadDataStoreSharedCounter",
+    "Lorg/telegram/messenger/NativeLoader;->initNativeLibs"
+   ]
+  },
+  {
+   "category": "webview",
+   "api": "Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V",
+   "invocations": 20,
+   "callers_sample": [
+    "Lcom/google/android/recaptcha/internal/zzby;->zze",
+    "Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->destroyWebView",
+    "Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->setBlock",
+    "Lorg/telegram/ui/Components/EmbedBottomSheet$2;->onDetachedFromWindow",
+    "Lorg/telegram/ui/Components/EmbedBottomSheet;->destroy",
+    "Lorg/telegram/ui/Components/PhotoViewerWebView;->release",
+    "Lorg/telegram/ui/PaymentFormActivity;->lambda$sendData$67",
+    "Lorg/telegram/ui/web/WebInstantView;->readHTML"
+   ]
+  },
+  {
+   "category": "persistence",
+   "api": "Landroid/app/Service;->startForeground(I Landroid/app/Notification;)V",
+   "invocations": 17,
+   "callers_sample": [
+    "Landroidx/work/impl/foreground/SystemForegroundService;->startForeground",
+    "Lcom/google/android/gms/cast/CastRemoteDisplayLocalService;->zzc",
+    "Lorg/telegram/messenger/FilesMigrationService;->onStartCommand",
+    "Lorg/telegram/messenger/NotificationsService;->onCreate",
+    "Lorg/telegram/messenger/voip/VoIPService;->onCreate",
+    "Lorg/telegram/messenger/voip/VoIPService;->showIncomingNotification",
+    "Lorg/telegram/messenger/voip/VoIPService;->showNotification",
+    "Lorg/telegram/messenger/voip/VoIPService;->updateCurrentForegroundType"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;",
+   "invocations": 15,
+   "callers_sample": [
+    "Landroidx/biometric/CryptoObjectUtils;->createFakeCryptoObject",
+    "Landroidx/media3/exoplayer/hls/Aes128DataSource;->getCipherInstance",
+    "Lcom/google/android/recaptcha/internal/zzadg;->zza",
+    "Lcom/google/android/recaptcha/internal/zznk;->zza",
+    "Lcom/google/android/recaptcha/internal/zznk;->zzb",
+    "Lorg/telegram/messenger/FingerprintController;->checkDeviceFingerprintsChanged",
+    "Lorg/telegram/ui/PassportActivity;->lambda$createRequestInterface$16",
+    "Lorg/telegram/ui/WearAuthSheet;->aeadEncrypt"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/Cipher;->doFinal([B)[B",
+   "invocations": 12,
+   "callers_sample": [
+    "Lcom/google/android/recaptcha/internal/zznk;->zza",
+    "Lorg/telegram/ui/PassportActivity;->lambda$createRequestInterface$16",
+    "Lorg/telegram/ui/Wallet/GramWalletStorage;->decrypt",
+    "Lorg/telegram/ui/Wallet/GramWalletStorage;->encrypt",
+    "Lorg/telegram/ui/Wallet/GramWalletStorage;->recordKey",
+    "Lorg/telegram/ui/WearAuthSheet;->aeadEncrypt",
+    "Lorg/telegram/ui/bots/BotBiometry;->lambda$requestToken$0",
+    "Lorg/telegram/ui/bots/BotBiometry;->lambda$updateToken$1"
+   ]
+  },
+  {
+   "category": "location",
+   "api": "Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;",
+   "invocations": 12,
+   "callers_sample": [
+    "Landroidx/appcompat/app/TwilightManager;->getLastKnownLocationForProvider",
+    "Lorg/telegram/messenger/LocationController;->start",
+    "Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;->start",
+    "Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->getLastLocation",
+    "Lorg/telegram/ui/LocationActivity;->getLastLocation",
+    "Lorg/telegram/ui/Stories/recorder/Weather;->$r8$lambda$fvqkoXIkTbli7Ns6qnkozliUScs",
+    "Lorg/telegram/ui/ThemeActivity;->updateSunTime",
+    "Lorg/telegram/ui/bots/BotLocation;->requestObject"
+   ]
+  },
+  {
+   "category": "webview",
+   "api": "Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V",
+   "invocations": 11,
+   "callers_sample": [
+    "Lcom/google/android/recaptcha/internal/zzby;->zze",
+    "Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;-><init>",
+    "Lorg/telegram/ui/Components/EmbedBottomSheet;-><init>",
+    "Lorg/telegram/ui/Components/PhotoViewerWebView;-><init>",
+    "Lorg/telegram/ui/Components/WebPlayerView;-><init>",
+    "Lorg/telegram/ui/PaymentFormActivity;->createView",
+    "Lorg/telegram/ui/web/BotWebViewContainer;->setupWebView",
+    "Lorg/telegram/ui/web/WebInstantView;->readHTML"
+   ]
+  },
+  {
+   "category": "webview",
+   "api": "Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object; Ljava/lang/String;)V",
+   "invocations": 11,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/adblock/WebAdBlocker;-><init>",
+    "Lcom/google/android/recaptcha/internal/zzby;->zze",
+    "Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;-><init>",
+    "Lorg/telegram/ui/Components/EmbedBottomSheet$8;->onOpenAnimationEnd",
+    "Lorg/telegram/ui/Components/PhotoViewerWebView;->init",
+    "Lorg/telegram/ui/Components/WebPlayerView;-><init>",
+    "Lorg/telegram/ui/web/BotWebViewContainer;->setupWebView",
+    "Lorg/telegram/ui/web/WebInstantView;->readHTML"
+   ]
+  },
+  {
+   "category": "webview",
+   "api": "Landroid/webkit/WebView;->evaluateJavascript(Ljava/lang/String; Landroid/webkit/ValueCallback;)V",
+   "invocations": 11,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/adblock/WebAdBlocker;->injectCosmetics",
+    "Lcom/google/android/recaptcha/internal/zzbo;->invokeSuspend",
+    "Lorg/telegram/ui/Components/EmbedBottomSheet;->runJsCode",
+    "Lorg/telegram/ui/Components/PhotoViewerWebView;->runJsCode",
+    "Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->lambda$doInBackground$1",
+    "Lorg/telegram/ui/web/BotWebViewContainer$MyWebView;->evaluateJS",
+    "Lorg/telegram/ui/web/WebInstantView;->getHTML",
+    "Lorg/telegram/ui/web/WebInstantView;->lambda$getHTML$7"
+   ]
+  },
+  {
+   "category": "audio_recording",
+   "api": "Landroid/media/AudioRecord;->startRecording()V",
+   "invocations": 9,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/camera/RoundVideoEncoder;->startAudioCapture",
+    "Lorg/telegram/messenger/MediaController;->lambda$startRecording$42",
+    "Lorg/telegram/messenger/MediaController;->lambda$toggleRecordingPause$34",
+    "Lorg/telegram/messenger/camera/CameraView$VideoRecorder;->prepareEncoder",
+    "Lorg/telegram/utils/recorder/audio/AudioCapture;->startCapture",
+    "Lorg/telegram/utils/recorder/round/RoundVideoCodecRecorder;->startRecording",
+    "Lorg/webrtc/audio/WebRtcAudioRecord;->startRecording",
+    "Lorg/webrtc/voiceengine/WebRtcAudioRecord;->startRecording"
+   ]
+  },
+  {
+   "category": "location",
+   "api": "Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String; J F Landroid/location/LocationListener;)V",
+   "invocations": 9,
+   "callers_sample": [
+    "Lorg/telegram/messenger/LocationController;->start",
+    "Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;->start",
+    "Lorg/telegram/ui/Stories/recorder/Weather;->$r8$lambda$fvqkoXIkTbli7Ns6qnkozliUScs",
+    "Lorg/telegram/ui/ThemeActivity;->startLocationUpdate",
+    "Lorg/telegram/ui/bots/BotLocation;->requestObject"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/Cipher;->init(I Ljava/security/Key;)V",
+   "invocations": 8,
+   "callers_sample": [
+    "Landroidx/biometric/CryptoObjectUtils;->createFakeCryptoObject",
+    "Lcom/google/android/recaptcha/internal/zznk;->zza",
+    "Lorg/telegram/messenger/FingerprintController;->checkDeviceFingerprintsChanged",
+    "Lorg/telegram/ui/PassportActivity;->lambda$createRequestInterface$16",
+    "Lorg/telegram/ui/Wallet/GramWalletStorage;->encryptionCipher",
+    "Lorg/telegram/ui/Wallet/GramWalletStorage;->recordKey",
+    "Lorg/telegram/ui/bots/BotBiometry;->makeCryptoObject",
+    "Lorg/telegram/ui/bots/BotStorage;->setBytes"
+   ]
+  },
+  {
+   "category": "location",
+   "api": "Landroid/location/Geocoder;-><init>(Landroid/content/Context; Ljava/util/Locale;)V",
+   "invocations": 8,
+   "callers_sample": [
+    "Lorg/telegram/messenger/LocationController;->$r8$lambda$tlUU8lHFc_rWHayxFAniRRtUDs0",
+    "Lorg/telegram/ui/Adapters/BaseLocationAdapter;->lambda$searchPlacesWithQuery$5",
+    "Lorg/telegram/ui/Business/LocationActivity;->lambda$showLocationAlert$9",
+    "Lorg/telegram/ui/Cells/SharingLiveLocationCell;->lambda$getName$1",
+    "Lorg/telegram/ui/Stories/recorder/PaintView$24;->$r8$lambda$TJAqt-HJ3gUH-TAs7IV4QJfxXHk",
+    "Lorg/telegram/ui/ThemeActivity;->lambda$updateSunTime$23"
+   ]
+  },
+  {
+   "category": "audio_recording",
+   "api": "Landroid/media/AudioRecord;->read(Ljava/nio/ByteBuffer; I)I",
+   "invocations": 7,
+   "callers_sample": [
+    "Lorg/telegram/messenger/MediaController$2;->run",
+    "Lorg/telegram/messenger/camera/CameraView$VideoRecorder$1;->run",
+    "Lorg/telegram/utils/recorder/audio/AudioCapture;->readOnce",
+    "Lorg/telegram/utils/recorder/round/RoundVideoCodecRecorder;->captureAndEncodeAudio",
+    "Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->run",
+    "Lorg/webrtc/voiceengine/WebRtcAudioRecord$AudioRecordThread;->run"
+   ]
+  },
+  {
+   "category": "camera",
+   "api": "Landroid/hardware/Camera;->open(I)Landroid/hardware/Camera;",
+   "invocations": 7,
+   "callers_sample": [
+    "Lorg/telegram/messenger/camera/CameraController;->$r8$lambda$dLLxaCjfZdsrLvpEN4LZ9BSVMr4",
+    "Lorg/telegram/messenger/camera/CameraController;->lambda$initCamera$4",
+    "Lorg/telegram/messenger/camera/CameraController;->lambda$open$10",
+    "Lorg/telegram/messenger/camera/CameraController;->lambda$startPreview$7",
+    "Lorg/telegram/messenger/camera/CameraController;->lambda$stopPreview$8",
+    "Lorg/webrtc/Camera1Enumerator;->enumerateFormats",
+    "Lorg/webrtc/Camera1Session;->create"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/Cipher;->init(I Ljava/security/Key; Ljava/security/spec/AlgorithmParameterSpec;)V",
+   "invocations": 7,
+   "callers_sample": [
+    "Landroidx/media3/exoplayer/hls/Aes128DataSource;->open",
+    "Lcom/google/android/recaptcha/internal/zznk;->zzb",
+    "Lorg/telegram/ui/Wallet/GramWalletStorage;->decrypt",
+    "Lorg/telegram/ui/WearAuthSheet;->aeadEncrypt",
+    "Lorg/telegram/ui/bots/BotBiometry;->makeCryptoObject",
+    "Lorg/telegram/ui/bots/BotStorage;->getBytes"
+   ]
+  },
+  {
+   "category": "persistence",
+   "api": "Landroid/app/Service;->startForeground(I Landroid/app/Notification; I)V",
+   "invocations": 7,
+   "callers_sample": [
+    "Landroidx/work/impl/foreground/SystemForegroundService$Api29Impl;->startForeground",
+    "Landroidx/work/impl/foreground/SystemForegroundService$Api31Impl;->startForeground",
+    "Lorg/telegram/messenger/voip/VoIPService;->onCreate",
+    "Lorg/telegram/messenger/voip/VoIPService;->showIncomingNotification",
+    "Lorg/telegram/messenger/voip/VoIPService;->showNotification",
+    "Lorg/telegram/messenger/voip/VoIPService;->updateCurrentForegroundType"
+   ]
+  },
+  {
+   "category": "camera",
+   "api": "Landroid/hardware/camera2/CameraDevice;->createCaptureSession(Ljava/util/List; Landroid/hardware/camera2/CameraCaptureSession$StateCallback; Landroid/os/Handler;)V",
+   "invocations": 6,
+   "callers_sample": [
+    "Landroidx/camera/camera2/pipe/compat/AndroidCameraDevice;->createCaptureSession",
+    "Lorg/telegram/messenger/camera/Camera2Session;->checkOpen",
+    "Lorg/telegram/utils/recorder/round/RoundVideoCameraController;->createCaptureSession",
+    "Lorg/telegram/utils/recorder/round/RoundVideoCameraController;->createDualCaptureSessions",
+    "Lorg/webrtc/Camera2Session$CameraStateCallback;->onOpened"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/spec/SecretKeySpec;-><init>([B Ljava/lang/String;)V",
+   "invocations": 6,
+   "callers_sample": [
+    "Landroidx/media3/exoplayer/hls/Aes128DataSource;->open",
+    "Lcom/exteragram/messenger/translator/providers/MicrosoftTranslator;->signature",
+    "Lorg/telegram/ui/Wallet/GramWalletStorage;->decrypt",
+    "Lorg/telegram/ui/Wallet/GramWalletStorage;->recordKey",
+    "Lorg/telegram/ui/WearAuthSheet;->aeadEncrypt",
+    "Lorg/telegram/utils/proxy/WebProxyTransport;-><init>"
+   ]
+  },
+  {
+   "category": "webview",
+   "api": "Landroid/webkit/WebView;->loadUrl(Ljava/lang/String; Ljava/util/Map;)V",
+   "invocations": 6,
+   "callers_sample": [
+    "Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->onInitFailed",
+    "Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->setBlock",
+    "Lorg/telegram/ui/Components/EmbedBottomSheet$6;->onInitFailed",
+    "Lorg/telegram/ui/Components/EmbedBottomSheet$8;->onOpenAnimationEnd",
+    "Lorg/telegram/ui/Components/PhotoViewerWebView;->init",
+    "Lorg/telegram/ui/web/BotWebViewContainer$MyWebView;->loadUrl"
+   ]
+  },
+  {
+   "category": "camera",
+   "api": "Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String; Landroid/hardware/camera2/CameraDevice$StateCallback; Landroid/os/Handler;)V",
+   "invocations": 5,
+   "callers_sample": [
+    "Landroidx/camera/camera2/pipe/compat/Camera2CameraOpener;->openCamera-RzXb1QE",
+    "Lorg/telegram/messenger/camera/Camera2Session;-><init>",
+    "Lorg/telegram/utils/recorder/round/RoundVideoCameraController;->openCameraIfReady",
+    "Lorg/telegram/utils/recorder/round/RoundVideoCameraController;->requestWarmCameraOpen",
+    "Lorg/webrtc/Camera2Session;->openCamera"
+   ]
+  },
+  {
+   "category": "native_library_loading",
+   "api": "Ljava/lang/System;->load(Ljava/lang/String;)V",
+   "invocations": 5,
+   "callers_sample": [
+    "Lcom/sun/jna/Native;->loadNativeDispatchLibrary",
+    "Lcom/sun/jna/Native;->loadNativeDispatchLibraryFromClasspath",
+    "Lorg/telegram/messenger/NativeLoader;->initNativeLibs",
+    "Lorg/telegram/messenger/NativeLoader;->loadFromZip"
+   ]
+  },
+  {
+   "category": "persistence",
+   "api": "Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I",
+   "invocations": 5,
+   "callers_sample": [
+    "Landroidx/work/impl/background/systemjob/SystemJobScheduler;->scheduleInternal",
+    "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->schedule",
+    "Lcom/google/android/gms/internal/measurement/zzcf;->zza",
+    "Lcom/google/android/gms/measurement/internal/zzlq;->zzh"
+   ]
+  },
+  {
+   "category": "persistence",
+   "api": "Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;",
+   "invocations": 5,
+   "callers_sample": [
+    "Landroidx/core/content/ContextCompat$Api26Impl;->startForegroundService",
+    "Lorg/telegram/messenger/ApplicationLoader;->startPushService",
+    "Lorg/telegram/messenger/MessagesController;->lambda$processUpdateArray$425",
+    "Lorg/telegram/messenger/voip/VoIPPreNotificationService;->answer",
+    "Lorg/telegram/messenger/voip/VoIPPreNotificationService;->open"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;",
+   "invocations": 4,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/plugins/analyzer/AnalyzerCache;->sign",
+    "Lcom/exteragram/messenger/translator/providers/MicrosoftTranslator;->signature",
+    "Lcom/google/android/recaptcha/internal/zzadk;->zza",
+    "Lorg/telegram/utils/proxy/WebProxyTransport;-><init>"
+   ]
+  },
+  {
+   "category": "network",
+   "api": "Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;",
+   "invocations": 4,
+   "callers_sample": [
+    "Lokhttp3/internal/platform/Jdk9Platform;->newSSLContext",
+    "Lokhttp3/internal/platform/Platform;->newSSLContext"
+   ]
+  },
+  {
+   "category": "telephony_identifiers",
+   "api": "Landroid/telephony/TelephonyManager;->getPhoneType()I",
+   "invocations": 4,
+   "callers_sample": [
+    "Lorg/telegram/messenger/AndroidUtilities;->isSimAvailable",
+    "Lorg/telegram/messenger/voip/VoIPService;->hasEarpiece",
+    "Lorg/telegram/ui/PassportActivity;->startPhoneVerification",
+    "Lorg/telegram/ui/PaymentFormActivity;->fillNumber"
+   ]
+  },
+  {
+   "category": "telephony_identifiers",
+   "api": "Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+   "invocations": 4,
+   "callers_sample": [
+    "Lorg/telegram/messenger/EmuDetector;->checkPhoneNumber",
+    "Lorg/telegram/ui/LoginActivity;->getUserPhoneNumbers",
+    "Lorg/telegram/ui/PassportActivity;->startPhoneVerification",
+    "Lorg/telegram/ui/PaymentFormActivity;->fillNumber"
+   ]
+  },
+  {
+   "category": "webview",
+   "api": "Landroid/webkit/WebView;->loadDataWithBaseURL(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Ljava/lang/String;)V",
+   "invocations": 4,
+   "callers_sample": [
+    "Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->setBlock",
+    "Lorg/telegram/ui/Components/EmbedBottomSheet$8;->onOpenAnimationEnd",
+    "Lorg/telegram/ui/Components/PhotoViewerWebView;->init",
+    "Lorg/telegram/ui/web/BotWebViewContainer$MyWebView;->loadDataWithBaseURL"
+   ]
+  },
+  {
+   "category": "app_install",
+   "api": "Landroid/app/DownloadManager;->enqueue(Landroid/app/DownloadManager$Request;)J",
+   "invocations": 3,
+   "callers_sample": [
+    "Lorg/telegram/ui/bots/BotDownloads$FileDownload;-><init>",
+    "Lorg/telegram/ui/web/BotWebViewContainer$MyWebView$1;->lambda$onLongClick$2",
+    "Lorg/telegram/ui/web/BotWebViewContainer$MyWebView$5;->lambda$onDownloadStart$0"
+   ]
+  },
+  {
+   "category": "base64",
+   "api": "Landroid/util/Base64;->encode([B I)[B",
+   "invocations": 3,
+   "callers_sample": [
+    "Lcom/google/firebase/installations/RandomFidGenerator;->encodeFidBase64UrlSafe",
+    "Lorg/telegram/ui/PollItemMenu;->setCell",
+    "Lorg/telegram/ui/Wallet/WalletEngine2;->encryptedCommentPreview"
+   ]
+  },
+  {
+   "category": "clipboard",
+   "api": "Landroid/content/ClipboardManager;->addPrimaryClipChangedListener(Landroid/content/ClipboardManager$OnPrimaryClipChangedListener;)V",
+   "invocations": 3,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/ai/ui/activities/EditServiceActivity;->onResume",
+    "Lorg/telegram/ui/ProxySettingsActivity;->onResume",
+    "Lorg/telegram/ui/Wallet/WalletSendSelectSender;->onResume"
+   ]
+  },
+  {
+   "category": "clipboard",
+   "api": "Landroid/content/ClipboardManager;->getPrimaryClipDescription()Landroid/content/ClipDescription;",
+   "invocations": 3,
+   "callers_sample": [
+    "Lorg/telegram/ui/CodeNumberField;->onTouchEvent",
+    "Lorg/telegram/ui/Components/EditTextCaption$7;->commitText"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V",
+   "invocations": 3,
+   "callers_sample": [
+    "Landroidx/media3/exoplayer/hls/Aes128DataSource;->open",
+    "Lorg/telegram/ui/Wallet/GramWalletStorage;->decrypt",
+    "Lorg/telegram/ui/bots/BotBiometry;->makeCryptoObject"
+   ]
+  },
+  {
+   "category": "package_enumeration",
+   "api": "Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String; Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;",
+   "invocations": 3,
+   "callers_sample": [
+    "Landroidx/profileinstaller/ProfileVerifier$Api33Impl;->getPackageInfo",
+    "Lcom/google/android/recaptcha/internal/zzli;->zza",
+    "Lcom/radolyn/ayugram/utils/fcm/AyuPackageManager;->getPackageInfo"
+   ]
+  },
+  {
+   "category": "screen_capture",
+   "api": "Landroid/media/projection/MediaProjectionManager;->createScreenCaptureIntent()Landroid/content/Intent;",
+   "invocations": 3,
+   "callers_sample": [
+    "Lorg/telegram/ui/Components/voip/PrivateVideoPreviewDialog;->lambda$new$0",
+    "Lorg/telegram/ui/Components/voip/PrivateVideoPreviewDialogNew;->lambda$new$0",
+    "Lorg/telegram/ui/GroupCallActivity;->startScreenCapture"
+   ]
+  },
+  {
+   "category": "telephony_identifiers",
+   "api": "Landroid/telephony/SubscriptionManager;->getActiveSubscriptionInfoList()Ljava/util/List;",
+   "invocations": 3,
+   "callers_sample": [
+    "Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->lambda$new$7",
+    "Lorg/telegram/ui/LoginActivity$LoginPayView;->lambda$setParams$1",
+    "Lorg/telegram/ui/LoginActivity;->getUserPhoneNumbers"
+   ]
+  },
+  {
+   "category": "user_data",
+   "api": "Landroid/accounts/AccountManager;->getAccountsByType(Ljava/lang/String;)[Landroid/accounts/Account;",
+   "invocations": 3,
+   "callers_sample": [
+    "Lorg/telegram/messenger/ContactsController;->deleteUnknownAppAccounts",
+    "Lorg/telegram/messenger/ContactsController;->lambda$checkAppAccount$4",
+    "Lorg/telegram/messenger/ContactsController;->lambda$deleteAllContacts$8"
+   ]
+  },
+  {
+   "category": "dynamic_code_loading",
+   "api": "Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String; Ljava/lang/ClassLoader;)V",
+   "invocations": 2,
+   "callers_sample": [
+    "Lcom/google/android/gms/dynamite/zzd;-><init>",
+    "Lorg/lsposed/hiddenapibypass/CoreOjClassLoader;-><init>"
+   ]
+  },
+  {
+   "category": "network",
+   "api": "Lokhttp3/OkHttpClient;-><init>(Lokhttp3/OkHttpClient$Builder;)V",
+   "invocations": 2,
+   "callers_sample": [
+    "Lokhttp3/OkHttpClient$Builder;->build",
+    "Lokhttp3/OkHttpClient;-><init>"
+   ]
+  },
+  {
+   "category": "package_enumeration",
+   "api": "Landroid/content/pm/PackageManager;->getInstalledPackages(I)Ljava/util/List;",
+   "invocations": 2,
+   "callers_sample": [
+    "Lcom/google/android/recaptcha/internal/zzhr;->zzb",
+    "Lcom/radolyn/ayugram/utils/fcm/AyuPackageManager;->getInstalledPackages"
+   ]
+  },
+  {
+   "category": "app_install",
+   "api": "Landroid/content/pm/PackageInstaller;->createSession(Landroid/content/pm/PackageInstaller$SessionParams;)I",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/updater/UpdaterUtils;->installApk"
+   ]
+  },
+  {
+   "category": "app_install",
+   "api": "Landroid/content/pm/PackageInstaller;->openSession(I)Landroid/content/pm/PackageInstaller$Session;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/updater/UpdaterUtils;->installApk"
+   ]
+  },
+  {
+   "category": "audio_recording",
+   "api": "Landroid/media/AudioRecord;->read([B I I)I",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/camera/RoundVideoEncoder$AudioCaptureRunnable;->run"
+   ]
+  },
+  {
+   "category": "audio_recording",
+   "api": "Landroid/media/MediaRecorder;->setAudioSource(I)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/camera/CameraController;->lambda$recordVideo$14"
+   ]
+  },
+  {
+   "category": "audio_recording",
+   "api": "Landroid/media/MediaRecorder;->start()V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/camera/CameraController;->lambda$recordVideo$14"
+   ]
+  },
+  {
+   "category": "camera",
+   "api": "Landroid/hardware/camera2/CameraDevice;->createCaptureSession(Landroid/hardware/camera2/params/SessionConfiguration;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Landroidx/camera/camera2/pipe/compat/Api28Compat;->createCaptureSession"
+   ]
+  },
+  {
+   "category": "camera",
+   "api": "Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String; Ljava/util/concurrent/Executor; Landroid/hardware/camera2/CameraDevice$StateCallback;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Landroidx/camera/camera2/pipe/compat/Api28Compat;->openCamera"
+   ]
+  },
+  {
+   "category": "camera",
+   "api": "Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/camera/CameraController;->takePicture"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/CipherInputStream;-><init>(Ljava/io/InputStream; Ljavax/crypto/Cipher;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Landroidx/media3/exoplayer/hls/Aes128DataSource;->open"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String; Ljava/security/Provider;)Ljavax/crypto/Cipher;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/google/android/recaptcha/internal/zzadg;->zza"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/Mac;->getInstance(Ljava/lang/String; Ljava/security/Provider;)Ljavax/crypto/Mac;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/google/android/recaptcha/internal/zzadk;->zza"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljava/security/MessageDigest;->getInstance(Ljava/lang/String; Ljava/security/Provider;)Ljava/security/MessageDigest;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/google/android/recaptcha/internal/zzadl;->zza"
+   ]
+  },
+  {
+   "category": "crypto",
+   "api": "Ljavax/crypto/Cipher;->doFinal([B I I)[B",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/google/android/recaptcha/internal/zznk;->zzb"
+   ]
+  },
+  {
+   "category": "dynamic_code_loading",
+   "api": "Ldalvik/system/InMemoryDexClassLoader;-><init>(Ljava/nio/ByteBuffer; Ljava/lang/ClassLoader;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/plugins/utils/ClassProxy$$ExternalSyntheticApiModelOutline0;->m"
+   ]
+  },
+  {
+   "category": "location",
+   "api": "Lcom/google/android/gms/location/FusedLocationProviderClient;->getLastLocation()Lcom/google/android/gms/tasks/Task;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/GoogleLocationProvider;->getLastLocation"
+   ]
+  },
+  {
+   "category": "location",
+   "api": "Lcom/google/android/gms/location/FusedLocationProviderClient;->requestLocationUpdates(Lcom/google/android/gms/location/LocationRequest; Lcom/google/android/gms/location/LocationCallback; Landroid/os/Looper;)Lcom/google/android/gms/tasks/Task;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/GoogleLocationProvider;->requestLocationUpdates"
+   ]
+  },
+  {
+   "category": "location",
+   "api": "Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String; J F Landroid/location/LocationListener; Landroid/os/Looper;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Landroidx/car/app/AppManager;->startLocationUpdates"
+   ]
+  },
+  {
+   "category": "network",
+   "api": "Lretrofit2/Retrofit$Builder;-><init>()V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/exteragram/messenger/api/network/ApiClient;->$r8$lambda$eQYFQy4p1yS6c9r7oScFNs3eM4E"
+   ]
+  },
+  {
+   "category": "network",
+   "api": "Ljava/net/Socket;-><init>(Ljava/net/Proxy;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lokhttp3/internal/connection/ConnectPlan;->connectSocket"
+   ]
+  },
+  {
+   "category": "network",
+   "api": "Ljava/net/Socket;-><init>()V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lokhttp3/internal/connection/RealConnection$Companion;->newTestConnection"
+   ]
+  },
+  {
+   "category": "network",
+   "api": "Ljava/net/URL;-><init>(Ljava/net/URL; Ljava/lang/String;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Landroidx/media3/datasource/DefaultHttpDataSource;->handleRedirect"
+   ]
+  },
+  {
+   "category": "network",
+   "api": "Lokhttp3/OkHttpClient;-><init>()V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lretrofit2/Retrofit$Builder;->build"
+   ]
+  },
+  {
+   "category": "package_enumeration",
+   "api": "Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/radolyn/ayugram/utils/fcm/AyuPackageManager;->getInstalledApplications"
+   ]
+  },
+  {
+   "category": "package_enumeration",
+   "api": "Landroid/content/pm/PackageManager;->getInstalledApplications(Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Ljava/util/List;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/radolyn/ayugram/utils/fcm/AyuPackageManager;->getInstalledApplications"
+   ]
+  },
+  {
+   "category": "package_enumeration",
+   "api": "Landroid/content/pm/PackageManager;->getInstalledPackages(Landroid/content/pm/PackageManager$PackageInfoFlags;)Ljava/util/List;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/radolyn/ayugram/utils/fcm/AyuPackageManager;->getInstalledPackages"
+   ]
+  },
+  {
+   "category": "package_enumeration",
+   "api": "Landroid/content/pm/PackageManager;->getPackageInfo(Landroid/content/pm/VersionedPackage; I)Landroid/content/pm/PackageInfo;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/radolyn/ayugram/utils/fcm/AyuPackageManager;->getPackageInfo"
+   ]
+  },
+  {
+   "category": "package_enumeration",
+   "api": "Landroid/content/pm/PackageManager;->getPackageInfo(Landroid/content/pm/VersionedPackage; Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/radolyn/ayugram/utils/fcm/AyuPackageManager;->getPackageInfo"
+   ]
+  },
+  {
+   "category": "persistence",
+   "api": "Landroid/app/AlarmManager;->setExact(I J Landroid/app/PendingIntent;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Landroidx/work/impl/utils/ForceStopRunnable;->setAlarm"
+   ]
+  },
+  {
+   "category": "persistence",
+   "api": "Landroid/app/AlarmManager;->setRepeating(I J J Landroid/app/PendingIntent;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/ApplicationLoader;->startPushService"
+   ]
+  },
+  {
+   "category": "persistence",
+   "api": "Landroid/app/AlarmManager;->set(I J Landroid/app/PendingIntent;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/NotificationsController;->scheduleNotificationRepeat"
+   ]
+  },
+  {
+   "category": "screen_capture",
+   "api": "Landroid/media/projection/MediaProjection;->createVirtualDisplay(Ljava/lang/String; I I I I Landroid/view/Surface; Landroid/hardware/display/VirtualDisplay$Callback; Landroid/os/Handler;)Landroid/hardware/display/VirtualDisplay;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/webrtc/ScreenCapturerAndroid;->createVirtualDisplay"
+   ]
+  },
+  {
+   "category": "shell_execution",
+   "api": "Ljava/lang/ProcessBuilder;->start()Ljava/lang/Process;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/EmuDetector;->checkIp"
+   ]
+  },
+  {
+   "category": "shell_execution",
+   "api": "Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/sun/jna/NativeLibrary;->getLinuxLdPaths"
+   ]
+  },
+  {
+   "category": "shell_execution",
+   "api": "Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/mvel2/sh/ShellSession;->_exec"
+   ]
+  },
+  {
+   "category": "telephony_identifiers",
+   "api": "Landroid/telephony/TelephonyManager;->getSimOperator()Ljava/lang/String;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lcom/google/android/datatransport/cct/CctTransportBackend;->getMccMncOrEmpty"
+   ]
+  },
+  {
+   "category": "telephony_identifiers",
+   "api": "Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/EmuDetector;->checkDeviceId"
+   ]
+  },
+  {
+   "category": "telephony_identifiers",
+   "api": "Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/EmuDetector;->checkImsi"
+   ]
+  },
+  {
+   "category": "telephony_identifiers",
+   "api": "Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener; I)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/MediaController;->lambda$new$3"
+   ]
+  },
+  {
+   "category": "telephony_identifiers",
+   "api": "Landroid/telephony/PhoneStateListener;-><init>()V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/messenger/MediaController$4;-><init>"
+   ]
+  },
+  {
+   "category": "telephony_identifiers",
+   "api": "Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->lambda$new$9"
+   ]
+  },
+  {
+   "category": "webview",
+   "api": "Landroid/webkit/WebViewClient;->onReceivedSslError(Landroid/webkit/WebView; Landroid/webkit/SslErrorHandler; Landroid/net/http/SslError;)V",
+   "invocations": 1,
+   "callers_sample": [
+    "Lorg/telegram/ui/web/BotWebViewContainer$MyWebView$2;->onReceivedSslError"
+   ]
+  }
+ ],
+ "dynamic_code_loading": {
+  "dex_classloader": [
+   "Ldalvik/system/InMemoryDexClassLoader;-><init>(Ljava/nio/ByteBuffer; Ljava/lang/ClassLoader;)V",
+   "Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String; Ljava/lang/ClassLoader;)V"
+  ],
+  "dexfile": [],
+  "system_load": [
+   "Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+   "Ljava/lang/System;->load(Ljava/lang/String;)V"
+  ],
+  "exec": [
+   "Ljava/lang/ProcessBuilder;->start()Ljava/lang/Process;",
+   "Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+   "Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;"
+  ]
+ },
+ "network_indicators": {
+  "urls_suspicious": [
+   "http://127.0.0.1",
+   "http://127.0.0.1:8898/login",
+   "http://crbug.com/483041824",
+   "http://dashif.org/guidelines/last-segment-number",
+   "http://dashif.org/guidelines/thumbnail_tile",
+   "http://dashif.org/guidelines/trickmode",
+   "http://dashif.org/thumbnail_tile",
+   "http://fontforge.sf.net",
+   "http://g.co/dev/packagevisibility.",
+   "http://jira.codehaus.org/browse/MVEL",
+   "http://jmathtex.sourceforge.net",
+   "http://t.me/",
+   "http://t.me/proxy?",
+   "http://t.me/socks?",
+   "http://www.aparat.com/video/video/embed/vt/frame/showvideo/yes/videohash/%s",
+   "http://www.gnu.org/licenses/gpl.html.",
+   "http://www.microsoft.com/typography/fonts/",
+   "http://xml.org/sax/features/external-general-entities",
+   "http://xml.org/sax/features/external-parameter-entities",
+   "http://xml.org/sax/properties/lexical-handler",
+   "https://%s/%s/%s",
+   "https://accounts.spotify.com/api/token",
+   "https://accounts.spotify.com/authorize",
+   "https://ads.telegram.org\u0000\u0000\u0000",
+   "https://ads.telegram.org/guidelines",
+   "https://alphacephei.com/vosk/models/vosk-model-small-ca-0.4.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-cn-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-cs-0.4-rhasspy.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-de-0.15.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-eo-0.42.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-es-0.42.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-fa-0.42.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-fr-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-gu-0.42.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-hi-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-it-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-ja-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-ko-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-kz-0.42.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-nl-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-pl-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-pt-0.3.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-ru-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-tg-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-tr-0.3.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-uk-v3-small.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-uz-0.22.zip",
+   "https://alphacephei.com/vosk/models/vosk-model-small-vn-0.4.zip",
+   "https://amp-api.music.apple.com/v1/catalog/",
+   "https://android.googlesource.com/toolchain/llvm-project",
+   "https://aomedia.org/emsg/ID3",
+   "https://api-partner.spotify.com/pathfinder/v2/query",
+   "https://api.bing.com/osjson.aspx?query=",
+   "https://api.coinbase.com/v2/exchange-rates?currency=USD",
+   "https://api.exteragram.app/api/v1/",
+   "https://api.lrcmux.dev/get",
+   "https://api.openai.com/v1",
+   "https://api.perplexity.ai/v1/agent",
+   "https://api.stripe.com",
+   "https://api.twitch.tv/api/channels/%s/access_token",
+   "https://api.twitch.tv/kraken/streams/%s?stream_type=all",
+   "https://app-measurement.com/a",
+   "https://app-measurement.com/s/d",
+   "https://attheme.org?slug=",
+   "https://cdn.jsdelivr.net/gh/",
+   "https://cdn.jsdelivr.net/gh/dimisa-RUAdList/RUAdListCDN@main/lists/ruadlist.ubo.min.txt",
+   "https://cdn.jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/thirdparties/easylist.txt",
+   "https://cdn.jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/thirdparties/easyprivacy.txt",
+   "https://chaquo.com/chaquopy/",
+   "https://cocoon.org/؞",
+   "https://coub.com/api/v2/coubs/%s.json",
+   "https://crbug.com/581399",
+   "https://crowdin.com/project/exteralocales",
+   "https://default.url",
+   "https://desktop.telegram.org\u0000\u0000\u0000mb\u000eإستيراد\u0000Zq\u0019عناصر",
+   "https://desktop.telegram.org/\u0000\u0000mb",
+   "https://desktop.telegram.org/\u0000\u0000mb\u0007ImportaZq",
+   "https://desktop.telegram.org/\u0000\u0000mb\bImportar\u0000\u0000\u0000Zq\u0014Elementos",
+   "https://desktop.telegram.org/\u0000\u0000t",
+   "https://desktop.telegram.org/\u0000\u0000t\u0004Help\u0000\u0000\u0000`.ͷ",
+   "https://desktop.telegram.org/\u0000\u0000t\u0005Ajuda\u0000\u0000`.ͷ",
+   "https://developer.apple.com/streaming/emsg-id3",
+   "https://dns.comss.one/dns-query",
+   "https://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Proxy.html",
+   "https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html",
+   "https://docs.oracle.com/javase/8/docs/api/java/lang/Override.html",
+   "https://dpaste.com/api/v2/",
+   "https://duckduckgo.com/?q=\u0000==zAWithout",
+   "https://duckduckgo.com/ac/?q=\u0000\u0000",
+   "https://duckduckgo.com/privacy\u0000\u0018",
+   "https://exteraGram.app",
+   "https://filters.adtidy.org/extension/ublock/filters/11.txt",
+   "https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt",
+   "https://fragment.com",
+   "https://fragment.com/",
+   "https://fragment.com/ads/topup\u0000\u0012U",
+   "https://fragment.com/ads/topup\u0000wAk",
+   "https://fragment.com/gift/",
+   "https://fragment.com/stars\u0000^",
+   "https://fragment.com/username/",
+   "https://getdesktop.telegram.org/\u0000\u0000\u00001;",
+   "https://goo.gl/NAOOOI",
+   "https://goo.gl/NAOOOI.",
+   "https://instagram.com/",
+   "https://ipwho.is",
+   "https://itunes.apple.com/search",
+   "https://legal.yahoo.com/us/en/yahoo/privacy/index.html\u0000%Q\u0015\u000eChoose",
+   "https://lrclib.net/api/get",
+   "https://lrclib.net/api/search",
+   "https://maps.googleapis",
+   "https://messenger.telegram.org/",
+   "https://mini.ya.ru/",
+   "https://mozilla.cloudflare-dns.com/dns-query?name=",
+   "https://music.apple.com",
+   "https://music.apple.com/",
+   "https://music.apple.com/us/browse",
+   "https://nft.fragment.com/gift/",
+   "https://nft.fragment.com/number/",
+   "https://nft.fragment.com/username/",
+   "https://open.spotify.com/",
+   "https://open.spotifycdn.com/cdn/build/web-player/",
+   "https://open.spotifycdn.com/cdn/build/web-player/xpui-routes-search.",
+   "https://openrouter.ai/api/v1",
+   "https://pagead2.googlesyndication.com/pagead/gen_204?id=gmob-apps",
+   "https://player.vimeo.com/video/%s/config",
+   "https://plugins.exteragram.app/",
+   "https://privacy.microsoft.com/en-us/privacystatement\u0000\u0000\u0000",
+   "https://promote.telegram.org/guidelines",
+   "https://pypi.org/project/",
+   "https://pypi.org/pypi/",
+   "https://regex101.com/r/3XHb17",
+   "https://search.brave.com/api/suggest?q=",
+   "https://search.brave.com/help/privacy-policy\u0000\u0000\u0000Ae/You",
+   "https://search.brave.com/search?q=\u0000\u0006$W\u0013Approve",
+   "https://search.yahoo.com/search?p=\u0000",
+   "https://spclient.wg.spotify.com/canvaz-cache/v0/canvases",
+   "https://ss3.4sqi.net/img/categories_v2/",
+   "https://ss3.4sqi.net/img/categories_v2/building/government_capitolbuilding_64.png",
+   "https://ss3.4sqi.net/img/categories_v2/travel/hotel_64.png",
+   "https://static-maps",
+   "https://static-maps.yandex.ru/1.x/?ll=%.6f,%.6f&z=%d&size=%d,%d&l=map&scale=%d&lang=%s",
+   "https://static-maps.yandex.ru/1.x/?ll=%.6f,%.6f&z=%d&size=%d,%d&l=map&scale=%d&pt=%.6f,%.6f,vkbkm&lang=%s",
+   "https://stats.fm/",
+   "https://stripe.com/api",
+   "https://stripe.com/docs/stripe.js",
+   "https://stripe.com/docs/stripe.js.",
+   "https://sugg.search.yahoo.net/sg/?output=json&nresults=10&command=\u0000i\u00071",
+   "https://t",
+   "https://t.me/",
+   "https://t.me/$",
+   "https://t.me/%1$s/s/%2$s",
+   "https://t.me/%1$s/s/live",
+   "https://t.me/+",
+   "https://t.me/+%s",
+   "https://t.me/+PublicChat",
+   "https://t.me/BotFather",
+   "https://t.me/BotFather?start=",
+   "https://t.me/BotFather?start=deletebot",
+   "https://t.me/TelegramTips\u0000\u0000\b",
+   "https://t.me/TelegramTips\u0000\u0000!nL",
+   "https://t.me/TelegramTipsAR/128",
+   "https://t.me/TelegramTipsBR&\bRejeitar\u0000\u0000\u0000!nL\u0007PadrãoPy\u0014Trocar",
+   "https://t.me/TelegramTipsDE",
+   "https://t.me/TelegramTipsES",
+   "https://t.me/TelegramTipsIT",
+   "https://t.me/TelegramTipsKo!nL\u0006기본\u0000Py\u0017프로필",
+   "https://t.me/addlist/pPhOtEq00KhjYTc6",
+   "https://t.me/addstyle/",
+   "https://t.me/ayugramreleases",
+   "https://t.me/boost/",
+   "https://t.me/boost/?c=",
+   "https://t.me/call/",
+   "https://t.me/cocoon%\u0007v\bDisabled\u0000\u0000\u0000\bv\u0010Set",
+   "https://t.me/cocoon?direct\u0000",
+   "https://t.me/exteraPluginRepo?c=",
+   "https://t.me/exteraPluginRepo?git=",
+   "https://t.me/exteraSettings?p=",
+   "https://t.me/giftcode/",
+   "https://t.me/joinchat/",
+   "https://t.me/m/",
+   "https://t.me/nft/",
+   "https://t.me/premiumbot?start=status",
+   "https://t.me/proxy?",
+   "https://t.me/socks?",
+   "https://t.me/stickers",
+   "https://t.me/webproxy?",
+   "https://telegram.org",
+   "https://telegram.org\u0000\u0000\u0000M0",
+   "https://telegram.org/",
+   "https://telegram.org/blog/telegram-stars",
+   "https://telegram.org/deactivate?phone=",
+   "https://telegram.org/dl",
+   "https://telegram.org/embed",
+   "https://telegram.org/faq\u0000\u0000\u0000.",
+   "https://telegram.org/faq\u0000\u0000\u0000F\u0002",
+   "https://telegram.org/faq#general-questions",
+   "https://telegram.org/faq#passport\u0000\u0000\u0011GB",
+   "https://telegram.org/faq#q-i-have-a-new-phone-number-what-do-i-do\u0000\u0000",
+   "https://telegram.org/faq#q-i-have-a-new-phone-number-what-do-i-do\u0000\u0000\u0003EexteraGram",
+   "https://telegram.org/faq#q-i-have-a-new-phone-number-what-do-i-do\u0000\u0000\u0003EexteraGram이",
+   "https://telegram.org/faq#secret-chats\u0000\u0000̡",
+   "https://telegram.org/faq#troubleshooting",
+   "https://telegram.org/faq/ar#a",
+   "https://telegram.org/faq/ar#a10-iFu1لم",
+   "https://telegram.org/faq/ar#g2\u0000i\u0011\u001aتعطيل",
+   "https://telegram.org/faq/ar#j",
+   "https://telegram.org/faq/ar.",
+   "https://telegram.org/faq/de#allgemeine-fragen",
+   "https://telegram.org/faq/de#f-ich-habe-eine-neue-nummer-was-soll-ich-tun\u0000\u0000\u0000\u0003AexteraGram",
+   "https://telegram.org/faq/de#problembehandlung",
+   "https://telegram.org/faq/de.",
+   "https://telegram.org/faq/es#p-tengo-un-nuevo-numero-que-hago\u0000\u0000\u0000\u0003CexteraGram",
+   "https://telegram.org/faq/es#preguntas-generales",
+   "https://telegram.org/faq/es#solucion-de-problemas",
+   "https://telegram.org/faq/es.",
+   "https://telegram.org/faq/it#d-ho-un-nuovo-numero-di-telefono-cosa-faccio\u0000\u0000\u0000\u0003EexteraGram",
+   "https://telegram.org/faq/it#domande-generali",
+   "https://telegram.org/faq/it#risoluzione-dei-problemi",
+   "https://telegram.org/faq/it.",
+   "https://telegram.org/faq/ko#1478791328",
+   "https://telegram.org/faq/ko#325188137",
+   "https://telegram.org/faq/ko.",
+   "https://telegram.org/faq/pt-br\u0000.",
+   "https://telegram.org/faq/pt-br#p-tenho-um-numero-novo-o-que-devo-fazer\u0000\u0003;exteraGram",
+   "https://telegram.org/faq/pt-br#questoes-gerais",
+   "https://telegram.org/faq/pt-br#solucao-de-problemas",
+   "https://telegram.org/privacy\u0000\u0000\u0000",
+   "https://telegram.org/privacy\u0000\u0000\u0000\u0003*u",
+   "https://telegram.org/privacy\u0000\u0000\u0000\u0011p",
+   "https://telegram.org/privacy\u0000\u0000\u0000!i:u\u000fI",
+   "https://telegram.org/privacy\u0000\u0000\u0000-iFu\u0016Usuario",
+   "https://telegram.org/privacy\u0000\u0000\u0000I#\b~%s/5min\u0000\u0000\u0000%E$",
+   "https://telegram.org/privacy\u0000\u0000\u0000QWu\u0004Geen\u0000\u0000\u0000Yu\u0012Proxy-instellingen\u0000̾u",
+   "https://telegram.org/privacy\u0000\u0000\u0000Yu\u0010프록시",
+   "https://telegram.org/privacy\u0000\u0000\u0000Yu\u0018Configurações",
+   "https://telegram.org/privacy\u0000\u0000\u0000i%",
+   "https://telegram.org/privacy\u0000\u0000\u0000j\u0012%1$s",
+   "https://telegram.org/privacy#5-6-no-ads-based-on-user-data",
+   "https://telegram.org/privacy-tpa\u0000\u0000\u0000?ޛ\u0007CommentXߛ\u0011Join",
+   "https://telegram.org/tos\u0000\u0000\u0000",
+   "https://telegram.org/tos\u0000\u0000\u0000N\u0012C",
+   "https://telegram.org/tos\u0000\u0000\u0000N\u0012C\u0006Orange\u0000lE\u0012Don",
+   "https://telegram.org/tos\u0000\u0000\u0000N\u0012C\u0006Orange\u0000lE\u0013Stories",
+   "https://telegram.org/tos\u0000\u0000\u0000N\u0012C\u0006Oranje\u0000\u0016Instellingen",
+   "https://telegram.org/tos\u0000\u0000\u0000N\u0012C\u0007Laranja\u0017Aplicar",
+   "https://telegram.org/tos\u0000\u0000\u0000N\u0012C\u0007NaranjalE\u0011No",
+   "https://telegram.org/tos\u0000\u0000\u0000N\u0012C\u0012البرتقالي\u0000lE",
+   "https://telegram.org/tos/content-creator-rewards\u0000\u0000\u0000&x\u0013\u0015Enter",
+   "https://telegram.org/tos/content-creator-rewards\u0000\u0000\u00007\u0019",
+   "https://telegram.org/tos/content-creator-rewards\u0000\u0000\u0000J",
+   "https://telegram.org/tos/content-creator-rewards\u0000\u0000\u0000m;\u000eSet",
+   "https://telegram.org/tos/content-creator-rewards\u0000\u0000\u0000ӯ\u0003",
+   "https://telegram.org/tos/mini-apps\u0000\u0003\u0017اسم",
+   "https://telegram.org/tos/mini-apps\u0000\b\u0015.This",
+   "https://telegram.org/tos/mini-apps\u0000\u000eDrag",
+   "https://telegram.org/tos/mini-apps\u00000\u0007RevenueL",
+   "https://telegram.org/tos/mini-apps\u00007c3",
+   "https://telegram.org/tos/mini-apps\u0000A\u0004Naam\u0000\u0000\u0000\u0003\u000eGebruikersnaam\u0000\u0002",
+   "https://telegram.org/tos/mini-apps\u0000A\u0004Nome\u0000\u0000\u0000\u0002",
+   "https://telegram.org/tos/mini-apps\u0000A\u0006Nombre\u0000\u0003\u0011Nombre",
+   "https://telegram.org/tos/mini-apps\u0000A\u0006이름\u0000\u0002",
+   "https://telegram.org/tos/mini-apps\u0000T.Wirklich",
+   "https://telegram.org/tos/mini-apps\u0000T6Vuoi",
+   "https://telegram.org/tos/mini-apps\u0000w",
+   "https://telegram.org/tos/stars\u0000\u0005Gifts\u0000\u0000\u000eexclude",
+   "https://telegram.org/tos/stars\u0000\u0010T\u0010No",
+   "https://telegram.org/tos/stars\u0000\u0014\u0013\u0006Unique\u0000b\u0013\u0001\u0000We",
+   "https://telegram.org/tos/stars\u0000R",
+   "https://telegram.org/tos/stars\u0000g5\u0004List\u0000\u0000\u0000=5\u0004Math\u0000\u0000\u0000E",
+   "https://telegram.org/tos/stars/\u0019:\u0017Delete",
+   "https://telegram.org/tos/stars/D/Do",
+   "https://tgb-playground.smart-glocal.com/cds/v1/tokenize/card",
+   "https://tgb.smart-glocal.com/cds/v1/tokenize/card",
+   "https://tineye.com",
+   "https://tineye.com/search?url=",
+   "https://toncenter.com/api/v3/transactions?hash=",
+   "https://tonviewer.com/",
+   "https://translate.yandex.net/api/v1/tr.json/translate?&srv=android&id=",
+   "https://twitter.com/",
+   "https://twitter.com/hashtag/",
+   "https://twitter.com/stripestatus,",
+   "https://ublockorigin.github.io/uAssetsCDN/filters/badware.min.txt",
+   "https://ublockorigin.github.io/uAssetsCDN/filters/filters.min.txt",
+   "https://ublockorigin.github.io/uAssetsCDN/filters/privacy.min.txt",
+   "https://ublockorigin.github.io/uAssetsCDN/filters/quick-fixes.min.txt",
+   "https://ublockorigin.github.io/uAssetsCDN/filters/unbreak.min.txt",
+   "https://usher.ttvnw.net/api/channel/hls/%s.m3u8?%s",
+   "https://web.telegram.org/",
+   "https://web.telegram.org/\u0000\u0000",
+   "https://web.telegram.org/\u0000\u0000Œ=",
+   "https://web.telegram.org/\u0000\u0000Œ=\u000eActieve",
+   "https://web.telegram.org/\u0000\u0000Œ=\u0014Activa",
+   "https://web.telegram.org/\u0000\u0000Œ=\u001bالعناصر",
+   "https://www.bing.com",
+   "https://www.bing.com/images/search?view=detailv2&iss=sbi&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:",
+   "https://www.bing.com/search?q=\u0000c\u0017n",
+   "https://www.instagram.com/explore/tags/",
+   "https://www.last.fm/",
+   "https://www.recaptcha.net/recaptcha/api3",
+   "https://www.youtube.com",
+   "https://www.youtube.com/embed/",
+   "https://www.youtube.com/get_video_info?",
+   "https://www.youtube.com/iframe_api",
+   "https://www.youtube.com/watch?v=",
+   "https://www.youtube.com/youtubei/v1/player?key=",
+   "https://x",
+   "https://ya.ru/search/?text=",
+   "https://yandex.com",
+   "https://yandex.com/images/touch/search?rpt=imageview&format=json&request=",
+   "https://yandex.ru",
+   "https://yandex.ru/legal/confidential",
+   "https://youtrack.jetbrains.com/issue/KT-55980",
+   "https://youtrack.jetbrains.com/issue/KT-67202",
+   "https://youtube.com"
+  ],
+  "urls_benign_count": 92,
+  "urls_benign_sample": [
+   "http://maps.google.com/maps?q=",
+   "http://maps.google.com/maps?saddr=%f,%f&daddr=%f,%f",
+   "http://maps.google.com/maps?saddr=&daddr=%f,%f",
+   "http://ns.adobe.com/xap/1.0/",
+   "http://ns.adobe.com/xap/1.0/\u0000",
+   "http://ns.google.com/photos/1.0/camera/",
+   "http://ns.google.com/photos/1.0/container/",
+   "http://ns.google.com/photos/1.0/container/item/",
+   "http://schema.org/CompletedActionStatus",
+   "http://schema.org/FailedActionStatus",
+   "http://schemas.android.com/aapt",
+   "http://schemas.android.com/apk/res-auto",
+   "http://schemas.android.com/apk/res/android",
+   "http://schemas.android.com/tools",
+   "http://schemas.microsoft.com/DRM/2007/03/protocols/AcquireLicense",
+   "http://www.example.com",
+   "http://www.google.com",
+   "http://www.w3.org/1998/Math/MathML",
+   "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+   "http://www.w3.org/1999/xhtml",
+   "http://www.w3.org/1999/xlink",
+   "http://www.w3.org/2000/svg",
+   "http://www.w3.org/TR/SVG11/feature#",
+   "http://www.w3.org/ns/ttml#parameter",
+   "http://xmlpull.org/v1/doc/features.html#process-docdecl",
+   "http://xmlpull.org/v1/doc/features.html#process-namespaces",
+   "https://accounts.google.com/o/oauth2/revoke?token=",
+   "https://core.telegram.org/bots/webapps#launching-the-main-mini-app",
+   "https://developer.android.com/build/agp-upgrade-assistant",
+   "https://developer.android.com/google/play/integrity/reference/com/google/android/play/core/integrity/model/StandardIntegrityErrorCode.html#",
+   "https://developer.android.com/guide/topics/media/issues/cleartext-not-permitted",
+   "https://developer.android.com/guide/topics/media/issues/player-accessed-on-wrong-thread",
+   "https://developer.android.com/kotlin/add-kotlin",
+   "https://developer.android.com/training/articles/direct-boot",
+   "https://developers.google.com/actions?invocation=",
+   "https://dns.google.com/resolve?name=",
+   "https://fcmregistrations.googleapis.com/v1/projects/",
+   "https://firebase-settings.crashlytics.com/spi/v2/platforms/android/gmp/%s/settings",
+   "https://firebase.google.com/docs/crashlytics/get-started?platform=android#add-plugin",
+   "https://firebase.google.com/support/guides/disable-analytics",
+   "https://firebase.google.com/support/privacy/init-options.",
+   "https://firebaseremoteconfig.googleapis.com/v1/projects/%s/namespaces/%s:fetch",
+   "https://firebaseremoteconfigrealtime.googleapis.com/v1/projects/%s/namespaces/%s:streamFetchInvalidations",
+   "https://generativelanguage.googleapis.com/v1beta",
+   "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+   "https://github.com/",
+   "https://github.com/Kotlin/kotlinx.coroutines/issues,",
+   "https://github.com/Kunzisoft/KeePassDX",
+   "https://github.com/Remix-Design/RemixIcon",
+   "https://github.com/androidx/media/issues/1730",
+   "https://github.com/bitwarden/android",
+   "https://github.com/cure53/DOMPurify",
+   "https://github.com/exteraGram/exteraGram",
+   "https://github.com/google/gson/blob/main/Troubleshooting.md#",
+   "https://github.com/mozilla/readability",
+   "https://google.com/search?",
+   "https://issuetracker.google.com/328687152",
+   "https://issuetracker.google.com/issues/",
+   "https://issuetracker.google.com/issues/241760537",
+   "https://issuetracker.google.com/issues/328687152#comment3"
+  ],
+  "ips": [
+   "1.1.1.0",
+   "1.1.1.1",
+   "1.1.1.2",
+   "1.2.1.0",
+   "1.2.1.1",
+   "1.2.1.2",
+   "1.3.1.0",
+   "1.3.1.1",
+   "1.3.1.2",
+   "1.3.1.3",
+   "1.3.1.4",
+   "1.3.1.5",
+   "1.3.1.6",
+   "1.4.1.0",
+   "1.4.1.1",
+   "1.4.1.10",
+   "1.4.1.11",
+   "1.4.1.12",
+   "1.4.1.13",
+   "1.4.1.14",
+   "1.4.1.15",
+   "1.4.1.16",
+   "1.4.1.2",
+   "1.4.1.3",
+   "1.4.1.4",
+   "1.4.1.5",
+   "1.4.1.6",
+   "1.4.1.7",
+   "1.4.1.8",
+   "1.4.1.9",
+   "1.4.6.4",
+   "10.0.2.15",
+   "105.0.0.0",
+   "141.0.0.0",
+   "5.5.2.2"
+  ],
+  "domains_top": [
+   [
+    "telegram.org",
+    84
+   ],
+   [
+    "t.me",
+    41
+   ],
+   [
+    "alphacephei.com",
+    24
+   ],
+   [
+    "github.com",
+    10
+   ],
+   [
+    "fragment.com",
+    7
+   ],
+   [
+    "www.w3.org",
+    7
+   ],
+   [
+    "issuetracker.google.com",
+    7
+   ],
+   [
+    "web.telegram.org",
+    6
+   ],
+   [
+    "desktop.telegram.org",
+    6
+   ],
+   [
+    "developer.android.com",
+    6
+   ],
+   [
+    "www.youtube.com",
+    6
+   ],
+   [
+    "www.google.com",
+    5
+   ],
+   [
+    "ublockorigin.github.io",
+    5
+   ],
+   [
+    "maps.google.com",
+    5
+   ],
+   [
+    "cdn.jsdelivr.net",
+    4
+   ],
+   [
+    "schemas.android.com",
+    4
+   ],
+   [
+    "maps.googleapis.com",
+    4
+   ],
+   [
+    "dashif.org",
+    4
+   ],
+   [
+    "twitter.com",
+    3
+   ],
+   [
+    "music.apple.com",
+    3
+   ],
+   [
+    "xml.org",
+    3
+   ],
+   [
+    "ss3.4sqi.net",
+    3
+   ],
+   [
+    "stripe.com",
+    3
+   ],
+   [
+    "suggestqueries.google.com",
+    3
+   ],
+   [
+    "firebase.google.com",
+    3
+   ],
+   [
+    "nft.fragment.com",
+    3
+   ],
+   [
+    "duckduckgo.com",
+    3
+   ],
+   [
+    "ns.google.com",
+    3
+   ],
+   [
+    "docs.oracle.com",
+    3
+   ],
+   [
+    "search.brave.com",
+    3
+   ],
+   [
+    "www.bing.com",
+    3
+   ],
+   [
+    "support.google.com",
+    2
+   ],
+   [
+    "filters.adtidy.org",
+    2
+   ],
+   [
+    "tineye.com",
+    2
+   ],
+   [
+    "yandex.com",
+    2
+   ],
+   [
+    "goo.gl",
+    2
+   ],
+   [
+    "www.googleapis.com",
+    2
+   ],
+   [
+    "lrclib.net",
+    2
+   ],
+   [
+    "crbug.com",
+    2
+   ],
+   [
+    "api.twitch.tv",
+    2
+   ]
+  ],
+  "emails": [
+   "0@z.39",
+   "0h@i.g8djC",
+   "1.-d1.@a1..9",
+   "1.@ANs1.-As1.",
+   "1.AŖ@j1.AŎr",
+   "2@0qpV.sè",
+   "2MW@W.0O",
+   "2Q@ɤ.g6",
+   "4L@3l.ȻenkK",
+   "4uk@e.4c",
+   "5@g.ab.8P",
+   "6@i0v.tE",
+   "7@7.7A",
+   "7@Ml.ڜreQ9D",
+   "8@ʉz.EȒcD",
+   "A@931.-27772.",
+   "AʘA.@mQAʘA.AAt",
+   "Cki@_.biO",
+   "Dn@sNDeN.Hhh",
+   "EN@u.dPǨaАrrr",
+   "F@N.Uq",
+   "G@sk.eѵ",
+   "G@鷚.տvQ",
+   "GS@3u.ݥhUhe",
+   "I@6RT.hO7",
+   "I@O.0cw",
+   "J@O.e-",
+   "Km@RQ.Ya",
+   "N@rVT.YqzMiMw",
+   "OH4@T9Q.cz",
+   "OO@6fsU.i1d嫹",
+   "OWύl-@1.8uքE.H",
+   "Q@j.VuCWdӭA6",
+   "S@ɣe.FE",
+   "T@6L6.B.",
+   "U@D4.wc",
+   "X@OO.r-",
+   "Xgɰ@he.d93a",
+   "YEU@Dٯu.h1A",
+   "_@EO.aT",
+   "_M8eG15J@PeAxtN.MB",
+   "_SA@Go.AO_",
+   "aS@bip0.ǖpΩ",
+   "back@2x.png",
+   "bzip2-devel@sourceware.org.",
+   "c1@e.FOehʻ",
+   "d+z@d.ly7b",
+   "dGW@VVhy.cv",
+   "h.@JP.0TdG-.hEJ8FŪ",
+   "h@h.0m",
+   "i-@p.D-",
+   "i-@p.D0",
+   "i-@p.D4P",
+   "i-@p.D5",
+   "i-@p.DJP",
+   "i-@p.DP",
+   "i-@p.DUP",
+   "i-@p.DXP",
+   "i-@p.DoP",
+   "iV@N.MU"
+  ],
+  "telegram_bot_tokens": [],
+  "url_caller_context": {
+   "http://127.0.0.1": [
+    "Lcom/exteragram/messenger/player/motion/SpotifyAuth;->listen"
+   ],
+   "http://127.0.0.1:8898/login": [
+    "Lcom/exteragram/messenger/player/motion/SpotifyAuth;->login",
+    "Lcom/exteragram/messenger/player/motion/SpotifyCanvasRepository;->$r8$lambda$YM0XgjBWHOwpA7fTmzf3z_jrbdI"
+   ],
+   "http://crbug.com/483041824": [
+    "Lorg/chromium/support_lib_boundary/PrefetchOperationCallbackBoundaryInterface;->onSuccess"
+   ],
+   "http://dashif.org/guidelines/last-segment-number": [
+    "Landroidx/media3/exoplayer/dash/manifest/DashManifestParser;->parseLastSegmentNumberSupplementalProperty"
+   ],
+   "http://dashif.org/guidelines/thumbnail_tile": [
+    "Landroidx/media3/exoplayer/dash/manifest/DashManifestParser;->parseTileCountFromProperties"
+   ],
+   "http://dashif.org/guidelines/trickmode": [
+    "Landroidx/media3/exoplayer/dash/DashMediaPeriod;->findTrickPlayProperty",
+    "Landroidx/media3/exoplayer/dash/manifest/DashManifestParser;->parseRoleFlagsFromProperties"
+   ],
+   "http://dashif.org/thumbnail_tile": [
+    "Landroidx/media3/exoplayer/dash/manifest/DashManifestParser;->parseTileCountFromProperties"
+   ],
+   "http://g.co/dev/packagevisibility.": [
+    "Landroidx/media3/datasource/RawResourceDataSource;->openAssetFileDescriptor"
+   ],
+   "http://jira.codehaus.org/browse/MVEL": [
+    "Lorg/mvel2/optimizers/impl/asm/ASMAccessorOptimizer;->_initializeAccessor"
+   ],
+   "http://t.me/proxy?": [
+    "Lorg/telegram/ui/ProxySettingsActivity;->getProxyUriFromText"
+   ],
+   "http://t.me/socks?": [
+    "Lorg/telegram/ui/ProxySettingsActivity;->getProxyUriFromText"
+   ],
+   "http://www.aparat.com/video/video/embed/vt/frame/showvideo/yes/videohash/%s": [
+    "Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->doInBackground"
+   ],
+   "http://xml.org/sax/features/external-general-entities": [
+    "Lcom/caverock/androidsvg/SVGParser;->parseUsingSAX"
+   ],
+   "http://xml.org/sax/features/external-parameter-entities": [
+    "Lcom/caverock/androidsvg/SVGParser;->parseUsingSAX"
+   ],
+   "http://xml.org/sax/properties/lexical-handler": [
+    "Lcom/caverock/androidsvg/SVGParser;->parseUsingSAX"
+   ],
+   "https://accounts.spotify.com/api/token": [
+    "Lcom/exteragram/messenger/player/motion/SpotifyCanvasRepository;->requestTokens"
+   ],
+   "https://accounts.spotify.com/authorize": [
+    "Lcom/exteragram/messenger/player/motion/SpotifyAuth;->login"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-ca-0.4.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-cn-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-cs-0.4-rhasspy.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-de-0.15.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-eo-0.42.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-es-0.42.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-fa-0.42.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-fr-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-gu-0.42.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-hi-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-it-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-ja-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-ko-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-kz-0.42.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-nl-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-pl-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-pt-0.3.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-ru-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-tg-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-tr-0.3.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-uk-v3-small.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-uz-0.22.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://alphacephei.com/vosk/models/vosk-model-small-vn-0.4.zip": [
+    "Lcom/exteragram/messenger/speech/recognizers/VoskRecognizer$1;-><init>"
+   ],
+   "https://amp-api.music.apple.com/v1/catalog/": [
+    "Lcom/exteragram/messenger/player/motion/MotionCoverRepository;->catalogGet"
+   ],
+   "https://aomedia.org/emsg/ID3": [
+    "Landroidx/media3/extractor/metadata/emsg/EventMessage;->getWrappedMetadataFormat"
+   ],
+   "https://api-partner.spotify.com/pathfinder/v2/query": [
+    "Lcom/exteragram/messenger/player/motion/SpotifyCanvasRepository;->search"
+   ],
+   "https://api.coinbase.com/v2/exchange-rates?currency=USD": [
+    "Lcom/exteragram/messenger/utils/network/ExchangeRates$1;->getRemote"
+   ],
+   "https://api.lrcmux.dev/get": [
+    "Lcom/exteragram/messenger/player/lyrics/LyricsRepository;->requestLrcmux"
+   ],
+   "https://api.openai.com/v1": [
+    "Lcom/exteragram/messenger/ai/ui/activities/EditServiceActivity;-><clinit>"
+   ],
+   "https://api.perplexity.ai/v1/agent": [
+    "Lcom/exteragram/messenger/ai/network/backend/RestBackend;->resolveEndpoint",
+    "Lcom/exteragram/messenger/ai/ui/activities/EditServiceActivity;-><clinit>"
+   ],
+   "https://api.stripe.com": [
+    "Lcom/stripe/android/net/StripeApiHandler;->getApiUrl"
+   ],
+   "https://api.twitch.tv/api/channels/%s/access_token": [
+    "Lorg/telegram/ui/Components/WebPlayerView$TwitchStreamVideoTask;->doInBackground"
+   ],
+   "https://api.twitch.tv/kraken/streams/%s?stream_type=all": [
+    "Lorg/telegram/ui/Components/WebPlayerView$TwitchStreamVideoTask;->doInBackground"
+   ],
+   "https://attheme.org?slug=": [
+    "Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->saveToFile",
+    "Lorg/telegram/ui/ActionBar/Theme;->getWallpaperUrl"
+   ],
+   "https://cdn.jsdelivr.net/gh/": [
+    "Lcom/exteragram/messenger/plugins/catalog/GitPluginRepository;->getIndexUrls"
+   ],
+   "https://coub.com/api/v2/coubs/%s.json": [
+    "Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->doInBackground"
+   ],
+   "https://crbug.com/581399": [
+    "Lorg/chromium/net/impl/UrlRequestBuilderImpl;->addHeader"
+   ],
+   "https://crowdin.com/project/exteralocales": [
+    "Lcom/exteragram/messenger/preferences/MainPreferencesActivity;->onClick"
+   ],
+   "https://default.url": [
+    "Landroidx/media3/exoplayer/drm/FrameworkMediaDrm;->adjustLicenseServerUrl"
+   ],
+   "https://developer.apple.com/streaming/emsg-id3": [
+    "Landroidx/media3/extractor/metadata/emsg/EventMessage;->getWrappedMetadataFormat"
+   ],
+   "https://dns.comss.one/dns-query": [
+    "Lcom/exteragram/messenger/ai/network/ProxyDns;->getUrl"
+   ],
+   "https://dpaste.com/api/v2/": [
+    "Lcom/radolyn/ayugram/preferences/FiltersPreferencesActivity;->$r8$lambda$PikoHca8JO_sHrT2mQ5bPSqkj8I"
+   ],
+   "https://exteraGram.app": [
+    "Lcom/exteragram/messenger/preferences/MainPreferencesActivity;->onClick"
+   ],
+   "https://fragment.com": [
+    "Lorg/telegram/ui/ChangeUsernameActivity$UsernameHelpCell;-><init>",
+    "Lorg/telegram/ui/ProfileActivity;->$r8$lambda$8PyU32UY-eoyOEAWubP1IbHihyU"
+   ],
+   "https://fragment.com/": [
+    "Lorg/telegram/ui/Wallet/WalletActivity;->$r8$lambda$GM8uV_jjPVzhK_-B2u1CfqN9rA8"
+   ],
+   "https://fragment.com/gift/": [
+    "Lorg/telegram/ui/Stars/StarGiftSheet;->lambda$cantWithBlockchainGiftAlert$150"
+   ],
+   "https://fragment.com/username/": [
+    "Lorg/telegram/ui/ChangeUsernameActivity$UsernameHelpCell$1$1;->onClick",
+    "Lorg/telegram/ui/ChannelCreateActivity$9$1;->onClick",
+    "Lorg/telegram/ui/ChatActivity;->lambda$didLongPressUsername$504",
+    "Lorg/telegram/ui/ChatEditTypeActivity$6$1;->onClick"
+   ],
+   "https://goo.gl/NAOOOI": [
+    "Lcom/google/android/gms/measurement/internal/zzpp;->zzC"
+   ],
+   "https://goo.gl/NAOOOI.": [
+    "Lcom/google/android/gms/measurement/internal/zzpp;->zzC"
+   ],
+   "https://ipwho.is": [
+    "Lcom/exteragram/messenger/proxy/IpAddressInfoController;->requestIpAddressInfo"
+   ],
+   "https://itunes.apple.com/search": [
+    "Lcom/exteragram/messenger/nowplaying/NowPlayingController;->fetchItunesTrack"
+   ],
+   "https://lrclib.net/api/get": [
+    "Lcom/exteragram/messenger/player/lyrics/LyricsRepository;->requestLrclib"
+   ],
+   "https://lrclib.net/api/search": [
+    "Lcom/exteragram/messenger/player/lyrics/LyricsRepository;->searchLrclib"
+   ],
+   "https://maps.googleapis": [
+    "Lorg/telegram/messenger/ImageLoader$HttpImageTask;->doInBackground"
+   ],
+   "https://messenger.telegram.org/": [
+    "Lorg/telegram/ui/Components/EmbedBottomSheet$8;->onOpenAnimationEnd",
+    "Lorg/telegram/ui/Components/PhotoViewerWebView;->init"
+   ],
+   "https://mozilla.cloudflare-dns.com/dns-query?name=": [
+    "Lorg/telegram/tgnet/ConnectionsManager$MozillaDnsLoadTask;->doInBackground"
+   ],
+   "https://music.apple.com": [
+    "Lcom/exteragram/messenger/player/motion/MotionCoverRepository;->catalogGet",
+    "Lcom/exteragram/messenger/player/motion/MotionCoverRepository;->token"
+   ],
+   "https://music.apple.com/": [
+    "Lcom/exteragram/messenger/player/motion/MotionCoverRepository;->catalogGet"
+   ],
+   "https://music.apple.com/us/browse": [
+    "Lcom/exteragram/messenger/player/motion/MotionCoverRepository;->token"
+   ],
+   "https://nft.fragment.com/gift/": [
+    "Lorg/telegram/tgnet/tl/TL_wallet$nftItem;->isGift"
+   ],
+   "https://nft.fragment.com/number/": [
+    "Lorg/telegram/tgnet/tl/TL_wallet$nftItem;->isPhoneNumber"
+   ],
+   "https://nft.fragment.com/username/": [
+    "Lorg/telegram/tgnet/tl/TL_wallet$nftItem;->isUsername"
+   ],
+   "https://open.spotify.com/": [
+    "Lcom/exteragram/messenger/player/motion/SpotifyCanvasRepository;->scrapeSearchHash"
+   ],
+   "https://open.spotifycdn.com/cdn/build/web-player/": [
+    "Lcom/exteragram/messenger/player/motion/SpotifyCanvasRepository;->scrapeSearchHash"
+   ],
+   "https://open.spotifycdn.com/cdn/build/web-player/xpui-routes-search.": [
+    "Lcom/exteragram/messenger/player/motion/SpotifyCanvasRepository;->scrapeSearchHash"
+   ],
+   "https://openrouter.ai/api/v1": [
+    "Lcom/exteragram/messenger/ai/ui/activities/EditServiceActivity;-><clinit>"
+   ],
+   "https://pagead2.googlesyndication.com/pagead/gen_204?id=gmob-apps": [
+    "Lcom/google/android/gms/ads/identifier/zza;->run"
+   ],
+   "https://player.vimeo.com/video/%s/config": [
+    "Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->doInBackground"
+   ],
+   "https://plugins.exteragram.app/": [
+    "Lcom/exteragram/messenger/plugins/ui/PluginsInfoActivity;->onClick"
+   ],
+   "https://promote.telegram.org/guidelines": [
+    "Lorg/telegram/ui/ReportBottomSheet$4;->$r8$lambda$tT8aRlhNdwnb-dq4XEU3edKhQ_U",
+    "Lorg/telegram/ui/ReportBottomSheet$5;->$r8$lambda$Yjiql7Y_qwIMTVRHRRLr3ir7FfU",
+    "Lorg/telegram/ui/ReportBottomSheet$6;->$r8$lambda$yXMCSeOf2fTdzB4tHhChq2Ojoc0",
+    "Lorg/telegram/ui/ReportBottomSheet;->$r8$lambda$8haaZv15Y15mI0zOTs3LBnsjpBA",
+    "Lorg/telegram/ui/ReportBottomSheet;->$r8$lambda$AOQxIR-_uVOsxpTYabOEs-GgrUU",
+    "Lorg/telegram/ui/ReportBottomSheet;->$r8$lambda$LTnGfEHDzi-3dyaeztujUYNjGqQ"
+   ],
+   "https://pypi.org/project/": [
+    "Lcom/exteragram/messenger/plugins/ui/components/PluginRequirementsView$Companion;->requirementUrl"
+   ],
+   "https://pypi.org/pypi/": [
+    "Lcom/exteragram/messenger/plugins/pip/PipController;->installPackage"
+   ],
+   "https://spclient.wg.spotify.com/canvaz-cache/v0/canvases": [
+    "Lcom/exteragram/messenger/player/motion/SpotifyCanvasRepository;->canvases"
+   ],
+   "https://ss3.4sqi.net/img/categories_v2/": [
+    "Lorg/telegram/ui/Adapters/BaseLocationAdapter;->lambda$searchPlacesWithQuery$6",
+    "Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->addInfoView",
+    "Lorg/telegram/ui/LocationActivity$MapOverlayView;->addInfoView"
+   ],
+   "https://ss3.4sqi.net/img/categories_v2/building/government_capitolbuilding_64.png": [
+    "Lorg/telegram/ui/Adapters/BaseLocationAdapter;->lambda$searchPlacesWithQuery$5"
+   ],
+   "https://ss3.4sqi.net/img/categories_v2/travel/hotel_64.png": [
+    "Lorg/telegram/ui/Adapters/BaseLocationAdapter;->lambda$searchPlacesWithQuery$5"
+   ],
+   "https://static-maps": [
+    "Lorg/telegram/messenger/ImageLoader$HttpImageTask;->doInBackground"
+   ],
+   "https://stats.fm/": [
+    "Lcom/exteragram/messenger/nowplaying/ui/SetupNowPlayingActivity;->$r8$lambda$wgnVTF9u-5xJNetChrEj7S2xD90"
+   ],
+   "https://stripe.com/api": [
+    "Lcom/stripe/android/net/StripeApiHandler;->requestToken"
+   ],
+   "https://stripe.com/docs/stripe.js": [
+    "Lcom/stripe/android/Stripe;->validateKey"
+   ],
+   "https://stripe.com/docs/stripe.js.": [
+    "Lcom/stripe/android/Stripe;->validateKey"
+   ],
+   "https://t": [
+    "Lorg/telegram/ui/ChatActivity;->addSponsoredMessages"
+   ],
+   "https://t.me/": [
+    "Lorg/telegram/ui/ChatActivity;->getMessageLinkToCopy",
+    "Lorg/telegram/ui/ChatActivity;->lambda$didLongPressLink$479",
+    "Lorg/telegram/ui/ChatActivity;->lambda$openClickableLink$453",
+    "Lorg/telegram/ui/Components/URLSpanNoUnderline;->onClick",
+    "Lorg/telegram/ui/LaunchActivity;->handleIntent",
+    "Lorg/telegram/ui/PhotoViewer;->onLinkLongPress"
+   ],
+   "https://t.me/$": [
+    "Lorg/telegram/ui/PremiumPreviewFragment;->buyPremium",
+    "Lorg/telegram/ui/Stars/StarsIntroActivity;->$r8$lambda$ipbcP8b7a053N5xSEE2QTd_sqIg"
+   ],
+   "https://t.me/%1$s/s/%2$s": [
+    "Lorg/telegram/ui/Stories/PeerStoriesView$StoryItemHolder;->createLink"
+   ],
+   "https://t.me/%1$s/s/live": [
+    "Lorg/telegram/ui/Stories/PeerStoriesView$StoryItemHolder;->createLink"
+   ],
+   "https://t.me/+": [
+    "Lorg/telegram/ui/ManageLinksActivity$LinkCell;->setLink"
+   ],
+   "https://t.me/+%s": [
+    "Lorg/telegram/ui/PrivacyControlActivity$ListAdapter;->onBindViewHolder"
+   ],
+   "https://t.me/BotFather": [
+    "Lorg/telegram/ui/ChatEditActivity$9;->onClick"
+   ],
+   "https://t.me/BotFather?start=": [
+    "Lorg/telegram/ui/ChatEditActivity;->lambda$createView$40",
+    "Lorg/telegram/ui/ChatEditActivity;->lambda$createView$41",
+    "Lorg/telegram/ui/ChatEditActivity;->lambda$createView$42"
+   ],
+   "https://t.me/BotFather?start=deletebot": [
+    "Lorg/telegram/ui/Components/CreateBotAlert;->$r8$lambda$qAo-yrXuig7Yg23SwpzxS0gHbXI"
+   ],
+   "https://t.me/addlist/pPhOtEq00KhjYTc6": [
+    "Lcom/exteragram/messenger/plugins/ui/PluginsInfoActivity;->onClick"
+   ],
+   "https://t.me/addstyle/": [
+    "Lorg/telegram/ui/Components/AIEditorAlert;->lambda$new$3"
+   ],
+   "https://t.me/boost/": [
+    "Lorg/telegram/ui/Stories/ChannelBoostUtilities;->createLink"
+   ],
+   "https://t.me/boost/?c=": [
+    "Lorg/telegram/ui/Stories/ChannelBoostUtilities;->createLink"
+   ],
+   "https://t.me/exteraPluginRepo?c=": [
+    "Lcom/exteragram/messenger/plugins/catalog/PluginRepositoryLinks;->build"
+   ],
+   "https://t.me/exteraPluginRepo?git=": [
+    "Lcom/exteragram/messenger/plugins/catalog/PluginRepositoryLinks;->buildGit"
+   ],
+   "https://t.me/exteraSettings?p=": [
+    "Lcom/exteragram/messenger/plugins/models/SettingItem;->getLink"
+   ],
+   "https://t.me/giftcode/": [
+    "Lorg/telegram/ui/Components/Premium/boosts/PremiumPreviewGiftLinkBottomSheet;->share",
+    "Lorg/telegram/ui/Components/Premium/boosts/adapters/GiftInfoAdapter;->share",
+    "Lorg/telegram/ui/Components/Premium/boosts/cells/LinkCell;->setSlug"
+   ],
+   "https://t.me/joinchat/": [
+    "Lorg/telegram/ui/ManageLinksActivity$LinkCell;->setLink"
+   ],
+   "https://t.me/m/": [
+    "Lorg/telegram/ui/Business/BusinessLinksController;->findLink"
+   ],
+   "https://t.me/nft/": [
+    "Lorg/telegram/ui/Stars/ProfileGiftsView;->onGiftClick"
+   ],
+   "https://t.me/proxy?": [
+    "Lorg/telegram/ui/ProxySettingsActivity;->getProxyUriFromText",
+    "Lorg/telegram/utils/proxy/ProxySettings;->getLink"
+   ],
+   "https://t.me/socks?": [
+    "Lorg/telegram/ui/ProxySettingsActivity;->getProxyUriFromText",
+    "Lorg/telegram/utils/proxy/ProxySettings;->getLink"
+   ],
+   "https://t.me/stickers": [
+    "Lcom/exteragram/messenger/reactions/ChannelReactionsEditActivity;->$r8$lambda$XMz6uuSxuO8mfhkS2qfCKq362kk"
+   ],
+   "https://t.me/webproxy?": [
+    "Lorg/telegram/utils/proxy/ProxySettings;->getLink"
+   ],
+   "https://telegram.org": [
+    "Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;-><init>",
+    "Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;-><init>"
+   ],
+   "https://telegram.org/": [
+    "Lcom/exteragram/messenger/export/output/html/HtmlWriter;->MakeLinks",
+    "Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;-><init>"
+   ],
+   "https://telegram.org/deactivate?phone=": [
+    "Lorg/telegram/ui/PassportActivity;->lambda$createPasswordInterface$11"
+   ],
+   "https://telegram.org/dl": [
+    "Lorg/telegram/ui/NewContactBottomSheet;->lambda$updatedPhone$14"
+   ],
+   "https://telegram.org/embed": [
+    "Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->setBlock"
+   ],
+   "https://tgb-playground.smart-glocal.com/cds/v1/tokenize/card": [
+    "Lorg/telegram/ui/PaymentFormActivity$27;->doInBackground"
+   ],
+   "https://tgb.smart-glocal.com/cds/v1/tokenize/card": [
+    "Lorg/telegram/ui/PaymentFormActivity$27;->doInBackground"
+   ],
+   "https://tineye.com": [
+    "Lcom/exteragram/messenger/components/ReverseImageSearch;->seedConsentCookies"
+   ],
+   "https://tineye.com/search?url=": [
+    "Lcom/exteragram/messenger/components/ReverseImageSearch;->buildUrl"
+   ],
+   "https://toncenter.com/api/v3/transactions?hash=": [
+    "Lorg/telegram/ui/Wallet/WalletEngine2;->lambda$decryptTransactionComment$45",
+    "Lorg/telegram/ui/Wallet/WalletEngine2;->lambda$getTransactionByHash$39"
+   ],
+   "https://tonviewer.com/": [
+    "Lorg/telegram/ui/ChatActivity;->lambda$didPressTonAddress$488",
+    "Lorg/telegram/ui/Wallet/WalletActivity;->openTransactionInExplorer"
+   ],
+   "https://translate.yandex.net/api/v1/tr.json/translate?&srv=android&id=": [
+    "Lcom/exteragram/messenger/translator/providers/YandexTranslator;->buildRequest"
+   ],
+   "https://twitter.com/stripestatus,": [
+    "Lcom/stripe/android/net/StripeApiHandler;->makeURLConnectionRequest"
+   ],
+   "https://usher.ttvnw.net/api/channel/hls/%s.m3u8?%s": [
+    "Lorg/telegram/ui/Components/WebPlayerView$TwitchStreamVideoTask;->doInBackground"
+   ],
+   "https://web.telegram.org/": [
+    "Lorg/telegram/ui/WearAuthSheet;->$r8$lambda$xdTM_-WaemPMfWHPpaSnoOgZsnM"
+   ],
+   "https://www.bing.com": [
+    "Lcom/exteragram/messenger/components/ReverseImageSearch;->seedConsentCookies"
+   ],
+   "https://www.bing.com/images/search?view=detailv2&iss=sbi&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:": [
+    "Lcom/exteragram/messenger/components/ReverseImageSearch;->buildUrl"
+   ],
+   "https://www.last.fm/": [
+    "Lcom/exteragram/messenger/nowplaying/ui/SetupNowPlayingActivity;->$r8$lambda$wgnVTF9u-5xJNetChrEj7S2xD90"
+   ],
+   "https://www.recaptcha.net/recaptcha/api3": [
+    "Lcom/google/android/recaptcha/internal/zzhq;-><init>",
+    "Lcom/google/android/recaptcha/internal/zzih;-><clinit>"
+   ],
+   "https://www.youtube.com": [
+    "Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->doInBackground"
+   ],
+   "https://www.youtube.com/embed/": [
+    "Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->doInBackground"
+   ],
+   "https://www.youtube.com/get_video_info?": [
+    "Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->doInBackground"
+   ],
+   "https://www.youtube.com/iframe_api": [
+    "Lorg/telegram/ui/Components/EmbedBottomSheet$8;->onOpenAnimationEnd",
+    "Lorg/telegram/ui/Components/EmbedBottomSheet;-><init>"
+   ],
+   "https://www.youtube.com/watch?v=": [
+    "Lorg/telegram/ui/Components/PhotoViewerWebView$3;->lambda$shouldInterceptRequest$0"
+   ],
+   "https://www.youtube.com/youtubei/v1/player?key=": [
+    "Lorg/telegram/ui/Components/PhotoViewerWebView$3;->shouldInterceptRequest"
+   ],
+   "https://x": [
+    "Landroidx/media3/exoplayer/drm/FrameworkMediaDrm;->addLaUrlAttributeIfMissing",
+    "Landroidx/media3/exoplayer/drm/FrameworkMediaDrm;->adjustLicenseServerUrl"
+   ],
+   "https://yandex.com": [
+    "Lcom/exteragram/messenger/components/ReverseImageSearch;->seedConsentCookies"
+   ],
+   "https://yandex.com/images/touch/search?rpt=imageview&format=json&request=": [
+    "Lcom/exteragram/messenger/components/ReverseImageSearch;-><clinit>"
+   ],
+   "https://yandex.ru": [
+    "Lcom/exteragram/messenger/components/ReverseImageSearch;->seedConsentCookies"
+   ],
+   "https://youtrack.jetbrains.com/issue/KT-55980": [
+    "Lkotlin/jvm/internal/PropertyReference;->getReflected"
+   ],
+   "https://youtube.com": [
+    "Lorg/telegram/ui/Components/EmbedBottomSheet$8;->onOpenAnimationEnd",
+    "Lorg/telegram/ui/Components/PhotoViewerWebView;->init"
+   ]
+  },
+  "ip_caller_context": {
+   "10.0.2.15": [
+    "Lorg/telegram/messenger/EmuDetector;->checkIp"
+   ],
+   "141.0.0.0": [
+    "Lcom/exteragram/messenger/player/motion/MotionCoverRepository;->catalogGet",
+    "Lcom/exteragram/messenger/player/motion/MotionCoverRepository;->copy",
+    "Lcom/exteragram/messenger/player/motion/MotionCoverRepository;->getText",
+    "Lcom/exteragram/messenger/player/motion/SpotifyCanvasRepository;->canvases",
+    "Lcom/exteragram/messenger/player/motion/SpotifyCanvasRepository;->getText",
+    "Lcom/exteragram/messenger/player/motion/SpotifyCanvasRepository;->requestTokens"
+   ],
+   "105.0.0.0": [
+    "Lorg/telegram/ui/Components/PhotoViewerWebView$3;->lambda$shouldInterceptRequest$0"
+   ]
+  }
+ },
+ "iocs": {
+  "keyword_hits": {
+   "/system/xbin/su": {
+    "count": 1,
+    "samples": [
+     "/system/xbin/su"
+    ]
+   },
+   "superuser": {
+    "count": 1,
+    "samples": [
+     "/system/app/superuser.apk"
+    ]
+   },
+   "xposed": {
+    "count": 60,
+    "samples": [
+     "edittext needs to be an autocompletetextview if an exposed dropdown menu is being used.",
+     "lde/robv/android/xposed/xc_methodreplacement;",
+     "smap\npymethodhook.kt\nkotlin\n*s kotlin\n*f\n+ 1 pymethodhook.kt\ncom/exteragram/messenger/plugins/xposed/pymethodhook\n+ 2 fake.kt\nkotlin/jvm/internal/fakekt\n*l\n1#1,",
+     "textinputoutlinedexposeddropdownmenustyle",
+     "hasuwcameraunderexposedflashcapturequirk"
+    ]
+   },
+   "frida": {
+    "count": 2,
+    "samples": [
+     "calendarweeknameshortfriday",
+     "friday"
+    ]
+   },
+   "goldfish": {
+    "count": 1,
+    "samples": [
+     "goldfish"
+    ]
+   },
+   "genymotion": {
+    "count": 2,
+    "samples": [
+     "genymotion",
+     "com.google.android.launcher.layouts.genymotion"
+    ]
+   },
+   "qemu": {
+    "count": 13,
+    "samples": [
+     "qemu_drivers",
+     "checkqemudrivers",
+     "init.svc.qemu-props",
+     "checkqemuprops",
+     "/dev/qemu_pipe"
+    ]
+   },
+   "test-keys": {
+    "count": 2,
+    "samples": [
+     "test-keys aren't accepted on this build.",
+     "test-keys"
+    ]
+   }
+  },
+  "b64_blob_candidates": [
+   "dispatchOnPeriodicSessionPositionInfoChanged",
+   "ChannelNeedBoostsForProfileIconDescription",
+   "CrashlyticsReportSessionEventRolloutAssignmentEncoder",
+   "getEnterpriseAuthenticationAppLinkPolicyEnabled",
+   "b3312fa7e23ee7e4988e056be3f82d19181d9c6efe8141120314088f5013875ac656398d8a2ed19d2a85c8edd3ec2aef",
+   "makePurchaseUpdatedIntentWithInternalErrorReason",
+   "NotificationActionPinnedStickerEmojiUser",
+   "dropFirstElementUntilTheSpecifiedCellIsInTheBuffer",
+   "setSupportProgressBarIndeterminateVisibility",
+   "BoostingStarsGiveawayHowItWorksTextEndGroup",
+   "getTextSecondaryAndTertiaryInverseDisabled",
+   "PassportAddTranslationPassportRegistrationInfo",
+   "isAutoExpandOnRequestChildRectangleOffscreen",
+   "CommunityServiceMessageChannelYouRemoved",
+   "VILLLLLLLLLLLLZLLLLLLLLLLLLLLLZLIILLLLZIZIIZLZZZZZLZ",
+   "hideClearDeletedSeparatorUntilFilteringShown",
+   "experimentalSetEnableMediaCodecBufferDecodeOnlyFlag",
+   "findOnePartiallyOrCompletelyInvisibleChild",
+   "dispatchCustomCommandAsPredefinedCommand",
+   "sendAccessibilityFocusEventToMonthDropdown",
+   "findPitchPeriodInRangeWithDownsampleBuffer",
+   "39402006196394479212279040100143613805079739270465446667946905279627659399113263569398956308152294913554433653942643",
+   "discardUpstreamSamplesForClippedDuration",
+   "hexToByteArrayNoLineAndGroupSeparatorSlowPath",
+   "onDeviceImageCaptioningInferenceLogEvent",
+   "SuggestedOfferRefundByAdminAmountUnknown",
+   "setItemActiveIndicatorExpandedMarginHorizontal",
+   "suppressAmountKeyboardAfterAuthorization",
+   "ChannelNeedBoostsForProfileColorDescription",
+   "getMaxPendingFramesCountForMediaCodecDecoders",
+   "shouldUseAsynchronousAdapterInDefaultMode",
+   "finalizeActiveScanAndScheduleSuppressActiveScanRunnable",
+   "textInputOutlinedExposedDropdownMenuStyle",
+   "constrainAudioChannelCountToDeviceCapabilities",
+   "mWasImportantForAccessibilityBeforeHidden",
+   "maybeAssertAtLeastBytesLeftForLegacyMethod",
+   "addBackButtonTranslationAnimatorIfNeeded",
+   "VLLILLLLLLLLLLLLZLLLLLLLLLLLLLLLZLIILLLZIZIIZLZZZZZLZLLLZZ",
+   "SuggestionAgreementReachedAdmin1PresentPerfect",
+   "resolvePendingMessageEndOfStreamPosition"
+  ],
+  "key_like_strings": [
+   "TextInputLayout_placeholderTextColor",
+   "TL_help_passportConfigNotModified",
+   "ThemeOverlay_Material3Expressive_FloatingActionButton_Primary",
+   "TL_updateWalletTonConnectSession",
+   "OPTIONAL_MODULE_CUSTOM_IMAGE_LABELING_INIT",
+   "dispatchOnPeriodicSessionPositionInfoChanged",
+   "TextAppearance_M3_Sys_Typescale_LabelMedium",
+   "TL_messageActionStarGiftUnique_layer221",
+   "StarsSubscriptionRenewedToastText",
+   "ShortcutInfoCompatSaver_share_targets",
+   "ic_mr_button_connecting_01_light",
+   "TL_channelAdminLogEventActionParticipantJoinByInvite",
+   "navigation_bar_item_small_label_view",
+   "onSurfaceTextureDestroyedInternal",
+   "m3_sys_color_dark_surface_container_highest",
+   "applyFrameworkTintUsingColorFilter",
+   "getInitialBitrateEstimateForNetworkType",
+   "design_navigation_item_subheader",
+   "getPreferredChildSizeForViewport",
+   "sendingSuggestedMessageApprovalMap",
+   "BoostingGiveawayHowItWorksTextEndGroup_other",
+   "Layout_layout_constraintWidth_min",
+   "material_slider_active_tick_marks_color",
+   "mr_chooser_wifi_warning_container",
+   "LocalVariableAwareTranslationVisitor",
+   "SAMSUNG_DEVICE_SUPPORT_CONDITION",
+   "BoostingGiveawayHowItWorksSubTextEnd_other",
+   "AppCompatTextView_autoSizeTextType",
+   "EventLogChangedProfileColorIconGroup",
+   "ChannelNeedBoostsForProfileIconDescription",
+   "m3_sys_color_dynamic_on_secondary_fixed_variant",
+   "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+   "MaterialTextAppearance_android_fontVariationSettings",
+   "disabledTrackTypesWithoutScrubbingMode",
+   "cast_seek_bar_ad_break_minimum_width",
+   "Gift2ExportTONUnlocksAlertText_other",
+   "TextInputLayout_boxBackgroundColor",
+   "material_timepicker_clock_text_color",
+   "WAKE_LOCK_ACQUIRE_TIMEOUT_MILLIS",
+   "m3_comp_progress_indicator_linear_track_thickness"
+  ]
+ },
+ "obfuscation": {
+  "classes_total": 60238,
+  "obfuscated_classes": 1605,
+  "obfuscated_ratio": 0.027,
+  "packer_class_markers": [],
+  "packer_native_lib_markers": [],
+  "top_packages": [
+   [
+    "org/telegram",
+    29080
+   ],
+   [
+    "com/google",
+    12585
+   ],
+   [
+    "com/exteragram",
+    3640
+   ],
+   [
+    "androidx/media3",
+    2125
+   ],
+   [
+    "androidx/camera",
+    1984
+   ],
+   [
+    "com/radolyn",
+    758
+   ],
+   [
+    "com/android",
+    681
+   ],
+   [
+    "androidx/core",
+    537
+   ],
+   [
+    "org/mvel2",
+    534
+   ],
+   [
+    "androidx/car",
+    476
+   ],
+   [
+    "org/webrtc",
+    450
+   ],
+   [
+    "kotlinx/coroutines",
+    442
+   ],
+   [
+    "androidx/work",
+    413
+   ],
+   [
+    "androidx/credentials",
+    379
+   ],
+   [
+    "androidx/appcompat",
+    334
+   ],
+   [
+    "androidx/datastore",
+    297
+   ],
+   [
+    "okhttp3/internal",
+    269
+   ],
+   [
+    "org/chromium",
+    267
+   ],
+   [
+    "androidx/mediarouter",
+    247
+   ],
+   [
+    "androidx/room",
+    242
+   ],
+   [
+    "org/scilab",
+    196
+   ],
+   [
+    "kotlin/collections",
+    171
+   ],
+   [
+    "kotlin/jvm",
+    159
+   ],
+   [
+    "io/noties",
+    147
+   ],
+   [
+    "androidx/fragment",
+    143
+   ],
+   [
+    "j$/time",
+    139
+   ],
+   [
+    "androidx/recyclerview",
+    134
+   ],
+   [
+    "kotlinx/serialization",
+    130
+   ],
+   [
+    "com/caverock",
+    126
+   ],
+   [
+    "com/sun",
+    122
+   ]
+  ],
+  "telegram_code_present": true
+ },
+ "native_libraries": [
+  {
+   "path": "lib/arm64-v8a/libc++_shared.so",
+   "size": 1374336
+  },
+  {
+   "path": "lib/arm64-v8a/libchaquopy_java.so",
+   "size": 189848
+  },
+  {
+   "path": "lib/arm64-v8a/libcrypto_chaquopy.so",
+   "size": 3784
+  },
+  {
+   "path": "lib/arm64-v8a/libcrypto_python.so",
+   "size": 4544368
+  },
+  {
+   "path": "lib/arm64-v8a/libdatastore_shared_counter.so",
+   "size": 7112
+  },
+  {
+   "path": "lib/arm64-v8a/libetgadblock.so",
+   "size": 3037648
+  },
+  {
+   "path": "lib/arm64-v8a/libextera_analyzer.so",
+   "size": 6357000
+  },
+  {
+   "path": "lib/arm64-v8a/libimage_processing_util_jni.so",
+   "size": 32528
+  },
+  {
+   "path": "lib/arm64-v8a/libjnidispatch.so",
+   "size": 165992
+  },
+  {
+   "path": "lib/arm64-v8a/liblanguage_id_l2c_jni.so",
+   "size": 1019552
+  },
+  {
+   "path": "lib/arm64-v8a/libpython3.11.so",
+   "size": 5389368
+  },
+  {
+   "path": "lib/arm64-v8a/libpython3.so",
+   "size": 3768
+  },
+  {
+   "path": "lib/arm64-v8a/libshadowhook.so",
+   "size": 108824
+  },
+  {
+   "path": "lib/arm64-v8a/libshadowhook_nothing.so",
+   "size": 1368
+  },
+  {
+   "path": "lib/arm64-v8a/libsqlite3_chaquopy.so",
+   "size": 3784
+  },
+  {
+   "path": "lib/arm64-v8a/libsqlite3_python.so",
+   "size": 1217120
+  },
+  {
+   "path": "lib/arm64-v8a/libssl_chaquopy.so",
+   "size": 3768
+  },
+  {
+   "path": "lib/arm64-v8a/libssl_python.so",
+   "size": 963112
+  },
+  {
+   "path": "lib/arm64-v8a/libsurface_util_jni.so",
+   "size": 4896
+  },
+  {
+   "path": "lib/arm64-v8a/libtmessages.49.so",
+   "size": 21981872
+  },
+  {
+   "path": "lib/arm64-v8a/libvosk.so",
+   "size": 10042800
+  },
+  {
+   "path": "lib/arm64-v8a/libyuv.so",
+   "size": 3912
+  },
+  {
+   "path": "lib/armeabi-v7a/libc++_shared.so",
+   "size": 963028
+  },
+  {
+   "path": "lib/armeabi-v7a/libchaquopy_java.so",
+   "size": 122188
+  },
+  {
+   "path": "lib/armeabi-v7a/libcrypto_chaquopy.so",
+   "size": 2344
+  },
+  {
+   "path": "lib/armeabi-v7a/libcrypto_python.so",
+   "size": 2745572
+  },
+  {
+   "path": "lib/armeabi-v7a/libdatastore_shared_counter.so",
+   "size": 4416
+  },
+  {
+   "path": "lib/armeabi-v7a/libetgadblock.so",
+   "size": 2119488
+  },
+  {
+   "path": "lib/armeabi-v7a/libextera_analyzer.so",
+   "size": 4707196
+  },
+  {
+   "path": "lib/armeabi-v7a/libimage_processing_util_jni.so",
+   "size": 24448
+  },
+  {
+   "path": "lib/armeabi-v7a/libjnidispatch.so",
+   "size": 116344
+  },
+  {
+   "path": "lib/armeabi-v7a/liblanguage_id_l2c_jni.so",
+   "size": 609628
+  },
+  {
+   "path": "lib/armeabi-v7a/libpython3.11.so",
+   "size": 3276492
+  },
+  {
+   "path": "lib/armeabi-v7a/libpython3.so",
+   "size": 2328
+  },
+  {
+   "path": "lib/armeabi-v7a/libshadowhook.so",
+   "size": 76888
+  },
+  {
+   "path": "lib/armeabi-v7a/libshadowhook_nothing.so",
+   "size": 716
+  },
+  {
+   "path": "lib/armeabi-v7a/libsqlite3_chaquopy.so",
+   "size": 2344
+  },
+  {
+   "path": "lib/armeabi-v7a/libsqlite3_python.so",
+   "size": 786796
+  },
+  {
+   "path": "lib/armeabi-v7a/libssl_chaquopy.so",
+   "size": 2328
+  },
+  {
+   "path": "lib/armeabi-v7a/libssl_python.so",
+   "size": 623384
+  },
+  {
+   "path": "lib/armeabi-v7a/libsurface_util_jni.so",
+   "size": 3460
+  },
+  {
+   "path": "lib/armeabi-v7a/libtmessages.49.so",
+   "size": 18113860
+  },
+  {
+   "path": "lib/armeabi-v7a/libvosk.so",
+   "size": 8985628
+  },
+  {
+   "path": "lib/armeabi-v7a/libyuv.so",
+   "size": 2780
+  }
+ ],
+ "resources": {
+  "file_counts_by_ext": [
+   [
+    "webp",
+    4372
+   ],
+   [
+    "xml",
+    2773
+   ],
+   [
+    "png",
+    1302
+   ],
+   [
+    "json",
+    341
+   ],
+   [
+    "version",
+    84
+   ],
+   [
+    "so",
+    68
+   ],
+   [
+    "properties",
+    65
+   ],
+   [
+    "bin",
+    54
+   ],
+   [
+    "svg",
+    50
+   ],
+   [
+    "kotlin_module",
+    37
+   ],
+   [
+    "ttf",
+    35
+   ],
+   [
+    "glsl",
+    29
+   ],
+   [
+    "proto",
+    13
+   ],
+   [
+    "txt",
+    11
+   ],
+   [
+    "mp3",
+    10
+   ],
+   [
+    "imy",
+    9
+   ],
+   [
+    "dex",
+    8
+   ],
+   [
+    "attheme",
+    8
+   ],
+   [
+    "kotlin_builtins",
+    8
+   ],
+   [
+    "binobj",
+    7
+   ],
+   [
+    "js",
+    6
+   ],
+   [
+    "dat",
+    4
+   ],
+   [
+    "jpg",
+    4
+   ],
+   [
+    "agsl",
+    4
+   ],
+   [
+    "zip",
+    2
+   ]
+  ],
+  "largest_files": [
+   {
+    "size": 21981872,
+    "path": "lib/arm64-v8a/libtmessages.49.so"
+   },
+   {
+    "size": 18113860,
+    "path": "lib/armeabi-v7a/libtmessages.49.so"
+   },
+   {
+    "size": 11731304,
+    "path": "classes.dex"
+   },
+   {
+    "size": 10222716,
+    "path": "classes6.dex"
+   },
+   {
+    "size": 10190668,
+    "path": "classes3.dex"
+   },
+   {
+    "size": 10047064,
+    "path": "classes7.dex"
+   },
+   {
+    "size": 10042800,
+    "path": "lib/arm64-v8a/libvosk.so"
+   },
+   {
+    "size": 9287536,
+    "path": "classes4.dex"
+   },
+   {
+    "size": 8985628,
+    "path": "lib/armeabi-v7a/libvosk.so"
+   },
+   {
+    "size": 8898728,
+    "path": "classes5.dex"
+   },
+   {
+    "size": 8557468,
+    "path": "assets/chaquopy/requirements-common.imy"
+   },
+   {
+    "size": 7002543,
+    "path": "assets/plugins_pysdk/sdk-arm64-v8a.zip"
+   },
+   {
+    "size": 6584419,
+    "path": "assets/plugins_pysdk/sdk-armeabi-v7a.zip"
+   },
+   {
+    "size": 6357000,
+    "path": "lib/arm64-v8a/libextera_analyzer.so"
+   },
+   {
+    "size": 5389368,
+    "path": "lib/arm64-v8a/libpython3.11.so"
+   }
+  ],
+  "assets_top": [
+   {
+    "path": "assets/chaquopy/requirements-common.imy",
+    "size": 8557468
+   },
+   {
+    "path": "assets/plugins_pysdk/sdk-arm64-v8a.zip",
+    "size": 7002543
+   },
+   {
+    "path": "assets/plugins_pysdk/sdk-armeabi-v7a.zip",
+    "size": 6584419
+   },
+   {
+    "path": "assets/chaquopy/stdlib-common.imy",
+    "size": 4833553
+   },
+   {
+    "path": "assets/emoji.pack",
+    "size": 3492338
+   },
+   {
+    "path": "assets/chaquopy/bootstrap-native/arm64-v8a/java/chaquopy.so",
+    "size": 3135208
+   },
+   {
+    "path": "assets/chaquopy/requirements-arm64-v8a.imy",
+    "size": 2730301
+   },
+   {
+    "path": "assets/chaquopy/bootstrap-native/armeabi-v7a/java/chaquopy.so",
+    "size": 2537848
+   },
+   {
+    "path": "assets/chaquopy/requirements-armeabi-v7a.imy",
+    "size": 2446172
+   },
+   {
+    "path": "assets/chaquopy/stdlib-arm64-v8a.imy",
+    "size": 1486019
+   },
+   {
+    "path": "assets/chaquopy/stdlib-armeabi-v7a.imy",
+    "size": 1395166
+   },
+   {
+    "path": "assets/grammars.dat",
+    "size": 632432
+   },
+   {
+    "path": "assets/chaquopy/bootstrap.imy",
+    "size": 625187
+   },
+   {
+    "path": "assets/localization_en.bin",
+    "size": 469060
+   },
+   {
+    "path": "assets/models/star.binobj",
+    "size": 361248
+   }
+  ],
+  "values_strings_files": [
+   "res/values/arrays.xml",
+   "res/values/strings.xml"
+  ]
+ },
+ "certificates": {
+  "certificates": [
+   {
+    "scheme": "v2",
+    "subject": "Common Name: AlexeyZavar, Organizational Unit: Mobile, Organization: Radolyn Labs, Locality: Moscow, State/Province: Russia, Country: RU",
+    "issuer": "Common Name: AlexeyZavar, Organizational Unit: Mobile, Organization: Radolyn Labs, Locality: Moscow, State/Province: Russia, Country: RU",
+    "serial": "1",
+    "self_signed": true,
+    "valid_from": "2024-04-06 14:29:46+00:00",
+    "valid_to": "2059-03-29 14:29:46+00:00",
+    "sha256": "50fdf87a75d5e522d08d5fc9f15cfd1fed8a93eaebc06c968793c8871d9a22b3"
+   }
+  ],
+  "v1_meta_files": [
+   "AL2.0",
+   "LGPL2.1",
+   "NOTICE.md",
+   "TMessagesProj.kotlin_module",
+   "activity_release.kotlin_module",
+   "ads-adservices-java_release.kotlin_module",
+   "androidx",
+   "androidx.activity_activity.version",
+   "androidx.annotation_annotation-experimental.version",
+   "androidx.appcompat_appcompat-resources.version",
+   "androidx.appcompat_appcompat.version",
+   "androidx.arch.core_core-runtime.version"
+  ],
+  "signature_schemes": [
+   "v2"
+  ]
+ },
+ "risk": {
+  "score_raw": 95,
+  "level_raw": "critical",
+  "score": 37,
+  "level": "medium",
+  "breakdown": {
+   "permissions": {
+    "points": 30,
+    "max": 30,
+    "details": [
+     "+4 READ_CONTACTS",
+     "+2 WRITE_CONTACTS",
+     "+5 READ_PHONE_STATE",
+     "+5 RECORD_AUDIO",
+     "+3 CAMERA",
+     "+4 ACCESS_FINE_LOCATION",
+     "+4 ACCESS_BACKGROUND_LOCATION",
+     "+3 MANAGE_EXTERNAL_STORAGE",
+     "+2 GET_ACCOUNTS",
+     "+10 REQUEST_INSTALL_PACKAGES",
+     "+4 REQUEST_DELETE_PACKAGES",
+     "+4 SYSTEM_ALERT_WINDOW",
+     "+2 WRITE_SETTINGS",
+     "+4 RECEIVE_BOOT_COMPLETED",
+     "+2 QUERY_ALL_PACKAGES"
+    ]
+   },
+   "dangerous_combinations": {
+    "points": 6,
+    "max": 10,
+    "details": [
+     "RECORD_AUDIO,CAMERA,ACCESS_FINE_LOCATION: набор шпионского мониторинга",
+     "REQUEST_INSTALL_PACKAGES,RECEIVE_BOOT_COMPLETED: dropper с автозапуском"
+    ]
+   },
+   "dynamic_code_loading": {
+    "points": 14,
+    "max": 18,
+    "details": [
+     "+8 InMemoryDexClassLoader",
+     "+6 Runtime.exec/ProcessBuilder"
+    ]
+   },
+   "reflection": {
+    "points": 8,
+    "max": 8,
+    "details": [
+     "call sites: 1249"
+    ]
+   },
+   "data_collection": {
+    "points": 20,
+    "max": 20,
+    "details": [
+     "+4 telephony identifiers",
+     "+4 location APIs",
+     "+3 audio recording",
+     "+3 camera",
+     "+4 screen capture",
+     "+2 clipboard"
+    ]
+   },
+   "persistence_evasion": {
+    "points": 9,
+    "max": 15,
+    "details": [
+     "+4 BOOT_COMPLETED receiver",
+     "+2 alarm/job/foreground APIs",
+     "+3 root/anti-analysis strings"
+    ]
+   },
+   "network_c2": {
+    "points": 8,
+    "max": 12,
+    "details": [
+     "+4 raw IP endpoints (2)",
+     "+2 crypto+base64 usage",
+     "+2 WebView ignores SSL errors"
+    ]
+   },
+   "obfuscation": {
+    "points": 0,
+    "max": 8,
+    "details": [
+     "obfuscated class ratio 0.03"
+    ]
+   }
+  },
+  "context_adjustment": {
+   "score": 37,
+   "baseline_perm_points_deducted": 30,
+   "baseline_api_points_deducted": 30,
+   "fork_specific_points": 36,
+   "unexplained_malware_indicators": [],
+   "plugin_loader_present": true,
+   "exec_only_emudetector_libraries": true,
+   "verdict": "Форк Telegram (AyuGram от Radolyn Labs, сборка с компонентами exteraGram) со встроенной системой плагинов: загрузка кода в память через InMemoryDexClassLoader (com.exteragram.messenger.plugins.utils.ClassProxy), Python-SDK Chaquopy в assets (plugins_pysdk), доставка плагинов с plugins.exteragram.app, самообновление через api.exteragram.app с правом REQUEST_INSTALL_PACKAGES. Прямых вредоносных индикаторов (SMS-механизмы, device admin, accessibility, бот-токены, C2-домены, чистые IP-адреса) статически не обнаружено. Основной риск: привилегированная поверхность плагинов/апдейтера (сервер-контролируемое исполнение кода), самозванный сертификат подписи, вне Play Store."
+  }
+ },
+ "mitre_attack": [
+  {
+   "id": "T1407",
+   "name": "Download New Code at Runtime",
+   "evidence": "dynamic dex loading APIs: ['Ldalvik/system/InMemoryDexClassLoader;-><init>(Ljava/nio/ByteBuffer; Ljava/lang/ClassLoader;)V', 'Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String; Ljava/lang/ClassLoader;)V']",
+   "context": "fork-specific"
+  },
+  {
+   "id": "T1623",
+   "name": "Command and Scripting Interpreter",
+   "evidence": "Runtime.exec / ProcessBuilder present",
+   "context": "baseline"
+  },
+  {
+   "id": "T1636.003",
+   "name": "Contact List",
+   "evidence": "READ/WRITE_CONTACTS",
+   "context": "baseline"
+  },
+  {
+   "id": "T1636.005",
+   "name": "Accounts",
+   "evidence": "GET_ACCOUNTS / AccountManager",
+   "context": "baseline"
+  },
+  {
+   "id": "T1430",
+   "name": "Location Tracking",
+   "evidence": "LocationManager/FusedLocation APIs",
+   "context": "baseline"
+  },
+  {
+   "id": "T1429",
+   "name": "Audio Capture",
+   "evidence": "AudioRecord/MediaRecorder audio capture",
+   "context": "baseline"
+  },
+  {
+   "id": "T1512",
+   "name": "Video Capture",
+   "evidence": "camera capture APIs",
+   "context": "baseline"
+  },
+  {
+   "id": "T1513",
+   "name": "Screen Capture",
+   "evidence": "MediaProjection screen capture",
+   "context": "baseline"
+  },
+  {
+   "id": "T1414",
+   "name": "Clipboard Data",
+   "evidence": "ClipboardManager monitoring",
+   "context": "baseline"
+  },
+  {
+   "id": "T1624",
+   "name": "Event Triggered Execution",
+   "evidence": "BOOT_COMPLETED broadcast receiver",
+   "context": "baseline+fork"
+  },
+  {
+   "id": "T1541",
+   "name": "Foreground Persistence",
+   "evidence": "foreground service usage",
+   "context": "baseline"
+  },
+  {
+   "id": "T1476",
+   "name": "Deliver Malicious Application via Other Means",
+   "evidence": "REQUEST_INSTALL_PACKAGES / DownloadManager",
+   "context": "fork-specific"
+  },
+  {
+   "id": "T1418",
+   "name": "Software Discovery",
+   "evidence": "getInstalledPackages / QUERY_ALL_PACKAGES",
+   "context": "fork-specific"
+  },
+  {
+   "id": "T1426",
+   "name": "System Information Discovery",
+   "evidence": "IMEI/IMSI/phone identifiers via TelephonyManager",
+   "context": "baseline"
+  },
+  {
+   "id": "T1521.001",
+   "name": "Symmetric Cryptography",
+   "evidence": "symmetric crypto (SecretKeySpec/Cipher)",
+   "context": "baseline"
+  }
+ ],
+ "notes": [
+  "Обнаружена кодовая база org.telegram.* — вероятная модификация клиента Telegram; камера/микрофон/локация могут быть легитимным функционалом мессенджера. Оценка риска смещена в пользу вредоносных комбинаций (SMS, accessibility, device admin).",
+  "Анализ полностью статический (apktool 2.9.3 + androguard 4.1.4): образец не запускался."
+ ],
+ "errors": []
+}

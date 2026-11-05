@@ -1,0 +1,1038 @@
+{
+  "certificates": [
+    {
+      "scheme": "v2",
+      "subject": "Common Name: AlexeyZavar, Organizational Unit: Mobile, Organization: Radolyn Labs, Locality: Moscow, State/Province: Russia, Country: RU",
+      "issuer": "Common Name: AlexeyZavar, Organizational Unit: Mobile, Organization: Radolyn Labs, Locality: Moscow, State/Province: Russia, Country: RU",
+      "serial_number": "1",
+      "not_valid_before": "2024-04-06 14:29:46+00:00",
+      "not_valid_after": "2059-03-29 14:29:46+00:00",
+      "sha256_fingerprint": "50 FD F8 7A 75 D5 E5 22 D0 8D 5F C9 F1 5C FD 1F ED 8A 93 EA EB C0 6C 96 87 93 C8 87 1D 9A 22 B3",
+      "sha1_fingerprint": "DB E5 11 BC 79 9A 0D 56 B6 DC 20 41 6A F7 B1 41 41 6F A7 EF",
+      "md5_fingerprint": "04c54334dade6e0aab2e00cde53637b0",
+      "key_size": null,
+      "signature_algorithm": "sha256"
+    }
+  ],
+  "assets": {
+    "total_entries": 9326,
+    "assets_count": 375,
+    "res_count": 8670,
+    "lib_count": 44,
+    "root_files": [
+      "classes.dex",
+      "classes2.dex",
+      "classes3.dex",
+      "classes4.dex",
+      "classes5.dex",
+      "classes6.dex",
+      "classes7.dex",
+      "classes8.dex",
+      "DebugProbesKt.bin",
+      "billing.properties",
+      "build-data.properties",
+      "build.properties",
+      "builddef.lst",
+      "car-app-api.level",
+      "client_analytics.proto",
+      "common.properties",
+      "core-common.properties",
+      "firebase-analytics.properties",
+      "firebase-appindexing.properties",
+      "firebase-encoders-proto.properties",
+      "firebase-encoders.properties",
+      "firebase-iid-interop.properties",
+      "firebase-measurement-connector.properties",
+      "genai-common.properties",
+      "genai-prompt.properties",
+      "genai-schema.properties",
+      "googleid.properties",
+      "image-labeling-common.properties",
+      "image-labeling-default-common.properties",
+      "image.properties",
+      "integrity.properties",
+      "isoparser-default.properties",
+      "language-id-common.properties",
+      "language-id.properties",
+      "messaging_event.proto",
+      "messaging_event_extension.proto",
+      "play-services-ads-identifier.properties",
+      "play-services-auth-api-phone.properties",
+      "play-services-auth-base.properties",
+      "play-services-auth-blockstore.properties",
+      "play-services-auth.properties",
+      "play-services-base.properties",
+      "play-services-basement.properties",
+      "play-services-cast-framework.properties",
+      "play-services-cast.properties",
+      "play-services-clearcut.properties",
+      "play-services-cloud-messaging.properties",
+      "play-services-fido.properties",
+      "play-services-flags.properties",
+      "play-services-identity-credentials.properties",
+      "play-services-identity.properties",
+      "play-services-location.properties",
+      "play-services-maps.properties",
+      "play-services-measurement-api.properties",
+      "play-services-measurement-base.properties",
+      "play-services-measurement-impl.properties",
+      "play-services-measurement-sdk-api.properties",
+      "play-services-measurement-sdk.properties",
+      "play-services-measurement.properties",
+      "play-services-mlkit-image-labeling.properties",
+      "play-services-mlkit-subject-segmentation.properties",
+      "play-services-phenotype.properties",
+      "play-services-recaptchabase.properties",
+      "play-services-stats.properties",
+      "play-services-tasks.properties",
+      "play-services-vision-common.properties",
+      "play-services-vision.properties",
+      "play-services-wallet.properties",
+      "play-services-wearable.properties",
+      "recaptcha.properties",
+      "version.txt",
+      "vision-common.properties",
+      "vision-interfaces.properties",
+      "AndroidManifest.xml",
+      "resources.arsc"
+    ],
+    "suspect_assets": [
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_bz2.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_ctypes.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_datetime.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_lzma.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_random.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_sha512.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_struct.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/binascii.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/java/chaquopy.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/math.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/mmap.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/zlib.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_bz2.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_ctypes.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_datetime.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_lzma.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_random.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_sha512.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_struct.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/binascii.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/java/chaquopy.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/math.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/mmap.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/zlib.cpython-311.so",
+      "assets/extera/registration_dates.bin",
+      "assets/localization_ar.bin",
+      "assets/localization_az.bin",
+      "assets/localization_be.bin",
+      "assets/localization_ca.bin",
+      "assets/localization_cs.bin",
+      "assets/localization_de.bin",
+      "assets/localization_el.bin",
+      "assets/localization_en.bin",
+      "assets/localization_eo.bin",
+      "assets/localization_es.bin",
+      "assets/localization_fa.bin",
+      "assets/localization_fi.bin",
+      "assets/localization_fr.bin",
+      "assets/localization_he.bin",
+      "assets/localization_hr.bin",
+      "assets/localization_hu.bin",
+      "assets/localization_id.bin",
+      "assets/localization_it.bin",
+      "assets/localization_ja.bin",
+      "assets/localization_kk.bin",
+      "assets/localization_ko.bin",
+      "assets/localization_lv.bin",
+      "assets/localization_ms.bin",
+      "assets/localization_nb.bin",
+      "assets/localization_nl.bin",
+      "assets/localization_os.bin",
+      "assets/localization_pl.bin",
+      "assets/localization_pt.bin",
+      "assets/localization_pt_br.bin",
+      "assets/localization_ro.bin",
+      "assets/localization_ru.bin",
+      "assets/localization_sk.bin",
+      "assets/localization_sr.bin",
+      "assets/localization_sv.bin",
+      "assets/localization_tr.bin",
+      "assets/localization_uk.bin",
+      "assets/localization_uz.bin",
+      "assets/localization_vi.bin",
+      "assets/localization_zh_cn.bin",
+      "assets/localization_zh_tw.bin",
+      "assets/lottie_meta.bin",
+      "assets/models/diamond_ios/anchors.bin",
+      "assets/models/diamond_ios/camera.bin",
+      "assets/models/diamond_ios/facetProjection.bin",
+      "assets/models/diamond_ios/frames.bin",
+      "assets/models/diamond_ios/main.bin",
+      "assets/models/diamond_ios/planes.bin",
+      "assets/models/diamond_ios/small.bin",
+      "assets/models/diamond_ios/vertices.bin",
+      "assets/models/diamond_ios/widths.bin",
+      "assets/plugins_pysdk/sdk-arm64-v8a.zip",
+      "assets/plugins_pysdk/sdk-armeabi-v7a.zip",
+      "assets/string_resource_ids.bin"
+    ],
+    "assets_dirs": [
+      "assets",
+      "assets/ayu_locales/values",
+      "assets/ayu_locales/values-ar",
+      "assets/ayu_locales/values-be",
+      "assets/ayu_locales/values-de",
+      "assets/ayu_locales/values-el",
+      "assets/ayu_locales/values-eo",
+      "assets/ayu_locales/values-es",
+      "assets/ayu_locales/values-fa",
+      "assets/ayu_locales/values-fi",
+      "assets/ayu_locales/values-fr",
+      "assets/ayu_locales/values-it",
+      "assets/ayu_locales/values-iw",
+      "assets/ayu_locales/values-ja",
+      "assets/ayu_locales/values-lv",
+      "assets/ayu_locales/values-os",
+      "assets/ayu_locales/values-pl",
+      "assets/ayu_locales/values-pt",
+      "assets/ayu_locales/values-ro",
+      "assets/ayu_locales/values-ru",
+      "assets/ayu_locales/values-tr",
+      "assets/ayu_locales/values-uk",
+      "assets/ayu_locales/values-vi",
+      "assets/ayu_locales/values-zh-rCN",
+      "assets/ayu_locales/values-zh-rTW",
+      "assets/chaquopy",
+      "assets/chaquopy/bootstrap-native/arm64-v8a",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/java",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/java",
+      "assets/dexopt",
+      "assets/emoji/compound",
+      "assets/extera",
+      "assets/extera/export/css",
+      "assets/extera/export/images",
+      "assets/extera/export/js",
+      "assets/extera_locales/values",
+      "assets/extera_locales/values-ar",
+      "assets/extera_locales/values-az",
+      "assets/extera_locales/values-be",
+      "assets/extera_locales/values-ca",
+      "assets/extera_locales/values-cs",
+      "assets/extera_locales/values-de",
+      "assets/extera_locales/values-es",
+      "assets/extera_locales/values-fa",
+      "assets/extera_locales/values-fi",
+      "assets/extera_locales/values-fr",
+      "assets/extera_locales/values-hr",
+      "assets/extera_locales/values-hu",
+      "assets/extera_locales/values-in",
+      "assets/extera_locales/values-it",
+      "assets/extera_locales/values-iw",
+      "assets/extera_locales/values-ja",
+      "assets/extera_locales/values-kk",
+      "assets/extera_locales/values-ko",
+      "assets/extera_locales/values-ms",
+      "assets/extera_locales/values-nb",
+      "assets/extera_locales/values-nl",
+      "assets/extera_locales/values-pl",
+      "assets/extera_locales/values-pt-rBR",
+      "assets/extera_locales/values-ro",
+      "assets/extera_locales/values-ru",
+      "assets/extera_locales/values-sk",
+      "assets/extera_locales/values-sr",
+      "assets/extera_locales/values-sv",
+      "assets/extera_locales/values-tr",
+      "assets/extera_locales/values-uk",
+      "assets/extera_locales/values-uz",
+      "assets/extera_locales/values-zh-rCN",
+      "assets/extera_locales/values-zh-rTW",
+      "assets/fonts",
+      "assets/models",
+      "assets/models/diamond_ios",
+      "assets/org/scilab/forge/jlatexmath",
+      "assets/org/scilab/forge/jlatexmath/fonts/base",
+      "assets/org/scilab/forge/jlatexmath/fonts/euler",
+      "assets/org/scilab/forge/jlatexmath/fonts/latin",
+      "assets/org/scilab/forge/jlatexmath/fonts/maths",
+      "assets/plugin_analyzer",
+      "assets/plugins_pysdk",
+      "assets/shaders",
+      "assets/shaders/diamond",
+      "assets/wallet_card_2d"
+    ],
+    "assets_dir_stats": {
+      "assets/chaquopy": {
+        "files": 34,
+        "bytes": 29424442
+      },
+      "assets/plugins_pysdk": {
+        "files": 3,
+        "bytes": 13586969
+      },
+      "assets/emoji.pack": {
+        "files": 1,
+        "bytes": 3492338
+      },
+      "assets/fonts": {
+        "files": 15,
+        "bytes": 2079901
+      },
+      "assets/extera_locales": {
+        "files": 34,
+        "bytes": 1645580
+      },
+      "assets/models": {
+        "files": 18,
+        "bytes": 1476346
+      },
+      "assets/ayu_locales": {
+        "files": 24,
+        "bytes": 895269
+      },
+      "assets/grammars.dat": {
+        "files": 1,
+        "bytes": 632432
+      },
+      "assets/org": {
+        "files": 57,
+        "bytes": 566524
+      },
+      "assets/localization_en.bin": {
+        "files": 1,
+        "bytes": 469060
+      },
+      "assets/tflite_langid.tflite.jpg": {
+        "files": 1,
+        "bytes": 315520
+      },
+      "assets/wallet_card_2d": {
+        "files": 57,
+        "bytes": 160900
+      },
+      "assets/secureid_ocr_nn.dat": {
+        "files": 1,
+        "bytes": 135656
+      },
+      "assets/PublicSuffixDatabase.list": {
+        "files": 1,
+        "bytes": 132737
+      },
+      "assets/pyPluginsSdk.imy": {
+        "files": 1,
+        "bytes": 125215
+      },
+      "assets/localization_ar.bin": {
+        "files": 1,
+        "bytes": 112864
+      },
+      "assets/string_resource_ids.bin": {
+        "files": 1,
+        "bytes": 106300
+      },
+      "assets/localization_it.bin": {
+        "files": 1,
+        "bytes": 100836
+      },
+      "assets/localization_ru.bin": {
+        "files": 1,
+        "bytes": 99880
+      },
+      "assets/localization_de.bin": {
+        "files": 1,
+        "bytes": 98012
+      },
+      "assets/localization_uk.bin": {
+        "files": 1,
+        "bytes": 96260
+      },
+      "assets/extera": {
+        "files": 45,
+        "bytes": 94097
+      },
+      "assets/localization_es.bin": {
+        "files": 1,
+        "bytes": 93756
+      },
+      "assets/PhoneFormats.dat": {
+        "files": 1,
+        "bytes": 90883
+      },
+      "assets/localization_ko.bin": {
+        "files": 1,
+        "bytes": 81996
+      },
+      "assets/localization_pt_br.bin": {
+        "files": 1,
+        "bytes": 79804
+      },
+      "assets/localization_nl.bin": {
+        "files": 1,
+        "bytes": 70272
+      },
+      "assets/shaders": {
+        "files": 10,
+        "bytes": 60714
+      },
+      "assets/localization_be.bin": {
+        "files": 1,
+        "bytes": 57700
+      },
+      "assets/localization_fa.bin": {
+        "files": 1,
+        "bytes": 57508
+      },
+      "assets/localization_he.bin": {
+        "files": 1,
+        "bytes": 50676
+      },
+      "assets/localization_ja.bin": {
+        "files": 1,
+        "bytes": 45392
+      },
+      "assets/localization_tr.bin": {
+        "files": 1,
+        "bytes": 42512
+      },
+      "assets/localization_pl.bin": {
+        "files": 1,
+        "bytes": 41428
+      },
+      "assets/plugin_analyzer": {
+        "files": 2,
+        "bytes": 39385
+      },
+      "assets/localization_fr.bin": {
+        "files": 1,
+        "bytes": 38076
+      },
+      "assets/localization_ro.bin": {
+        "files": 1,
+        "bytes": 37636
+      },
+      "assets/localization_fi.bin": {
+        "files": 1,
+        "bytes": 36576
+      },
+      "assets/localization_zh_cn.bin": {
+        "files": 1,
+        "bytes": 35416
+      },
+      "assets/localization_kk.bin": {
+        "files": 1,
+        "bytes": 33176
+      },
+      "assets/dexopt": {
+        "files": 2,
+        "bytes": 32668
+      },
+      "assets/localization_el.bin": {
+        "files": 1,
+        "bytes": 28592
+      },
+      "assets/shapes.dat": {
+        "files": 1,
+        "bytes": 24100
+      },
+      "assets/localization_uz.bin": {
+        "files": 1,
+        "bytes": 23532
+      },
+      "assets/monet_dark.attheme": {
+        "files": 1,
+        "bytes": 23009
+      },
+      "assets/monet_black.attheme": {
+        "files": 1,
+        "bytes": 23005
+      },
+      "assets/monet_light.attheme": {
+        "files": 1,
+        "bytes": 22927
+      },
+      "assets/localization_hu.bin": {
+        "files": 1,
+        "bytes": 22848
+      },
+      "assets/currencies.json": {
+        "files": 1,
+        "bytes": 21618
+      },
+      "assets/localization_ca.bin": {
+        "files": 1,
+        "bytes": 21576
+      },
+      "assets/localization_cs.bin": {
+        "files": 1,
+        "bytes": 20960
+      },
+      "assets/localization_sk.bin": {
+        "files": 1,
+        "bytes": 20916
+      },
+      "assets/localization_sr.bin": {
+        "files": 1,
+        "bytes": 20816
+      },
+      "assets/localization_hr.bin": {
+        "files": 1,
+        "bytes": 20096
+      },
+      "assets/localization_sv.bin": {
+        "files": 1,
+        "bytes": 19844
+      },
+      "assets/localization_ms.bin": {
+        "files": 1,
+        "bytes": 19712
+      },
+      "assets/localization_nb.bin": {
+        "files": 1,
+        "bytes": 19708
+      },
+      "assets/localization_id.bin": {
+        "files": 1,
+        "bytes": 19284
+      },
+      "assets/localization_vi.bin": {
+        "files": 1,
+        "bytes": 18616
+      },
+      "assets/localization_zh_tw.bin": {
+        "files": 1,
+        "bytes": 17964
+      },
+      "assets/night.attheme": {
+        "files": 1,
+        "bytes": 16374
+      },
+      "assets/darkblue.attheme": {
+        "files": 1,
+        "bytes": 15723
+      },
+      "assets/localization_pt.bin": {
+        "files": 1,
+        "bytes": 15484
+      },
+      "assets/localization_os.bin": {
+        "files": 1,
+        "bytes": 15136
+      },
+      "assets/localization_eo.bin": {
+        "files": 1,
+        "bytes": 14232
+      },
+      "assets/localization_lv.bin": {
+        "files": 1,
+        "bytes": 13888
+      },
+      "assets/day.attheme": {
+        "files": 1,
+        "bytes": 9860
+      },
+      "assets/arctic.attheme": {
+        "files": 1,
+        "bytes": 9041
+      },
+      "assets/emoji": {
+        "files": 12,
+        "bytes": 8037
+      },
+      "assets/flecks.png": {
+        "files": 1,
+        "bytes": 7494
+      },
+      "assets/countries.txt": {
+        "files": 1,
+        "bytes": 6287
+      },
+      "assets/bluebubbles.attheme": {
+        "files": 1,
+        "bytes": 6073
+      },
+      "assets/localization_az.bin": {
+        "files": 1,
+        "bytes": 5576
+      },
+      "assets/youtube_embed.html": {
+        "files": 1,
+        "bytes": 4400
+      },
+      "assets/lottie_meta.bin": {
+        "files": 1,
+        "bytes": 2688
+      }
+    },
+    "python_assets": [
+      "assets/chaquopy/app.imy",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_bz2.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_ctypes.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_datetime.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_lzma.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_random.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_sha512.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/_struct.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/binascii.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/java/chaquopy.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/math.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/mmap.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/arm64-v8a/zlib.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_bz2.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_ctypes.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_datetime.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_lzma.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_random.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_sha512.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/_struct.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/binascii.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/java/chaquopy.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/math.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/mmap.cpython-311.so",
+      "assets/chaquopy/bootstrap-native/armeabi-v7a/zlib.cpython-311.so",
+      "assets/chaquopy/bootstrap.imy",
+      "assets/chaquopy/build.json",
+      "assets/chaquopy/cacert.pem",
+      "assets/chaquopy/requirements-arm64-v8a.imy",
+      "assets/chaquopy/requirements-armeabi-v7a.imy",
+      "assets/chaquopy/requirements-common.imy",
+      "assets/chaquopy/stdlib-arm64-v8a.imy",
+      "assets/chaquopy/stdlib-armeabi-v7a.imy",
+      "assets/chaquopy/stdlib-common.imy"
+    ],
+    "python_assets_count": 34,
+    "native_libs": {
+      "arm64-v8a": [
+        {
+          "name": "libtmessages.49.so",
+          "size": 21981872
+        },
+        {
+          "name": "libvosk.so",
+          "size": 10042800
+        },
+        {
+          "name": "libextera_analyzer.so",
+          "size": 6357000
+        },
+        {
+          "name": "libpython3.11.so",
+          "size": 5389368
+        },
+        {
+          "name": "libcrypto_python.so",
+          "size": 4544368
+        },
+        {
+          "name": "libetgadblock.so",
+          "size": 3037648
+        },
+        {
+          "name": "libc++_shared.so",
+          "size": 1374336
+        },
+        {
+          "name": "libsqlite3_python.so",
+          "size": 1217120
+        },
+        {
+          "name": "liblanguage_id_l2c_jni.so",
+          "size": 1019552
+        },
+        {
+          "name": "libssl_python.so",
+          "size": 963112
+        },
+        {
+          "name": "libchaquopy_java.so",
+          "size": 189848
+        },
+        {
+          "name": "libjnidispatch.so",
+          "size": 165992
+        },
+        {
+          "name": "libshadowhook.so",
+          "size": 108824
+        },
+        {
+          "name": "libimage_processing_util_jni.so",
+          "size": 32528
+        },
+        {
+          "name": "libdatastore_shared_counter.so",
+          "size": 7112
+        },
+        {
+          "name": "libsurface_util_jni.so",
+          "size": 4896
+        },
+        {
+          "name": "libyuv.so",
+          "size": 3912
+        },
+        {
+          "name": "libcrypto_chaquopy.so",
+          "size": 3784
+        },
+        {
+          "name": "libsqlite3_chaquopy.so",
+          "size": 3784
+        },
+        {
+          "name": "libpython3.so",
+          "size": 3768
+        },
+        {
+          "name": "libssl_chaquopy.so",
+          "size": 3768
+        },
+        {
+          "name": "libshadowhook_nothing.so",
+          "size": 1368
+        }
+      ],
+      "armeabi-v7a": [
+        {
+          "name": "libtmessages.49.so",
+          "size": 18113860
+        },
+        {
+          "name": "libvosk.so",
+          "size": 8985628
+        },
+        {
+          "name": "libextera_analyzer.so",
+          "size": 4707196
+        },
+        {
+          "name": "libpython3.11.so",
+          "size": 3276492
+        },
+        {
+          "name": "libcrypto_python.so",
+          "size": 2745572
+        },
+        {
+          "name": "libetgadblock.so",
+          "size": 2119488
+        },
+        {
+          "name": "libc++_shared.so",
+          "size": 963028
+        },
+        {
+          "name": "libsqlite3_python.so",
+          "size": 786796
+        },
+        {
+          "name": "libssl_python.so",
+          "size": 623384
+        },
+        {
+          "name": "liblanguage_id_l2c_jni.so",
+          "size": 609628
+        },
+        {
+          "name": "libchaquopy_java.so",
+          "size": 122188
+        },
+        {
+          "name": "libjnidispatch.so",
+          "size": 116344
+        },
+        {
+          "name": "libshadowhook.so",
+          "size": 76888
+        },
+        {
+          "name": "libimage_processing_util_jni.so",
+          "size": 24448
+        },
+        {
+          "name": "libdatastore_shared_counter.so",
+          "size": 4416
+        },
+        {
+          "name": "libsurface_util_jni.so",
+          "size": 3460
+        },
+        {
+          "name": "libyuv.so",
+          "size": 2780
+        },
+        {
+          "name": "libcrypto_chaquopy.so",
+          "size": 2344
+        },
+        {
+          "name": "libsqlite3_chaquopy.so",
+          "size": 2344
+        },
+        {
+          "name": "libpython3.so",
+          "size": 2328
+        },
+        {
+          "name": "libssl_chaquopy.so",
+          "size": 2328
+        },
+        {
+          "name": "libshadowhook_nothing.so",
+          "size": 716
+        }
+      ]
+    },
+    "extracted_suspects": [
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/_bz2.cpython-311.so",
+        "size": 82792,
+        "sha256": "e1120e8d58cecf46dcc981bc3b8f194c3d6463ff73f1347e4b646ac15c722845"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/_ctypes.cpython-311.so",
+        "size": 218272,
+        "sha256": "58be40f27f6f821d8742874ed1d2f5532921c4dd185ab051b377093521b5b3b6"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/_datetime.cpython-311.so",
+        "size": 106712,
+        "sha256": "e7d186595e4b6fd954ff9c5c7d73ccb5f8dbb191235c8c195003ae4fdc595570"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/_lzma.cpython-311.so",
+        "size": 242888,
+        "sha256": "cd9c3a0453ae90d0514f3ecc2bd3df83243d6665261a5c6673cbfb7a7fff082b"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/_random.cpython-311.so",
+        "size": 13952,
+        "sha256": "4cb9b4286ae0154ea86fc4412a9cd33ac00019086e07a8942d5ab03ddd2badc6"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/_sha512.cpython-311.so",
+        "size": 22896,
+        "sha256": "a338a73a41e4bb776b7b09cf3dc3c662b7823880f2b1d7395320f5f83ad8d24a"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/_struct.cpython-311.so",
+        "size": 46328,
+        "sha256": "ead792f40c9b460dfe533960039a777e092aa75a9e725016320df27965301f99"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/binascii.cpython-311.so",
+        "size": 24880,
+        "sha256": "547f939c76e385dd393789859eeecb0658b32f15e76f3a9684d43a5d7f83d3d4"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/java/chaquopy.so",
+        "size": 3135208,
+        "sha256": "ca0f3a0676a4105899508509dcc90e32900d889781d9bdfb2af83fae02b17a65"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/math.cpython-311.so",
+        "size": 60184,
+        "sha256": "1017dae0e51780b65dced6797d2ceb14bb5f35ac712c9e66109fa0df4212bd11"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/mmap.cpython-311.so",
+        "size": 25784,
+        "sha256": "ce85b46c4456c347a856bf564fa2282eb511fb65789ed66fda2fe8f3ae2fbafb"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/arm64-v8a/zlib.cpython-311.so",
+        "size": 37840,
+        "sha256": "d8283b104036d956c29be46c9be336cb87ea4142c42c0cc98caf5528ac534743"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/_bz2.cpython-311.so",
+        "size": 61128,
+        "sha256": "a84c4b6a0dde628c3b9c161d051c1fec45319cc28bf4aae50c0d0d91962722aa"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/_ctypes.cpython-311.so",
+        "size": 108056,
+        "sha256": "f0d08fc086612fd96bb39b5525411fdf31cdcb990c97807e3d5da8962c1fb951"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/_datetime.cpython-311.so",
+        "size": 64112,
+        "sha256": "812d6126e10727367afb1f7ee248aa522d8b18c066e7dc5b1f1fdda8b1534e26"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/_lzma.cpython-311.so",
+        "size": 144848,
+        "sha256": "fc088825f7c2c015b2d9d96707e4d9d406bf4d70358411482bd018503649b8a7"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/_random.cpython-311.so",
+        "size": 8844,
+        "sha256": "a11a2b73352febf40b0aadc9f1fde38d0ffd7edf8418b4488fb7c9c3200e7d12"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/_sha512.cpython-311.so",
+        "size": 28896,
+        "sha256": "f83f041dbf2730bea129c26eac4ba11ac7e8933f63d7c227c754bb0aba9c182c"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/_struct.cpython-311.so",
+        "size": 27712,
+        "sha256": "3e12a8e5e5c9f40ef1192e6336f78191eb40421cdf58ec018f87cb104d9a85a0"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/binascii.cpython-311.so",
+        "size": 15696,
+        "sha256": "294e47f0e9dc8bbdfd57d8dcd839bc34c0c3362d082b9ece128cad7d9e343893"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/java/chaquopy.so",
+        "size": 2537848,
+        "sha256": "bf783b92e3f410cb42445ea64fb27af1dc3a0296b57e84a6598a74539056221d"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/math.cpython-311.so",
+        "size": 43792,
+        "sha256": "4ba4c5db5494b40e3e424223c2a2f7c9a28b6cd2fe685f522fb530cec19cec55"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/mmap.cpython-311.so",
+        "size": 16412,
+        "sha256": "76e90b8188b8a5a8f20ba87707fecd322e1a2e25739cb443ddd2f06361bbc3df"
+      },
+      {
+        "name": "assets/chaquopy/bootstrap-native/armeabi-v7a/zlib.cpython-311.so",
+        "size": 25536,
+        "sha256": "a7029229fb500b181e37745651c420ff91723edd8a7e77492e5879d5eb26b129"
+      },
+      {
+        "name": "assets/extera/registration_dates.bin",
+        "size": 53469,
+        "sha256": "9af137c6b30fc22111d37718123e92d8271eadf9fd0727abfa8b46e69ad3f3e8"
+      },
+      {
+        "name": "assets/localization_ar.bin",
+        "size": 112864,
+        "sha256": "4e202aa72469bacebdb4703f709be515307f72c82979c002a69dd0d8bff1f814"
+      },
+      {
+        "name": "assets/localization_az.bin",
+        "size": 5576,
+        "sha256": "ecb5ca923288e16ee7e4b466ee07aa7175255822d8b12045f7584faebc8c94e8"
+      },
+      {
+        "name": "assets/localization_be.bin",
+        "size": 57700,
+        "sha256": "f01ba4236ee1212d677010387df054862bf3da908f5a5c74bc053dd374953a2a"
+      },
+      {
+        "name": "assets/localization_ca.bin",
+        "size": 21576,
+        "sha256": "22c5df365e587889de6ec4599dddf6bf6a7f087df0145ee11ab5a46a4075cb33"
+      },
+      {
+        "name": "assets/localization_cs.bin",
+        "size": 20960,
+        "sha256": "eb3b80cd33d6767afbf2040ee1ddbd2ce7d3ce39a31ac445ddc3da231893d6ef"
+      },
+      {
+        "name": "assets/localization_de.bin",
+        "size": 98012,
+        "sha256": "b2e76d72f873aeceba02d743507af50428ee05ed670dea4769cf6d6bdb2faf5e"
+      },
+      {
+        "name": "assets/localization_el.bin",
+        "size": 28592,
+        "sha256": "37b04ee0887de6d036e6bfe480719b46566f9f98bcdeebea59c85660e984d357"
+      },
+      {
+        "name": "assets/localization_en.bin",
+        "size": 469060,
+        "sha256": "13f7e3d4bba8e47ee5ae24ed25c7830a8284ab749f4973a68a08944c3046c61f"
+      },
+      {
+        "name": "assets/localization_eo.bin",
+        "size": 14232,
+        "sha256": "40c0da8c47b91c2b8ceb78583b2be662c0dc5d42944b1fad721e9fcc2d537dca"
+      },
+      {
+        "name": "assets/localization_es.bin",
+        "size": 93756,
+        "sha256": "102c453c6faf520f0a9aff9f02018c2384f18ee6625162e642d79c9e77e8bfd7"
+      },
+      {
+        "name": "assets/localization_fa.bin",
+        "size": 57508,
+        "sha256": "c76d320c9d761cd010c5d1bf9fd7ec0eec827b5be66008880db9d33b99c46f52"
+      },
+      {
+        "name": "assets/localization_fi.bin",
+        "size": 36576,
+        "sha256": "e2e1d77656036bc7818c2e37d4a832d0e1cd2234b474b767fc341c6acbe9f7e3"
+      },
+      {
+        "name": "assets/localization_fr.bin",
+        "size": 38076,
+        "sha256": "7420c5b20722875c8111367260cb147e6360c9860f9d95ff3bb1ebc0d21f5c18"
+      },
+      {
+        "name": "assets/localization_he.bin",
+        "size": 50676,
+        "sha256": "4917e7b3994d3b430307744ceeddb632e0b03432ddd9732dcc0ee68194c1b5c9"
+      },
+      {
+        "name": "assets/localization_hr.bin",
+        "size": 20096,
+        "sha256": "8d5936b762c9c88bb10a46145fd04dce637ba2326e913de8247475381910fe67"
+      },
+      {
+        "name": "assets/localization_hu.bin",
+        "size": 22848,
+        "sha256": "ace8ba5f19e48d2ea8ec5ac25dd34b4fa7ca8be7a97196e5c4f948fb2e74a161"
+      },
+      {
+        "name": "assets/localization_id.bin",
+        "size": 19284,
+        "sha256": "2fb860e94fbfa4cfd6c54140e6ab1babb022ea1da70d78696e3f44422dc3a062"
+      },
+      {
+        "name": "assets/localization_it.bin",
+        "size": 100836,
+        "sha256": "50eb8e2b2e0c78b2a6d4ec0a5cbf8c6253c15249721e7968d8a8bb078373ae03"
+      },
+      {
+        "name": "assets/localization_ja.bin",
+        "size": 45392,
+        "sha256": "18094a0d7d6abe412bd1510239e69f31e3f8518e95e64fd7306d4cef22466026"
+      },
+      {
+        "name": "assets/localization_kk.bin",
+        "size": 33176,
+        "sha256": "e4354459d32b954b3a01120844fb12a7b38bb329ff097d20d101a5b561587e8e"
+      },
+      {
+        "name": "assets/localization_ko.bin",
+        "size": 81996,
+        "sha256": "e3c48f584d53c9c0e8801be3cdbc3aa87b8f176f6a1804393a62e015aa4bf977"
+      },
+      {
+        "name": "assets/localization_lv.bin",
+        "size": 13888,
+        "sha256": "6f55cb4db47e02fa9dc5fe0cda525d6c37420cd0f26f9f77e0982ec22bbb4904"
+      },
+      {
+        "name": "assets/localization_ms.bin",
+        "size": 19712,
+        "sha256": "c044424ebb23fbfea52c45a09e991f3392c3813dc362109a067d1137f0de0eb9"
+      },
+      {
+        "name": "assets/localization_nb.bin",
+        "size": 19708,
+        "sha256": "c96e3bd860fa0a71317c3e6bbc4be3ecba46e61cc4669a6dbef4c1b897bc5052"
+      },
+      {
+        "name": "assets/localization_nl.bin",
+        "size": 70272,
+        "sha256": "b061ad39fc03797b7d72e8f649723c7bc3676977603b405d4960a1588f60fdda"
+      }
+    ]
+  }
+}

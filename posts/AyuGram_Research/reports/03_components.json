@@ -1,0 +1,278 @@
+{
+  "counts": {
+    "activities": 19,
+    "services": 38,
+    "receivers": 30,
+    "providers": 8
+  },
+  "exported_components": [],
+  "receivers_with_filters": [
+    {
+      "name": "org.telegram.messenger.AppStartReceiver",
+      "intent_filters": {
+        "action": [
+          "org.telegram.start",
+          "android.intent.action.BOOT_COMPLETED"
+        ]
+      }
+    },
+    {
+      "name": "org.telegram.messenger.voip.VoIPMediaButtonReceiver",
+      "intent_filters": {
+        "action": [
+          "android.intent.action.MEDIA_BUTTON"
+        ]
+      }
+    },
+    {
+      "name": "org.telegram.messenger.MusicPlayerReceiver",
+      "intent_filters": {
+        "action": [
+          "org.telegram.android.musicplayer.close",
+          "org.telegram.android.musicplayer.pause",
+          "org.telegram.android.musicplayer.next",
+          "org.telegram.android.musicplayer.play",
+          "org.telegram.android.musicplayer.previous",
+          "android.intent.action.MEDIA_BUTTON",
+          "android.media.AUDIO_BECOMING_NOISY"
+        ]
+      }
+    },
+    {
+      "name": "com.exteragram.messenger.updater.UpdaterUtils$UpdateReceiver",
+      "intent_filters": {
+        "action": [
+          "android.intent.action.MY_PACKAGE_REPLACED"
+        ]
+      }
+    },
+    {
+      "name": "org.telegram.messenger.CallReceiver",
+      "intent_filters": {
+        "action": [
+          "android.intent.action.PHONE_STATE"
+        ]
+      }
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.SmsReceiver",
+      "intent_filters": {
+        "action": [
+          "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
+        ]
+      }
+    },
+    {
+      "name": "androidx.profileinstaller.ProfileInstallReceiver",
+      "intent_filters": {
+        "action": [
+          "androidx.profileinstaller.action.INSTALL_PROFILE",
+          "androidx.profileinstaller.action.SKIP_FILE",
+          "androidx.profileinstaller.action.SAVE_PROFILE",
+          "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+        ]
+      }
+    },
+    {
+      "name": "org.telegram.messenger.NotificationsDisabledReceiver",
+      "intent_filters": {
+        "action": [
+          "android.app.action.NOTIFICATION_CHANNEL_BLOCK_STATE_CHANGED"
+        ]
+      }
+    },
+    {
+      "name": "com.google.android.gms.cast.framework.media.MediaIntentReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.CopyCodeReceiver",
+      "intent_filters": {
+        "action": [
+          "org.telegram.messenger.ACTION_COPY_CODE"
+        ]
+      }
+    },
+    {
+      "name": "androidx.car.app.notification.CarAppNotificationBroadcastReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "com.google.android.gms.measurement.AppMeasurementReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+      "intent_filters": {
+        "action": [
+          "com.google.android.c2dm.intent.RECEIVE"
+        ]
+      }
+    },
+    {
+      "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+      "intent_filters": {
+        "action": [
+          "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+        ]
+      }
+    },
+    {
+      "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+      "intent_filters": {
+        "action": [
+          "android.intent.action.BOOT_COMPLETED"
+        ]
+      }
+    },
+    {
+      "name": "org.telegram.messenger.AutoMessageHeardReceiver",
+      "intent_filters": {
+        "action": [
+          "org.telegram.messenger.ACTION_MESSAGE_HEARD"
+        ]
+      }
+    },
+    {
+      "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.ContactsWidgetProvider",
+      "intent_filters": {
+        "action": [
+          "android.appwidget.action.APPWIDGET_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "org.telegram.messenger.ChatsWidgetProvider",
+      "intent_filters": {
+        "action": [
+          "android.appwidget.action.APPWIDGET_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "org.telegram.messenger.ShortcutResultReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.WearReplyReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.voip.VoIPActionsReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.NotificationDismissReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.CustomTabsCopyReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.ShareBroadcastReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.NotificationCallbackReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.PopupReplyReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.StopLiveLocationReceiver",
+      "intent_filters": {}
+    },
+    {
+      "name": "org.telegram.messenger.RefererReceiver",
+      "intent_filters": {
+        "action": [
+          "com.android.vending.INSTALL_REFERRER"
+        ]
+      }
+    }
+  ],
+  "services": [
+    "androidx.camera.core.impl.MetadataHolderService",
+    "androidx.car.app.CarAppMetadataHolderService",
+    "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+    "androidx.room.MultiInstanceInvalidationService",
+    "androidx.sharetarget.ChooserTargetServiceCompat",
+    "androidx.work.impl.background.systemjob.SystemJobService",
+    "androidx.work.impl.foreground.SystemForegroundService",
+    "com.exteragram.messenger.plugins.analyzer.PluginAnalyzerService",
+    "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+    "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+    "com.google.android.gms.auth.api.signin.RevocationBoundService",
+    "com.google.android.gms.cast.framework.ReconnectionService",
+    "com.google.android.gms.measurement.AppMeasurementJobService",
+    "com.google.android.gms.measurement.AppMeasurementService",
+    "com.google.firebase.components.ComponentDiscoveryService",
+    "com.google.firebase.messaging.FirebaseMessagingService",
+    "com.google.firebase.sessions.SessionLifecycleService",
+    "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+    "org.telegram.messenger.AuthenticatorService",
+    "org.telegram.messenger.BringAppForegroundService",
+    "org.telegram.messenger.ChatsWidgetService",
+    "org.telegram.messenger.ContactsSyncAdapterService",
+    "org.telegram.messenger.ContactsWidgetService",
+    "org.telegram.messenger.FilesMigrationService",
+    "org.telegram.messenger.GcmPushListenerService",
+    "org.telegram.messenger.ImportingService",
+    "org.telegram.messenger.KeepAliveJob",
+    "org.telegram.messenger.LocationSharingService",
+    "org.telegram.messenger.MusicBrowserService",
+    "org.telegram.messenger.MusicPlayerService",
+    "org.telegram.messenger.NotificationRepeat",
+    "org.telegram.messenger.NotificationsService",
+    "org.telegram.messenger.VideoEncodingService",
+    "org.telegram.messenger.WearAuthListenerService",
+    "org.telegram.messenger.car.TelegramCarAppService",
+    "org.telegram.messenger.voip.TelegramConnectionService",
+    "org.telegram.messenger.voip.VoIPService",
+    "org.telegram.ui.Stories.recorder.StoryUploadingService"
+  ],
+  "providers": [
+    "androidx.car.app.connection.provider",
+    "androidx.core.content.FileProvider",
+    "androidx.startup.InitializationProvider",
+    "com.exteragram.messenger.icons.IconPackProvider",
+    "com.google.firebase.provider.FirebaseInitProvider",
+    "com.google.mlkit.common.internal.MlKitInitProvider",
+    "org.telegram.messenger.NotificationImageProvider",
+    "org.telegram.messenger.voip.CallNotificationSoundProvider"
+  ],
+  "main_activity": "com.exteragram.messenger.DefaultIcon",
+  "activities_sample": [
+    "androidx.car.app.CarAppPermissionActivity",
+    "androidx.credentials.playservices.controllers.identityauth.HiddenActivity",
+    "androidx.credentials.playservices.controllers.identitycredentials.IdentityCredentialApiHiddenActivity",
+    "com.android.billingclient.api.ProxyBillingActivity",
+    "com.android.billingclient.api.ProxyBillingActivityV2",
+    "com.google.android.gms.auth.api.signin.internal.SignInHubActivity",
+    "com.google.android.gms.common.api.GoogleApiActivity",
+    "com.google.android.play.core.common.PlayCoreDialogWrapperActivity",
+    "org.telegram.messenger.OpenAttachedMenuBotReceiver",
+    "org.telegram.messenger.OpenChatReceiver",
+    "org.telegram.ui.BubbleActivity",
+    "org.telegram.ui.ChatsWidgetConfigActivity",
+    "org.telegram.ui.ContactsWidgetConfigActivity",
+    "org.telegram.ui.ExternalActionActivity",
+    "org.telegram.ui.LaunchActivity",
+    "org.telegram.ui.PopupNotificationActivity",
+    "org.telegram.ui.ShareActivity",
+    "org.telegram.ui.VoIPFeedbackActivity",
+    "org.telegram.ui.VoIPPermissionActivity"
+  ],
+  "activities_total": 19
+}

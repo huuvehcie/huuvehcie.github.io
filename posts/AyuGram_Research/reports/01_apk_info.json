@@ -1,0 +1,28 @@
+{
+  "apk_filename": "file.apk",
+  "apk_size_bytes": 133795216,
+  "sha256": "b7195bd9f3126543566acf3e1e5d3d1cc1fa163db927e85918877f7cb65cb113",
+  "md5": "98d2ef202dabf1b65f77d6e3b6b77a95",
+  "package": "com.radolyn.ayugram",
+  "app_name": "AyuGram",
+  "version_name": "13.1.1",
+  "version_code": "72379",
+  "min_sdk": "24",
+  "target_sdk": "36",
+  "max_sdk": null,
+  "main_activity": "com.exteragram.messenger.DefaultIcon",
+  "activities_count": 19,
+  "services_count": 38,
+  "receivers_count": 30,
+  "providers_count": 8,
+  "is_valid_APK": true,
+  "is_signed_v1": false,
+  "is_signed_v2": true,
+  "is_signed_v3": false,
+  "libraries": [
+    "com.sec.android.app.multiwindow",
+    "org.apache.http.legacy",
+    "com.google.android.maps",
+    "android.ext.adservices"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+ "application_attrs": {
+  "{http://schemas.android.com/apk/res/android}theme": "@7F120391",
+  "{http://schemas.android.com/apk/res/android}label": "@7F0FCAC3",
+  "{http://schemas.android.com/apk/res/android}icon": "@7F0E0000",
+  "{http://schemas.android.com/apk/res/android}name": "org.telegram.messenger.ApplicationLoader",
+  "{http://schemas.android.com/apk/res/android}manageSpaceActivity": "org.telegram.ui.ExternalActionActivity",
+  "{http://schemas.android.com/apk/res/android}backupAgent": "org.telegram.messenger.BackupAgent",
+  "{http://schemas.android.com/apk/res/android}allowBackup": "true",
+  "{http://schemas.android.com/apk/res/android}restoreAnyVersion": "true",
+  "{http://schemas.android.com/apk/res/android}hardwareAccelerated": "true",
+  "{http://schemas.android.com/apk/res/android}largeHeap": "true",
+  "{http://schemas.android.com/apk/res/android}supportsRtl": "false",
+  "{http://schemas.android.com/apk/res/android}extractNativeLibs": "true",
+  "{http://schemas.android.com/apk/res/android}usesCleartextTraffic": "true",
+  "{http://schemas.android.com/apk/res/android}roundIcon": "@7F0E0000",
+  "{http://schemas.android.com/apk/res/android}appComponentFactory": "androidx.core.app.CoreComponentFactory",
+  "{http://schemas.android.com/apk/res/android}allowAudioPlaybackCapture": "true",
+  "{http://schemas.android.com/apk/res/android}requestLegacyExternalStorage": "true",
+  "{http://schemas.android.com/apk/res/android}preserveLegacyExternalStorage": "true",
+  "{http://schemas.android.com/apk/res/android}enableOnBackInvokedCallback": "true"
+ },
+ "exported_components": [],
+ "queries": []
+}

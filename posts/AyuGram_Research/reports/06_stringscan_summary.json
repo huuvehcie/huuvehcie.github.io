@@ -1,0 +1,150 @@
+{
+  "total_urls": 267,
+  "total_ips": 4,
+  "total_onions": 0,
+  "total_tme_links": 24,
+  "suspicious_descriptor_tags": {
+    "process_builder": [
+      "Ljava/lang/ProcessBuilder;"
+    ],
+    "reflection_field": [
+      "Ljava/lang/reflect/Field;"
+    ],
+    "reflection_constructor": [
+      "Ljava/lang/reflect/Constructor;"
+    ],
+    "server_socket": [
+      "Ljava/net/ServerSocket;"
+    ],
+    "x509_trust_manager": [
+      "Ljavax/net/ssl/X509TrustManager;"
+    ],
+    "custom_trust_manager": [
+      "checkServerTrusted"
+    ],
+    "okhttp": [
+      "Lokhttp3/OkHttpClient;"
+    ],
+    "broadcast_receiver_base": [
+      "Landroid/content/BroadcastReceiver;"
+    ],
+    "debugger_check": [
+      "isDebuggerConnected"
+    ],
+    "system_bin_path": [
+      "/system/bin/"
+    ],
+    "chaquopy_python": [
+      "Lcom/chaquo/python/Python;"
+    ],
+    "account_manager": [
+      "Landroid/accounts/AccountManager;"
+    ],
+    "hmac": [
+      "Ljavax/crypto/Mac;"
+    ],
+    "inmemory_dex_loader": [
+      "Ldalvik/system/InMemoryDexClassLoader;"
+    ],
+    "path_classloader": [
+      "Ldalvik/system/PathClassLoader;"
+    ],
+    "secret_key_spec": [
+      "Ljavax/crypto/spec/SecretKeySpec;"
+    ],
+    "iv_param_spec": [
+      "Ljavax/crypto/spec/IvParameterSpec;"
+    ],
+    "android_id_read": [
+      "android_id"
+    ],
+    "accessibility_service_info": [
+      "Landroid/accessibilityservice/AccessibilityServiceInfo;"
+    ],
+    "https_url_connection": [
+      "Ljavax/net/ssl/HttpsURLConnection;"
+    ]
+  },
+  "top_packages": {
+    "org/telegram/ui": 21217,
+    "com/google/android": 10546,
+    "org/telegram/messenger": 3793,
+    "org/telegram/tgnet": 3768,
+    "com/exteragram/messenger": 3640,
+    "androidx/camera/camera2": 1261,
+    "androidx/media3/exoplayer": 1017,
+    "com/google/firebase": 988,
+    "com/radolyn/ayugram": 758,
+    "androidx/camera/core": 691,
+    "com/android/dx": 603,
+    "androidx/car/app": 476,
+    "androidx/media3/extractor": 418,
+    "com/google/common": 373,
+    "androidx/media3/session": 336,
+    "androidx/work/impl": 320,
+    "org/telegram/utils": 288,
+    "androidx/media3/common": 248,
+    "androidx/core/view": 223,
+    "com/google/gson": 219,
+    "com/google/mlkit": 209,
+    "org/chromium/net": 197,
+    "org/scilab/forge": 196,
+    "androidx/credentials/playservices": 187,
+    "androidx/appcompat/widget": 178,
+    "androidx/datastore/preferences": 169,
+    "com/google/protobuf": 164,
+    "androidx/mediarouter/media": 154,
+    "io/noties/markwon": 147,
+    "androidx/fragment/app": 140,
+    "kotlinx/coroutines/flow": 137,
+    "androidx/recyclerview/widget": 134,
+    "org/mvel2/conversion": 129,
+    "com/caverock/androidsvg": 126,
+    "androidx/datastore/core": 120,
+    "com/sun/jna": 119,
+    "androidx/credentials/exceptions": 113,
+    "kotlin/jvm/internal": 108,
+    "org/mvel2/ast": 104,
+    "j$/nio/file": 95,
+    "androidx/core/app": 86,
+    "android/support/v4": 85,
+    "com/google/zxing": 81,
+    "androidx/mediarouter/app": 80,
+    "androidx/appcompat/app": 78,
+    "org/chromium/support_lib_boundary": 69,
+    "com/neovisionaries/ws": 65,
+    "androidx/emoji2/text": 62,
+    "androidx/constraintlayout/core": 60,
+    "androidx/appcompat/view": 58,
+    "org/mvel2/optimizers": 56,
+    "androidx/core/content": 54,
+    "kotlinx/serialization/json": 53,
+    "org/mvel2/util": 51,
+    "kotlinx/coroutines/internal": 49,
+    "androidx/room/coroutines": 49,
+    "com/android/dex": 46,
+    "androidx/room/util": 45,
+    "org/commonmark/internal": 44,
+    "okhttp3/internal/http2": 43,
+    "androidx/media3/datasource": 42,
+    "kotlinx/coroutines/channels": 41,
+    "com/googlecode/mp4parser": 41,
+    "org/mvel2/templates": 41,
+    "androidx/core/graphics": 40,
+    "org/simplifiles/internal": 39,
+    "com/coremedia/iso": 38,
+    "org/mvel2/asm": 38,
+    "ru/noties/jlatexmath": 38,
+    "j$/time/chrono": 37,
+    "okhttp3/internal/connection": 36,
+    "androidx/dynamicanimation/animation": 36,
+    "kotlinx/serialization/internal": 36,
+    "j$/time/format": 35,
+    "androidx/graphics/shapes": 35,
+    "androidx/media3/container": 35,
+    "androidx/webkit/internal": 35,
+    "androidx/sqlite/db": 34,
+    "androidx/activity/result": 33,
+    "kotlin/io/path": 33
+  }
+}
