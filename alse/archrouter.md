@@ -1,8 +1,8 @@
-# Arch Linux Wi-Fi Router
+# Arch Linux Wi-Fi Router с выборочным обходом DPI
 
-Превращаем Arch Linux в точку доступа Wi-Fi с NAT, скрытым SSID и фильтрацией по MAC. Ethernet получает адрес по DHCP, Wi-Fi-клиенты выходят в интернет через Ethernet. Опционально: выборочный обход DPI через zapret2 только для указанных доменов.
+Превращаем Arch Linux в точку доступа Wi-Fi с NAT, скрытым SSID, фильтрацией по MAC и выборочным обходом DPI через zapret2. Ethernet получает адрес по DHCP, Wi-Fi-клиенты выходят в интернет через Ethernet. Обход DPI применяется только к указанным доменам и/или IP-подсетям.
 
-Проверено на: Arch Linux, ядро `7.x`, `hostapd`, `dnsmasq`, `iptables-nft`, `systemd-networkd`, `zapret2`.
+Проверено на: Arch Linux, ядро `7.x`, `hostapd`, `dnsmasq`, `iptables-nft`, `systemd-networkd`, `zapret2` (AUR).
 
 ---
 
@@ -13,7 +13,7 @@
 - DHCP-сервер для клиентов: `10.44.5.10–10.44.5.254`.
 - NAT (MASQUERADE) через Ethernet.
 - Фильтрация клиентов по MAC (whitelist на двух уровнях: hostapd + dnsmasq).
-- Выборочный обход DPI через zapret2 (`MODE_FILTER=hostlist`) — только для доменов из списка.
+- Выборочный обход DPI через zapret2 по доменам (`--hostlist`) и/или IP/CIDR (`--ipset`).
 - Готовность к добавлению VPN (policy-based routing).
 
 ---
@@ -324,7 +324,7 @@ systemctl restart hostapd dnsmasq
 
 ## 10. zapret2 — выборочный обход DPI
 
-Цель: только домены из указанного списка идут через zapret2 (обход DPI), остальной трафик идёт напрямую.
+Цель: только домены из hostlist и/или IP-адреса из ipset идут через zapret2, остальной трафик идёт напрямую.
 
 ### 10.1 Установка
 
@@ -332,57 +332,78 @@ systemctl restart hostapd dnsmasq
 paru -S zapret2
 ```
 
-После установки из AUR не нужно запускать `install_easy.sh` — пакет уже содержит всё необходимое. Достаточно отредактировать конфиг и запустить службу .
+После установки из AUR не нужно запускать `install_easy.sh` — пакет уже содержит всё необходимое. Достаточно отредактировать конфиг и запустить службу. Файлы: `/opt/zapret2/`, служба: `zapret2.service`.
 
-Файлы: `/opt/zapret2/`, служба: `zapret2.service`.
+### 10.2 Список доменов и IP для обхода
 
-### 10.2 Список доменов для обхода
+**Hostlist** (домены, один на строку):
 
 ```bash
-cat >/opt/zapret2/ipset/zapret_hosts_user.txt <<'EOF'
+cat >/opt/zapret2/ipset/zap2_hosts_usr.txt <<'EOF'
 youtube.com
 googlevideo.com
 rutracker.org
 EOF
 ```
 
-Один домен на строку. Поддомены (`m.youtube.com`, `www.youtube.com`) матчатся автоматически, если указан корневой домен. Для видео YouTube критично добавить `googlevideo.com` — именно оттуда идёт поток.
+**IPset** (IP или CIDR, один на строку):
 
-### 10.3 Конфигурация
+```bash
+cat >/opt/zapret2/ipset/zap2_ips_usr.txt <<'EOF'
+# Пример: подсеть или конкретный IP
+203.0.113.0/24
+198.51.100.42
+EOF
+```
 
-Отредактируйте `/opt/zapret2/config`:
+Формат hostlist: поддомены (`m.youtube.com`) матчатся автоматически, если указан корневой домен. Для строгого совпадения только с основным доменом используйте `^example.com`. Для YouTube критично добавить `googlevideo.com` — именно оттуда идёт видеопоток.
+
+### 10.3 Конфигурация `NFQWS2_OPT`
+
+Отредактируйте `/opt/zapret2/config`. Ключевое: **`MODE_FILTER=hostlist`** обязателен, даже если вы используете `--ipset` в отдельных профилях. Без него механизм hostlist не активируется, и трафик не будет перехватываться.
 
 ```bash
 sed -i 's/^MODE_FILTER=.*/MODE_FILTER=hostlist/' /opt/zapret2/config
 ```
 
-Убедитесь, что в `NFQWS2_OPT` указан путь к вашему hostlist:
-
-```bash
-grep -n 'hostlist' /opt/zapret2/config
-```
-
-Строки должны содержать `--hostlist=/opt/zapret2/ipset/zapret_hosts_user.txt` для TCP 80, TCP 443 и UDP 443. Пример:
+Пример `NFQWS2_OPT` с двумя профилями (hostlist + ipset), разделёнными `--new`. Первый совпавший профиль применяется к трафику:
 
 ```bash
 NFQWS2_OPT="
-        --filter-tcp=80 --filter-l7=http --hostlist=/opt/zapret2/ipset/zapret_hosts_user.txt --payload=http_req --lua-desync=fake:blob=fake_default_http:tcp_ts=-1000 --lua-desync=multisplit:pos=method+2 --new
-        --filter-tcp=443 --filter-l7=tls --hostlist=/opt/zapret2/ipset/zapret_hosts_user.txt --payload=tls_client_hello --lua-desync=fake:blob=fake_default_tls:tcp_ts=-1000 --lua-desync=multidisorder:pos=midsld --new
-        --filter-udp=443 --filter-l7=quic --hostlist=/opt/zapret2/ipset/zapret_hosts_user.txt --payload=quic_initial --lua-desync=fake:blob=fake_default_quic:repeats=6
+  --filter-tcp=80 --filter-l7=http --hostlist=/opt/zapret2/ipset/zap2_hosts_usr.txt --payload=http_req --lua-desync=fake:blob=fake_default_http:tcp_ts=-1000 --lua-desync=multisplit:pos=method+2 --new
+  --filter-tcp=80 --filter-l7=http --ipset=/opt/zapret2/ipset/zap2_ips_usr.txt --payload=http_req --lua-desync=fake:blob=fake_default_http:tcp_ts=-1000 --lua-desync=multisplit:pos=method+2 --new
+  --filter-tcp=443 --filter-l7=tls --hostlist=/opt/zapret2/ipset/zap2_hosts_usr.txt --payload=tls_client_hello --lua-desync=fake:blob=fake_default_tls:tcp_ts=-1000 --lua-desync=multidisorder:pos=midsld --new
+  --filter-tcp=443 --filter-l7=tls --ipset=/opt/zapret2/ipset/zap2_ips_usr.txt --payload=tls_client_hello --lua-desync=fake:blob=fake_default_tls:tcp_ts=-1000 --lua-desync=multidisorder:pos=midsld --new
+  --filter-udp=443 --filter-l7=quic --hostlist=/opt/zapret2/ipset/zap2_hosts_usr.txt --payload=quic_initial --lua-desync=fake:blob=fake_default_quic:repeats=6 --new
+  --filter-udp=443 --filter-l7=quic --ipset=/opt/zapret2/ipset/zap2_ips_usr.txt --payload=quic_initial --lua-desync=fake:blob=fake_default_quic:repeats=6
 "
 ```
 
-### 10.4 Ключевой момент: `MODE_FILTER=hostlist`
+**Важно**: `MODE_FILTER` не имеет значения «одновременно hostlist и ipset». Он управляет только автоматической подстановкой заполнителей. Фильтрация по IP реализуется через `--ipset` в отдельных профилях, независимо от `MODE_FILTER`.
 
-**Без этого параметра zapret2 не заполнит внутренний nftables-набор `zapret`, и трафик из hostlist не будет перехватываться.** Симптом: служба активна, hostlist указан, DNS резолвит домены, но `nft list set inet zapret2 zapret` пуст, и YouTube не открывается.
+### 10.4 Права доступа к файлам (критично)
 
-Проверка режима:
+`nfqws2` запускается от имени пользователя `tpws` (не root). Он должен иметь право на чтение файлов hostlist и ipset, а также **право на вход** во все директории по пути к ним. Если директория `/opt/zapret2/ipset` имеет права `700`, `tpws` не сможет прочитать файлы, и zapret2 упадёт с ошибкой:
 
-```bash
-grep '^MODE_FILTER' /opt/zapret2/config
+```
+cannot access hostlist file '/opt/zapret2/ipset/zap2_hosts_usr.txt'
 ```
 
-Должно быть `MODE_FILTER=hostlist`. Если стоит `none` или `ipset` — замените и перезапустите.
+Это известная проблема: при правах `600` на файлы hostlist `nfqws` (запущенный от непривилегированного пользователя) не может их прочитать.
+
+**Решение:**
+
+```bash
+chmod o+rx /opt/zapret2/ipset
+chmod o+r /opt/zapret2/ipset/zap2_hosts_usr.txt
+chmod o+r /opt/zapret2/ipset/zap2_ips_usr.txt
+```
+
+После этого перезапустите службу:
+
+```bash
+systemctl restart zapret2
+```
 
 ### 10.5 Запуск и проверка
 
@@ -397,13 +418,13 @@ systemctl status zapret2 --no-pager
 nft list set inet zapret2 zapret
 ```
 
-Должны появиться IP-адреса (например, `142.251.x.x` для YouTube). Если набор пуст после перезапуска — проверьте:
+Должны появиться IP-адреса (например, `142.251.x.x` для YouTube). Если набор пуст — проверьте:
 
 ```bash
 cat /etc/resolv.conf; getent hosts youtube.com
 ```
 
-`getent` должен возвращать IPv4-адрес (не только IPv6). Если возвращает только IPv6 — zapret2 не сможет заполнить IPv4-набор. В этом случае убедитесь, что `dnsmasq` работает и раздаёт IPv4, или временно добавьте IPv4 DNS в `/etc/resolv.conf`.
+`getent` должен возвращать **IPv4**-адрес. Если только IPv6 — zapret2 не сможет заполнить IPv4-набор. Убедитесь, что `dnsmasq` раздаёт IPv4, или временно добавьте IPv4 DNS в `/etc/resolv.conf`.
 
 Проверка перехвата:
 
@@ -415,15 +436,19 @@ nft list chain inet zapret2 flow_offload_zapret
 
 ### 10.6 Если YouTube не работает
 
-1. **Проверьте hostlist:** `cat /opt/zapret2/ipset/zapret_hosts_user.txt` — должны быть `youtube.com` и `googlevideo.com`.
+1. **Проверьте hostlist:** `cat /opt/zapret2/ipset/zap2_hosts_usr.txt` — должны быть `youtube.com` и `googlevideo.com`.
 2. **Проверьте резолв:** `dig +short googlevideo.com @10.44.5.1` — должен вернуть IPv4.
-3. **Перезапустите zapret2** после изменения hostlist: `systemctl restart zapret2`.
-4. **Проверьте, что `MODE_FILTER=hostlist`** (раздел 10.4).
+3. **Проверьте `MODE_FILTER=hostlist`** (раздел 10.3).
+4. **Перезапустите zapret2** после изменения hostlist: `systemctl restart zapret2`.
 5. **Посмотрите логи:** `journalctl -u zapret2 -n 50 --no-pager`.
 
-### 10.7 Важно о стратегии обхода
+### 10.7 О стратегии обхода
 
-Пример `--lua-desync=fake:blob=fake_default_tls:tcp_ts=-1000` — базовая. Универсальной стратегии нет, она зависит от DPI провайдера. Если YouTube не открывается при заполненном наборе, стратегию нужно подобрать через `blockcheck2.sh` из исходного репозитория zapret2, затем заменить `--lua-desync=...` на найденную.
+Пример `--lua-desync=fake:blob=fake_default_tls:tcp_ts=-1000` — базовая. Универсальной стратегии нет, она зависит от DPI провайдера. Если YouTube не открывается при заполненном наборе, стратегию нужно подобрать через `blockcheck2.sh` из исходного репозитория zapret2, затем заменить `--lua-desync=...` на найденную. Для поиска стратегии под YouTube в blockcheck можно указать адрес вида `rr4---sn-....googlevideo.com` (взять из DevTools браузера во вкладке Network при воспроизведении видео).
+
+### 10.8 Предупреждение `--ipset parameter is present`
+
+Это **не ошибка**. Предупреждение означает, что фильтрация по IP происходит внутри `nfqws2` (после попадания в NFQUEUE), а не на уровне ядра до очереди. Для выборочного обхода это рабочий подход. Если вы хотите, чтобы трафик, не входящий в список, вообще не попадал в очередь, нужна предварительная фильтрация через ядерные ipset/nftables-сеты — это другая архитектура.
 
 ---
 
@@ -451,7 +476,7 @@ iptables -A FORWARD -i wg0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCE
 - **OpenVPN** может перехватить default route хоста. В конфиге клиента: `pull-filter ignore redirect-gateway` и `route-nopull`.
 - **WireGuard** — не добавляйте `0.0.0.0/0` в `AllowedIPs` интерфейса; маршрут для клиентов задаётся через таблицу 42.
 - `ip rule` / `ip route` не сохраняются через `iptables-save`. Добавляйте их в `PostUp` WireGuard или в systemd-юнит, поднимающий VPN.
-- **zapret2 и VPN:** если клиенты уходят в VPN, их трафик шифруется, и DPI-обход для них может быть не нужен. Оставьте zapret2 только для трафика, идущего напрямую (не через VPN).
+- **zapret2 и VPN:** если клиенты уходят в VPN, их трафик шифруется, и DPI-обход для них может быть не нужен. Оставьте zapret2 только для трафика, идущего напрямую.
 
 ---
 
@@ -466,6 +491,7 @@ iptables -A FORWARD -i wg0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCE
 | `MASQUERADE ... missing kernel module` | Ядро обновлено без перезагрузки / модуль не загружен | `reboot`, затем `modprobe xt_MASQUERADE` |
 | Клиент не получает IP | `dnsmasq` не слушает `wlan0` / не тот диапазон | Проверить `/etc/dnsmasq.d/wlan0.conf`, `ss -lntup \| grep :67` |
 | Нет интернета у клиентов | Нет `ip_forward` / нет `MASQUERADE` / `FORWARD` закрыт | Раздел 7, `iptables -t nat -L -n -v` |
-| zapret2 активен, но YouTube не открывается | `MODE_FILTER` не `hostlist`, набор `@zapret` пуст | `MODE_FILTER=hostlist` (раздел 10.4) |
+| zapret2: `cannot access hostlist file` | Нет прав на чтение у пользователя `tpws` | `chmod o+rx /opt/zapret2/ipset; chmod o+r /opt/zapret2/ipset/*.txt` (раздел 10.4) |
+| zapret2 активен, но YouTube не открывается | `MODE_FILTER` не `hostlist`, набор `@zapret` пуст | `MODE_FILTER=hostlist` (раздел 10.3) |
 | zapret2: `nft list set ... zapret` пуст | DNS не резолвит в IPv4 / hostlist пуст | Проверить `getent hosts youtube.com`, `dig +short googlevideo.com @10.44.5.1` |
 | zapret2: YouTube открывается, видео буферизуется | Нет `googlevideo.com` в hostlist | Добавить домен, перезапустить |
