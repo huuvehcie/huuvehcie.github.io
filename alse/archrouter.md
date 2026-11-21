@@ -1,8 +1,8 @@
 # Arch Linux Wi-Fi Router с обходом DPI, DNS-бенчмарком, автообновлением списков и проверкой VPN-подписок
 
-Превращаем Arch Linux в точку доступа Wi-Fi с NAT, скрытым SSID, фильтрацией по MAC и выборочным обходом DPI через zapret2. Дополнительно: ежедневный бенчмарк DNS-серверов, ежедневное автообновление списков zapret2 и ежедневная проверка VPN-подписок через vpnsort.
+Превращаем Arch Linux в точку доступа Wi-Fi с NAT, скрытым SSID, фильтрацией по MAC и выборочным обходом DPI через zapret2. Дополнительно: ежедневный бенчмарк DNS-серверов, ежедневное автообновление списков zapret2, ежедневная проверка VPN-подписок через vpnsort и полный туннель для клиентов Wi-Fi AP через sing-box (`sb_tun`).
 
-Проверено на: Arch Linux, ядро `7.x`, `hostapd`, `dnsmasq`, `iptables-nft`, `systemd-networkd`, `systemd-resolved`, `zapret2` (AUR), `knot`, `bind-tools`, `vpnsort` (сборка с внешней машины).
+Проверено на: Arch Linux, ядро `7.x`, `hostapd`, `dnsmasq`, `iptables-nft`, `systemd-networkd`, `systemd-resolved`, `zapret2` (AUR), `sing-box` (1.12+), `knot`, `bind-tools`, `vpnsort` (сборка с внешней машины).
 
 ---
 
@@ -17,7 +17,7 @@
 - Ежедневный бенчмарк DNS-серверов (UDP/DoH/DoT), автовыбор быстрейшего (03:00).
 - Ежедневное автообновление списков для zapret2 из публичных источников (04:00).
 - Ежедневная проверка VPN-подписок через vpnsort (06:00).
-- Готовность к добавлению VPN (policy-based routing).
+- Полный VPN-туннель для клиентов AP (`10.44.5.0/24`) через `sing-box` (`sb_tun`, `172.19.0.1/30`, таблица маршрутизации `52`, локальный DNS `127.0.0.1:1053` через `dnsmasq`, автоостановка `zapret2.service` на время туннеля и обратный запуск при остановке).
 
 ---
 
@@ -747,7 +747,7 @@ vpnsort -version        # должна показаться версия
 ```bash
 sudo install -d -m 755 /etc/vpnsort
 sudo install -m 600 /dev/null /etc/vpnsort/subcr_list.txt
-sudo nano /etc/vpnsort/subcr_list.txt
+sudo micro /etc/vpnsort/subcr_list.txt
 ```
 
 Пример:
@@ -936,25 +936,280 @@ scp shaman@ArchRouter:/var/lib/vpnsort/output/$(date +%Y%m%d)_subs.txt ./
 
 ---
 
-## 14. Дальше: VPN (policy-based routing)
+## 14. Полный VPN-туннель для Wi-Fi AP через sing-box (`sb_tun`)
 
-Пусть туннель — `wg0`. Направляем в него **только** клиентов AP (`10.44.5.0/24`), хост остаётся с прямым выходом через `enp0s25`.
+Направляем весь трафик клиентов точки доступа (`wlan0`, подсеть `10.44.5.0/24`) в TUN-интерфейс `sb_tun` (`172.19.0.1/30`) через `sing-box` (поддержка ссылок формата `ulink://install/?content=...` с VLESS / REALITY / `urltest_out` / `direct_out`), таблицу маршрутизации `52` и локальный DNS `127.0.0.1:1053` с пробросом через `dnsmasq`. На время работы `vpntunnel.service` автоматически останавливается `zapret2.service`, а при остановке `vpntunnel.service` правила и дроп-ин `dnsmasq` откатываются и `zapret2.service` запускается обратно.
+
+### 14.1 Ссылка подключения `/etc/vpntunnel/link.cfg`
 
 ```bash
-ip rule add from 10.44.5.0/24 lookup 42
-ip route add default dev wg0 table 42
-
-iptables -t nat -A POSTROUTING -s 10.44.5.0/24 -o wg0 -j MASQUERADE
-iptables -A FORWARD -i wlan0 -o wg0 -j ACCEPT
-iptables -A FORWARD -i wg0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo mkdir -p /etc/vpntunnel /run/vpntunnel
+sudo micro /etc/vpntunnel/link.cfg
+sudo chmod 600 /etc/vpntunnel/link.cfg
 ```
 
-Нюансы:
+В `/etc/vpntunnel/link.cfg` кладётся строка вида `ulink://install/?content=...` (комментарии с `#` и пустые строки игнорируются).
 
-- **OpenVPN** может перехватить default route хоста. В конфиге клиента: `pull-filter ignore redirect-gateway` и `route-nopull`.
-- **WireGuard** — не добавляй `0.0.0.0/0` в `AllowedIPs` интерфейса; маршрут для клиентов задаётся через таблицу 42.
-- `ip rule`/`ip route` не сохраняются через `iptables-save`. Добавляй в `PostUp` WireGuard или в systemd-юнит, поднимающий VPN.
-- **zapret2 и VPN:** если клиенты уходят в VPN, их трафик шифруется, DPI-обход для них может быть не нужен. Оставь zapret2 только для трафика, идущего напрямую.
+### 14.2 Скрипт управления `/usr/local/bin/vpntunnel-ctl.sh`
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+
+LINK_FILE="/etc/vpntunnel/link.cfg"
+OUT_DIR="/run/vpntunnel"
+CONFIG_FILE="${OUT_DIR}/config.json"
+TUN_IF="sb_tun"
+TUN_ADDR="172.19.0.1/30"
+DNS_LISTEN="127.0.0.1"
+DNS_PORT="1053"
+LAN_SUBNET="10.44.5.0/24"
+WAN_IF="enp0s25"
+RT_TABLE="52"
+DNS_DROPIN="/etc/dnsmasq.d/99-vpntunnel-dns.conf"
+
+extract_link() {
+  if [[ ! -s "$LINK_FILE" ]]; then
+    echo "File $LINK_FILE is missing or empty" >&2
+    exit 1
+  fi
+  grep -vE '^\s*(#|$)' "$LINK_FILE" | head -n 1 | tr -d '\r\n'
+}
+
+build_config() {
+  local raw_link
+  raw_link="$(extract_link)"
+  mkdir -p "$OUT_DIR"
+
+  python3 - "$raw_link" "$CONFIG_FILE" "$TUN_IF" "$TUN_ADDR" "$DNS_LISTEN" "$DNS_PORT" <<'PY'
+import base64
+import json
+import re
+import sys
+import urllib.parse
+
+link, out_path, tun_if, tun_addr, dns_ip, dns_port = sys.argv[1:]
+
+m = re.search(r"[?&]content=([^&#]+)", link)
+if not m:
+    raise SystemExit("Parameter 'content' not found in ulink URL")
+
+b64_str = urllib.parse.unquote(m.group(1)).strip()
+b64_str += "=" * ((4 - len(b64_str) % 4) % 4)
+
+decoded = base64.b64decode(b64_str).decode("utf-8", errors="replace").strip()
+cleaned = re.sub(r"\}\s*,\s*\]\s*$", "}]", decoded)
+
+parsed = json.loads(cleaned)
+if isinstance(parsed, dict):
+    raw_outbounds = parsed.get("outbounds") or [parsed]
+elif isinstance(parsed, list):
+    raw_outbounds = parsed
+else:
+    raise SystemExit("Unexpected JSON structure inside 'content'")
+
+proxy_tags = []
+outbounds = []
+for idx, ob in enumerate(raw_outbounds):
+    if not isinstance(ob, dict) or not ob.get("type"):
+        continue
+    item = dict(ob)
+    tag = item.get("tag") or f"proxy_{idx+1}"
+    tag = " ".join(str(tag).split())
+    item["tag"] = tag
+    outbounds.append(item)
+    proxy_tags.append(tag)
+
+if not proxy_tags:
+    raise SystemExit("No valid proxy outbounds found in decoded JSON")
+
+outbounds.extend([
+    {
+        "type": "urltest",
+        "tag": "urltest_out",
+        "outbounds": proxy_tags,
+        "url": "https://www.gstatic.com/generate_204",
+        "interval": "3m",
+        "tolerance": 50
+    },
+    {
+        "type": "direct",
+        "tag": "direct_out"
+    }
+])
+
+cfg = {
+    "log": {
+        "level": "info",
+        "timestamp": True
+    },
+    "dns": {
+        "servers": [
+            {
+                "tag": "dns_remote",
+                "type": "https",
+                "server": "1.1.1.1",
+                "server_port": 443,
+                "path": "/dns-query",
+                "detour": "urltest_out"
+            },
+            {
+                "tag": "dns_direct",
+                "type": "udp",
+                "server": "8.8.8.8",
+                "server_port": 53
+            }
+        ],
+        "rules": [],
+        "final": "dns_remote",
+        "strategy": "ipv4_only"
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "tun_in",
+            "interface_name": tun_if,
+            "address": [tun_addr],
+            "mtu": 1400,
+            "auto_route": False,
+            "strict_route": False
+        },
+        {
+            "type": "direct",
+            "tag": "dns_in",
+            "listen": dns_ip,
+            "listen_port": int(dns_port),
+            "override_address": "1.1.1.1",
+            "override_port": 53
+        }
+    ],
+    "outbounds": outbounds,
+    "route": {
+        "auto_detect_interface": True,
+        "default_domain_resolver": "dns_direct",
+        "final": "urltest_out",
+        "rules": [
+            {
+                "inbound": ["dns_in"],
+                "action": "hijack-dns"
+            },
+            {
+                "action": "sniff"
+            }
+        ]
+    }
+}
+
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(cfg, f, ensure_ascii=False, indent=2)
+PY
+}
+
+wait_for_tun() {
+  local tries=30
+  while (( tries > 0 )); do
+    if ip link show "$TUN_IF" >/dev/null 2>&1; then
+      return 0
+    fi
+    if ! pgrep -x sing-box >/dev/null 2>&1; then
+      echo "sing-box exited before creating interface $TUN_IF" >&2
+      return 1
+    fi
+    sleep 0.1
+    ((tries--))
+  done
+  echo "Timed out waiting for interface $TUN_IF" >&2
+  return 1
+}
+
+case "${1:-}" in
+  prepare)
+    build_config
+    sing-box check -c "$CONFIG_FILE"
+    ;;
+  up)
+    sysctl -w net.ipv4.ip_forward=1 >/dev/null
+    sysctl -w net.ipv4.conf.all.rp_filter=0 net.ipv4.conf.default.rp_filter=0 net.ipv4.conf.wlan0.rp_filter=0 net.ipv4.conf.sb_tun.rp_filter=0 >/dev/null 2>&1 || true
+
+    wait_for_tun
+    ip link set "$TUN_IF" up
+    ip addr replace "$TUN_ADDR" dev "$TUN_IF"
+
+    ip rule del from "$LAN_SUBNET" table "$RT_TABLE" 2>/dev/null || true
+    ip rule add from "$LAN_SUBNET" table "$RT_TABLE" priority 100
+    ip route replace default dev "$TUN_IF" table "$RT_TABLE"
+    ip route replace "$LAN_SUBNET" dev wlan0 table "$RT_TABLE"
+
+    iptables -t nat -C POSTROUTING -s "$LAN_SUBNET" -o "$TUN_IF" -j MASQUERADE 2>/dev/null || \
+      iptables -t nat -A POSTROUTING -s "$LAN_SUBNET" -o "$TUN_IF" -j MASQUERADE
+    iptables -t nat -C POSTROUTING -o "$WAN_IF" -j MASQUERADE 2>/dev/null || \
+      iptables -t nat -A POSTROUTING -o "$WAN_IF" -j MASQUERADE
+
+    iptables -C FORWARD -i wlan0 -o "$TUN_IF" -j ACCEPT 2>/dev/null || \
+      iptables -I FORWARD 1 -i wlan0 -o "$TUN_IF" -j ACCEPT
+    iptables -C FORWARD -i "$TUN_IF" -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT 2>/dev/null || \
+      iptables -I FORWARD 2 -i "$TUN_IF" -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+    printf "server=%s#%s\nno-resolv\n" "$DNS_LISTEN" "$DNS_PORT" > "$DNS_DROPIN"
+    systemctl is-active --quiet dnsmasq && systemctl restart dnsmasq || true
+    ;;
+  down)
+    ip rule del from "$LAN_SUBNET" table "$RT_TABLE" 2>/dev/null || true
+    ip route flush table "$RT_TABLE" 2>/dev/null || true
+    iptables -t nat -D POSTROUTING -s "$LAN_SUBNET" -o "$TUN_IF" -j MASQUERADE 2>/dev/null || true
+    iptables -D FORWARD -i wlan0 -o "$TUN_IF" -j ACCEPT 2>/dev/null || true
+    iptables -D FORWARD -i "$TUN_IF" -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT 2>/dev/null || true
+    rm -f "$DNS_DROPIN"
+    systemctl is-active --quiet dnsmasq && systemctl restart dnsmasq || true
+    ;;
+  *)
+    echo "Usage: $0 {prepare|up|down}" >&2
+    exit 1
+    ;;
+esac
+```
+
+```bash
+sudo chmod 755 /usr/local/bin/vpntunnel-ctl.sh
+```
+
+### 14.3 Systemd-юнит `/etc/systemd/system/vpntunnel.service` и запуск
+
+```ini
+[Unit]
+Description=Wi-Fi AP Full VPN Tunnel (sing-box TUN)
+After=network-online.target hostapd.service dnsmasq.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/systemctl stop zapret2.service
+ExecStartPre=/usr/local/bin/vpntunnel-ctl.sh prepare
+ExecStart=/usr/bin/sing-box run -c /run/vpntunnel/config.json
+ExecStartPost=/usr/local/bin/vpntunnel-ctl.sh up
+ExecStopPost=/usr/local/bin/vpntunnel-ctl.sh down
+ExecStopPost=/usr/bin/systemctl start zapret2.service
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now vpntunnel.service
+systemctl status vpntunnel.service --no-pager
+curl -4 --interface sb_tun --max-time 8 -s https://api.ipify.org; echo ""
+```
+
+### 14.4 Нюансы синтаксиса `sing-box` 1.12+ и маршрутизации
+
+- В `dns.servers` используются типизированные объекты (`"type": "https"` с `"detour": "urltest_out"` и `"type": "udp"` без `"detour"` на `direct_out`).
+- В `dns.rules` не используется устаревший фильтр по `outbound` (`"rules": []`).
+- В `inbounds` типа `tun` удалены старые поля сниффинга (`sniff`, `sniff_override_destination`); само действие `"action": "sniff"` задаётся в `route.rules`, а перехват DNS с `dns_in` — через `"action": "hijack-dns"`.
+- В `route` обязателен `"default_domain_resolver": "dns_direct"`.
+- В таблице маршрутизации `52` помимо `default dev sb_tun` должен присутствовать маршрут `10.44.5.0/24 dev wlan0`, чтобы трафик между шлюзом `10.44.5.1` и клиентами подсети `10.44.5.x` не уходил в `sb_tun`.
 
 ---
 
@@ -988,6 +1243,11 @@ iptables -A FORWARD -i wg0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCE
 | `_subs.txt` пуст | `-strict true` + `-max-delay` слишком строгие | `-strict false`, `-max-delay 3s` |
 | `vpnsort` теряет живые серверы на DNS | Обходной DNS не знает домен | Fallback `server=` в `/etc/dnsmasq.d/upstream.conf` |
 | Разное поведение на разных подписках | Разные «плохие» хосты | Ожидаемо; outer `timeout` = страховка |
+| `sing-box`: `legacy DNS` / `dns outbound` / `outbound DNS rule item is deprecated` | Устаревший синтаксис DNS/outbounds/rules в sing-box 1.12+ | Раздел 14.2 и 14.4 |
+| `sing-box`: `legacy inbound fields are deprecated` | Поля `sniff` внутри `inbound` типа `tun` | Перенести `"action": "sniff"` в `route.rules` (раздел 14.2) |
+| `sing-box`: `missing route.default_domain_resolver` | Не задан резолвер доменов по умолчанию | Указать `"default_domain_resolver": "dns_direct"` в `route` |
+| `sing-box`: `detour to an empty direct outbound makes no sense` | Указан `detour` на `direct_out` в `dns_direct` | Убрать `"detour"` у `dns_direct` (раздел 14.2) |
+| `Cannot find device "sb_tun"` в `up` | `ExecStartPost` сработал до создания `sb_tun` | Использовать `wait_for_tun` в `/usr/local/bin/vpntunnel-ctl.sh` |
 
 ---
 
